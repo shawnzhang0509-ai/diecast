@@ -5,69 +5,73 @@
 @layer base {
   :root {
     --background: 0 0% 5%;
-    --foreground: 0 0% 94%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 94%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 94%;
-    --primary: 0 0% 94%;
+    --foreground: 0 0% 97%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 97%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 97%;
+    --primary: 0 0% 97%;
     --primary-foreground: 0 0% 5%;
     --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 94%;
+    --secondary-foreground: 0 0% 97%;
     --muted: 0 0% 13%;
     --muted-foreground: 0 0% 47%;
-    --accent: 9 64% 51%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 38% 60%;
+    --accent-foreground: 0 0% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 13%;
     --input: 0 0% 13%;
-    --ring: 9 64% 51%;
+    --ring: 40 38% 60%;
     --radius: 0px;
-    --sidebar-background: 0 0% 7%;
-    --sidebar-foreground: 0 0% 94%;
-    --sidebar-primary: 9 64% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 97%;
+    --sidebar-primary: 40 38% 60%;
+    --sidebar-primary-foreground: 0 0% 5%;
     --sidebar-accent: 0 0% 13%;
-    --sidebar-accent-foreground: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 97%;
     --sidebar-border: 0 0% 13%;
-    --sidebar-ring: 9 64% 51%;
+    --sidebar-ring: 40 38% 60%;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
 @layer components {
   .font-display {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .font-body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', serif;
   }
 
   .text-accent {
-    color: #D24E35;
+    color: #C7A96B;
   }
 
   .bg-accent-custom {
-    background-color: #D24E35;
+    background-color: #C7A96B;
   }
 
   .bg-accent-hover {
-    background-color: #B84028;
+    background-color: #A89258;
   }
 
   .border-divider {
-    border-color: #222222;
+    border-color: #1F1F1F;
   }
 
   .text-secondary-muted {
@@ -75,7 +79,7 @@
   }
 
   .bg-surface {
-    background-color: #111111;
+    background-color: #141414;
   }
 }
 
@@ -85,7 +89,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0C0C0C;
+  background: #0D0D0D;
 }
 
 ::-webkit-scrollbar-thumb {

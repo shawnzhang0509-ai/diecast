@@ -5,10 +5,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"Manrope"', 'sans-serif'],
+        display: ['"Montserrat"', 'sans-serif'],
+        body: ['"Montserrat"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
       },
       colors: {
+        driftae: {
+          gold: '#C7A96B',
+          'gold-hover': '#A89258',
+          black: '#0D0D0D',
+          white: '#F7F7F7',
+          surface: '#141414',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

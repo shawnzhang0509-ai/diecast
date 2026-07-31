@@ -3,22 +3,21 @@ import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
-import { newArrivals } from '../data/products';
+import { newArrivals, formatPrice } from '../data/products';
 import type { Product } from '../data/products';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProductCard({ product }: { product: Product }) {
-  const statusLabel = product.status === 'new' ? 'NEW' : product.status === 'preorder' ? 'PREORDER' : '';
-  const statusColor = product.status === 'preorder' ? 'text-[#F0F0F0]' : 'text-[#D24E35]';
+  const statusLabel = product.status === 'new' ? '新到' : product.status === 'preorder' ? '预订' : '';
+  const statusColor = product.status === 'preorder' ? 'text-[#F7F7F7]' : 'text-[#C7A96B]';
 
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group block bg-[#0C0C0C] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+      className="group block bg-[#0D0D0D] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
       data-cursor-hover
     >
-      {/* Image */}
       <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
         <img
           src={product.image}
@@ -27,21 +26,20 @@ function ProductCard({ product }: { product: Product }) {
         />
       </div>
 
-      {/* Info */}
       <div style={{ padding: 24 }}>
         {statusLabel && (
           <span className={`font-body text-[12px] font-medium uppercase tracking-[0.08em] ${statusColor}`}>
             {statusLabel}
           </span>
         )}
-        <h3 className="mt-2 font-display text-[16px] font-medium leading-[1.4] tracking-[0.05em] text-[#F0F0F0]">
+        <h3 className="mt-2 font-display text-[16px] font-medium leading-[1.4] tracking-[0.05em] text-[#F7F7F7]">
           {product.name}
         </h3>
         <p className="mt-1 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
-          {product.scale} {product.material}
+          {product.year} · {product.mileage}
         </p>
-        <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#D24E35]">
-          ${product.price.toLocaleString()}
+        <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#C7A96B]">
+          {formatPrice(product.price)}
         </p>
       </div>
     </Link>
@@ -83,22 +81,20 @@ export default function NewArrivals() {
     <section
       id="new-arrivals"
       ref={sectionRef}
-      className="bg-[#111111]"
+      className="bg-[#141414]"
       style={{ padding: '120px 0' }}
     >
       <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
-        {/* Header */}
         <div className="mb-12 flex items-end justify-between">
-          <h2 className="font-display text-[36px] font-normal leading-[1.2] tracking-[-1px] text-[#F0F0F0] sm:text-[48px]">
-            New Arrivals
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
+            最新上架
           </h2>
-          <button className="group hidden items-center gap-2 font-body text-[14px] font-normal text-[#777777] transition-colors duration-200 hover:text-[#F0F0F0] sm:flex">
-            View All
+          <button className="group hidden items-center gap-2 font-body text-[14px] font-normal text-[#777777] transition-colors duration-200 hover:text-[#F7F7F7] sm:flex">
+            查看全部
             <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
           </button>
         </div>
 
-        {/* Grid */}
         <div
           ref={gridRef}
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
