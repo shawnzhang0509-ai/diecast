@@ -50,9 +50,9 @@ export default function Craftsmanship() {
   }, []);
 
   const stats = [
-    { value: '200+', label: '经典车源' },
-    { value: '30+', label: '合作品牌' },
-    { value: '48H', label: '全球物流' },
+    { value: '200+', label: 'Vehicles Curated' },
+    { value: '30+', label: 'Partner Marques' },
+    { value: '48H', label: 'Global Shipping' },
   ];
 
   return (
@@ -63,16 +63,16 @@ export default function Craftsmanship() {
     >
       <div className="mx-auto grid grid-cols-1 items-center gap-0 lg:grid-cols-2" style={{ maxWidth: 1400 }}>
         <div ref={contentRef} style={{ padding: '0 40px' }}>
-          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
-            匠心甄选
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
+            Curated Excellence
           </h2>
 
-          <p className="mt-6 font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
-            每一辆经典老爷车都经过我们专业团队的严格甄选。从发动机工况到车身漆面，从历史档案到产权证明，我们以博物馆级的标准审视每一个细节。
+          <p className="mt-6 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
+            Every classic automobile in our collection is rigorously vetted by our specialist team. From engine condition to bodywork, from provenance to documentation — we apply museum-grade standards to every detail.
           </p>
 
-          <p className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
-            我们提供完整的车辆鉴定报告、维修保养记录和全球运输保险服务。让您的每一次收藏，都成为值得传承的传世之作。
+          <p className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
+            We provide comprehensive vehicle inspection reports, service histories, and worldwide insured transport. Every acquisition becomes a legacy worth passing down.
           </p>
 
           <div className="mt-10 grid grid-cols-3 gap-8">
@@ -92,14 +92,14 @@ export default function Craftsmanship() {
             to="/about"
             className="mt-10 inline-block border border-[#C7A96B] bg-transparent px-8 py-3.5 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-[#C7A96B] transition-all duration-300 hover:bg-[#C7A96B] hover:text-[#0D0D0D]"
           >
-            了解我们
+            Our Story
           </Link>
         </div>
 
         <div ref={imageRef} className="relative h-[400px] overflow-hidden lg:h-[600px]">
           <img
             src="/images/collection-lifestyle.png"
-            alt="经典老爷车收藏展示"
+            alt="Classic automobile collection showcase"
             className="h-[120%] w-full object-cover"
           />
         </div>

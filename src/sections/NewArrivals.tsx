@@ -9,7 +9,7 @@ import type { Product } from '../data/products';
 gsap.registerPlugin(ScrollTrigger);
 
 function ProductCard({ product }: { product: Product }) {
-  const statusLabel = product.status === 'new' ? '新到' : product.status === 'preorder' ? '预订' : '';
+  const statusLabel = product.status === 'new' ? 'NEW' : product.status === 'preorder' ? 'PRE-ORDER' : '';
   const statusColor = product.status === 'preorder' ? 'text-[#F7F7F7]' : 'text-[#C7A96B]';
 
   return (
@@ -86,11 +86,11 @@ export default function NewArrivals() {
     >
       <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
         <div className="mb-12 flex items-end justify-between">
-          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
-            最新上架
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
+            New Arrivals
           </h2>
-          <button className="group hidden items-center gap-2 font-body text-[14px] font-normal text-[#777777] transition-colors duration-200 hover:text-[#F7F7F7] sm:flex">
-            查看全部
+          <button className="group hidden items-center gap-2 font-body text-[14px] font-normal text-driftae-muted transition-colors duration-200 hover:text-driftae-white sm:flex">
+            View All
             <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
           </button>
         </div>

@@ -59,7 +59,7 @@ export default function Hero() {
         <Logo variant="full" showTagline className="mb-10" />
 
         <p className="mt-2 max-w-[520px] font-body text-[14px] font-normal leading-[1.7] text-driftae-muted">
-          精选全球经典老爷车，每一辆都承载着汽车工业的黄金时代。从法拉利到保时捷，为您呈现值得珍藏的传世之作。
+          Curated classic and vintage automobiles from the world's most legendary marques. Every vehicle carries the spirit of automotive's golden age.
         </p>
 
         <Link
@@ -70,7 +70,7 @@ export default function Hero() {
           }}
           className="btn-gold mt-10 px-12 py-4"
         >
-          探索收藏
+          Explore Collection
         </Link>
       </div>
     </section>

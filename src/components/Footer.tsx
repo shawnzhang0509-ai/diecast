@@ -14,9 +14,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">收藏</h4>
+            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">Shop</h4>
             <ul className="space-y-3">
-              {['全部车源', '最新上架', '预订车辆', '特价车源', '寄售服务'].map((item) => (
+              {['All Vehicles', 'New Arrivals', 'Pre-Orders', 'Special Offers', 'Consignment'].map((item) => (
                 <li key={item}>
                   <Link
                     to="/"
@@ -30,9 +30,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">公司</h4>
+            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">Company</h4>
             <ul className="space-y-3">
-              {['关于我们', '经典品牌', '运输与交付', '常见问题', '联系我们'].map((item) => (
+              {['About Us', 'Our Brands', 'Shipping & Delivery', 'FAQ', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to="/about"
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">关注我们</h4>
+            <h4 className="mb-5 font-display text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold">Connect</h4>
             <div className="mb-6 flex gap-4">
               {[Instagram, Youtube, Facebook, Twitter].map((Icon, i) => (
                 <a
@@ -61,11 +61,11 @@ export default function Footer() {
             <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="您的邮箱"
+                placeholder="Your email"
                 className="flex-1 border border-driftae-border bg-transparent px-4 py-2.5 text-[13px] text-driftae-white placeholder:text-driftae-muted/50 focus:border-driftae-gold focus:outline-none"
               />
               <button className="btn-gold px-4 py-2.5 text-[12px]">
-                订阅
+                Subscribe
               </button>
             </div>
           </div>
@@ -77,10 +77,10 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-[12px] text-driftae-muted transition-colors duration-200 hover:text-driftae-gold">
-              隐私政策
+              Privacy Policy
             </a>
             <a href="#" className="text-[12px] text-driftae-muted transition-colors duration-200 hover:text-driftae-gold">
-              服务条款
+              Terms of Service
             </a>
           </div>
         </div>
