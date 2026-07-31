@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Logo from '../components/Logo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,22 +119,16 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="bg-[#0D0D0D]">
+    <div className="bg-driftae-black">
       <div
         ref={heroRef}
-        className="flex flex-col items-center justify-center bg-[#141414] text-center"
+        className="flex flex-col items-center justify-center border-b border-driftae-gold/20 bg-driftae-surface text-center"
         style={{ minHeight: '70vh', padding: '0 40px' }}
       >
-        <p className="animate-in mb-4 font-body text-[12px] font-medium uppercase tracking-[0.2em] text-[#C7A96B]">
-          About DRIFTAE
-        </p>
-        <h1 className="animate-in font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
-          激情与经典的交汇
-        </h1>
-        <p className="animate-in font-serif mt-4 text-[16px] italic text-[#C7A96B]">
-          Passion for Classics. Built for Collectors.
-        </p>
-        <p className="animate-in mt-6 max-w-[640px] font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
+        <div className="animate-in">
+          <Logo variant="full" showTagline />
+        </div>
+        <p className="animate-in mt-8 max-w-[640px] font-body text-[14px] font-normal leading-[1.7] text-driftae-muted">
           DRIFTAE 由收藏家创立，为收藏家服务。我们致力于连接汽车爱好者与全球最优秀的经典老爷车，让每一辆传世之作找到它的归宿。
         </p>
       </div>

@@ -4,6 +4,15 @@
 
 @layer base {
   :root {
+    /* DRIFTAE brand palette */
+    --driftae-gold: #C7A96B;
+    --driftae-gold-hover: #A89258;
+    --driftae-black: #0D0D0D;
+    --driftae-white: #F7F7F7;
+    --driftae-surface: #141414;
+    --driftae-border: #2A2418;
+    --driftae-muted: #8A8070;
+
     --background: 0 0% 5%;
     --foreground: 0 0% 97%;
     --card: 0 0% 8%;
@@ -12,7 +21,7 @@
     --popover-foreground: 0 0% 97%;
     --primary: 0 0% 97%;
     --primary-foreground: 0 0% 5%;
-    --secondary: 0 0% 13%;
+    --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 97%;
     --muted: 0 0% 13%;
     --muted-foreground: 0 0% 47%;
@@ -20,7 +29,7 @@
     --accent-foreground: 0 0% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 13%;
+    --border: 40 15% 15%;
     --input: 0 0% 13%;
     --ring: 40 38% 60%;
     --radius: 0px;
@@ -30,18 +39,23 @@
     --sidebar-primary-foreground: 0 0% 5%;
     --sidebar-accent: 0 0% 13%;
     --sidebar-accent-foreground: 0 0% 97%;
-    --sidebar-border: 0 0% 13%;
+    --sidebar-border: 40 15% 15%;
     --sidebar-ring: 40 38% 60%;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-driftae-black text-driftae-white antialiased;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(199, 169, 107, 0.35);
+    color: #F7F7F7;
   }
 }
 
@@ -59,31 +73,46 @@
   }
 
   .text-accent {
-    color: #C7A96B;
+    color: var(--driftae-gold);
   }
 
   .bg-accent-custom {
-    background-color: #C7A96B;
+    background-color: var(--driftae-gold);
   }
 
   .bg-accent-hover {
-    background-color: #A89258;
+    background-color: var(--driftae-gold-hover);
   }
 
   .border-divider {
-    border-color: #1F1F1F;
+    border-color: var(--driftae-border);
   }
 
   .text-secondary-muted {
-    color: #777777;
+    color: var(--driftae-muted);
   }
 
   .bg-surface {
-    background-color: #141414;
+    background-color: var(--driftae-surface);
+  }
+
+  /* Gold accent button — brand primary CTA */
+  .btn-gold {
+    @apply bg-driftae-gold font-body text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-black transition-colors duration-300 hover:bg-driftae-gold-hover;
+  }
+
+  /* Gold outline button */
+  .btn-gold-outline {
+    @apply border border-driftae-gold bg-transparent font-body text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-gold transition-all duration-300 hover:bg-driftae-gold hover:text-driftae-black;
+  }
+
+  /* Section gold top rule */
+  .section-gold-rule {
+    @apply border-t border-driftae-gold/20;
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — gold tinted */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -93,15 +122,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #3D3528;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #C7A96B;
 }
 
-/* Smooth scrolling */
 html.lenis, html.lenis body {
   height: auto;
 }
