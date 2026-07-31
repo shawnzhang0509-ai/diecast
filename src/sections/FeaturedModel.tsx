@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { formatPrice } from '../data/products';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedModel() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,35 +38,30 @@ export default function FeaturedModel() {
   }, []);
 
   const specs = [
-    { label: 'Scale', value: '1:18' },
-    { label: 'Material', value: 'Resin' },
-    { label: 'Manufacturer', value: 'MR Collection' },
-    { label: 'Edition', value: 'Limited 320 pcs' },
+    { label: '年份', value: '1962' },
+    { label: '里程', value: '8,200 mi' },
+    { label: '发动机', value: 'Colombo V12' },
+    { label: '车况', value: 'Concours' },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#111111]"
+      className="relative overflow-hidden bg-[#141414]"
       style={{ minHeight: '100vh' }}
     >
       <div className="mx-auto flex min-h-screen flex-col lg:flex-row" style={{ maxWidth: 1400 }}>
-        {/* Left - Image (55%) */}
-        <div
-          ref={imageRef}
-          className="relative flex-1 lg:max-w-[55%]"
-        >
+        <div className="relative flex-1 lg:max-w-[55%]">
           <div className="relative h-[50vh] lg:h-screen">
             <img
-              src="/images/product-ferrari-sf90.png"
-              alt="Ferrari SF90 Stradale 1:18 Scale Model"
+              src="/images/product-ferrari-250gto.png"
+              alt="Ferrari 250 GTO 1962"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent" />
-            {/* 3D Text Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
             <div className="absolute bottom-12 left-8 right-8">
               <h2
-                className="font-display text-[48px] font-bold uppercase leading-[0.9] tracking-[-2px] text-white sm:text-[64px] lg:text-[80px]"
+                className="font-display text-[48px] font-light uppercase leading-[0.9] tracking-[0.1em] text-white sm:text-[64px] lg:text-[80px]"
                 style={{
                   textShadow: '0 4px 30px rgba(0,0,0,0.5)',
                   WebkitTextStroke: '1px rgba(255,255,255,0.1)',
@@ -74,35 +69,33 @@ export default function FeaturedModel() {
               >
                 FERRARI
                 <br />
-                SF90
+                250
                 <br />
-                STRADALE
+                GTO
               </h2>
             </div>
           </div>
         </div>
 
-        {/* Right - Content (45%) */}
         <div
           ref={contentRef}
           className="flex flex-1 flex-col justify-center px-8 py-16 lg:max-w-[45%] lg:px-16"
         >
-          <p className="mb-4 font-body text-[12px] font-medium uppercase tracking-[0.08em] text-[#777777]">
-            Featured Model
+          <p className="mb-4 font-body text-[12px] font-medium uppercase tracking-[0.15em] text-[#C7A96B]">
+            精选座驾
           </p>
 
-          <h2 className="font-display text-[36px] font-normal leading-[1.2] tracking-[-1px] text-[#F0F0F0] sm:text-[48px]">
-            Ferrari SF90 Stradale
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
+            Ferrari 250 GTO
           </h2>
 
-          {/* Specs Grid */}
           <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-4">
             {specs.map((spec) => (
               <div key={spec.label}>
                 <p className="font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
                   {spec.label}
                 </p>
-                <p className="mt-1 font-display text-[14px] font-medium text-[#F0F0F0]">
+                <p className="mt-1 font-display text-[14px] font-medium text-[#F7F7F7]">
                   {spec.value}
                 </p>
               </div>
@@ -110,18 +103,18 @@ export default function FeaturedModel() {
           </div>
 
           <p className="mt-8 font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
-            A meticulous resin masterpiece capturing every aerodynamic detail of Ferrari's plug-in hybrid supercar. Hand-finished in Rosso Corsa with carbon fiber roof detail.
+            经典车界的圣杯。这台 1962 年法拉利 250 GTO 是全球仅 36 台中的珍品，搭载传奇 Colombo V12 发动机，拥有辉煌的赛车血统。
           </p>
 
-          <p className="mt-6 font-display text-[24px] font-normal text-[#D24E35]">
-            $499
+          <p className="mt-6 font-display text-[24px] font-normal text-[#C7A96B]">
+            {formatPrice(48500000)}
           </p>
 
           <Link
-            to="/product/ferrari-sf90-stradale"
-            className="mt-8 inline-block self-start border border-[#F0F0F0] bg-transparent px-8 py-3.5 font-body text-[13px] font-medium uppercase tracking-[0.05em] text-[#F0F0F0] transition-all duration-300 hover:bg-white hover:text-black"
+            to="/product/ferrari-250-gto"
+            className="mt-8 inline-block self-start border border-[#C7A96B] bg-transparent px-8 py-3.5 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-[#C7A96B] transition-all duration-300 hover:bg-[#C7A96B] hover:text-[#0D0D0D]"
           >
-            View Details
+            查看详情
           </Link>
         </div>
       </div>

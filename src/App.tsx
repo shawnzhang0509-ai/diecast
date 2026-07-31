@@ -3,23 +3,20 @@ import { useEffect, useState } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import Logo from './components/Logo';
 import HomePage from './pages/HomePage';
 import ProductDetail from './pages/ProductDetail';
 import AboutPage from './pages/AboutPage';
 
 function LoadingScreen() {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0C0C0C]">
-      <div className="w-48">
-        <div className="mb-4 text-center font-display text-[14px] tracking-[0.1em] text-[#777777] uppercase">
-          Loading
-        </div>
-        <div className="h-[2px] w-full bg-[#222222]">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-driftae-black">
+      <div className="flex flex-col items-center">
+        <Logo variant="full" className="animate-pulse" />
+        <div className="mt-10 h-px w-48 overflow-hidden bg-driftae-border">
           <div
-            className="h-full bg-[#D24E35]"
-            style={{
-              animation: 'loading 1.5s ease-in-out infinite',
-            }}
+            className="h-full bg-driftae-gold"
+            style={{ animation: 'loading 1.5s ease-in-out infinite' }}
           />
         </div>
         <style>{`
@@ -39,7 +36,6 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Simulate initial load
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1200);
@@ -47,12 +43,11 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    // Scroll to top on route change
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-[#0C0C0C]">
+    <div className="min-h-screen bg-driftae-black">
       <CustomCursor />
       <Navigation />
 
