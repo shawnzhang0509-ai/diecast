@@ -32,11 +32,11 @@ export default function InStockNow() {
       style={{ paddingTop: 120, paddingBottom: 120 }}
     >
       <div className="mb-16 px-6" style={{ maxWidth: 1400, margin: '0 auto 64px', paddingLeft: 40, paddingRight: 40 }}>
-        <h2 className="font-display text-[24px] font-light leading-[1.3] text-[#F7F7F7]">
-          现货在售
+        <h2 className="font-display text-[24px] font-light leading-[1.3] text-driftae-white">
+          In Stock Now
         </h2>
-        <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
-          限量经典车源，即刻可交付。
+        <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">
+          Limited classic vehicles available for immediate delivery.
         </p>
       </div>
 
@@ -63,7 +63,7 @@ export default function InStockNow() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-500 group-hover:bg-black/30">
                   <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    查看
+                    View
                   </span>
                 </div>
               </div>

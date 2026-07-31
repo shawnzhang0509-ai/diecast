@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { formatPrice } from '../data/products';
+import BrandTagline from '../components/BrandTagline';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,16 +39,16 @@ export default function FeaturedModel() {
   }, []);
 
   const specs = [
-    { label: '年份', value: '1962' },
-    { label: '里程', value: '8,200 mi' },
-    { label: '发动机', value: 'Colombo V12' },
-    { label: '车况', value: 'Concours' },
+    { label: 'Year', value: '1962' },
+    { label: 'Mileage', value: '8,200 mi' },
+    { label: 'Engine', value: 'Colombo V12' },
+    { label: 'Condition', value: 'Concours' },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#141414]"
+      className="relative overflow-hidden border-y border-driftae-gold/10 bg-driftae-surface"
       style={{ minHeight: '100vh' }}
     >
       <div className="mx-auto flex min-h-screen flex-col lg:flex-row" style={{ maxWidth: 1400 }}>
@@ -81,11 +82,8 @@ export default function FeaturedModel() {
           ref={contentRef}
           className="flex flex-1 flex-col justify-center px-8 py-16 lg:max-w-[45%] lg:px-16"
         >
-          <p className="mb-4 font-body text-[12px] font-medium uppercase tracking-[0.15em] text-[#C7A96B]">
-            精选座驾
-          </p>
-
-          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
+          <BrandTagline text="Featured Classic" className="mb-4" />
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
             Ferrari 250 GTO
           </h2>
 
@@ -102,8 +100,8 @@ export default function FeaturedModel() {
             ))}
           </div>
 
-          <p className="mt-8 font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
-            经典车界的圣杯。这台 1962 年法拉利 250 GTO 是全球仅 36 台中的珍品，搭载传奇 Colombo V12 发动机，拥有辉煌的赛车血统。
+          <p className="mt-8 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
+            The holy grail of classic automobiles. One of only 36 ever built, this 1962 Ferrari 250 GTO features the legendary Colombo V12 and a proven racing pedigree.
           </p>
 
           <p className="mt-6 font-display text-[24px] font-normal text-[#C7A96B]">
@@ -114,7 +112,7 @@ export default function FeaturedModel() {
             to="/product/ferrari-250-gto"
             className="mt-8 inline-block self-start border border-[#C7A96B] bg-transparent px-8 py-3.5 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-[#C7A96B] transition-all duration-300 hover:bg-[#C7A96B] hover:text-[#0D0D0D]"
           >
-            查看详情
+            View Details
           </Link>
         </div>
       </div>

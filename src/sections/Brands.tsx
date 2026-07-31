@@ -44,11 +44,11 @@ export default function Brands() {
     >
       <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
         <div className="mb-16 text-center">
-          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-[#F7F7F7] sm:text-[48px]">
-            经典品牌
+          <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
+            Legendary Marques
           </h2>
-          <p className="mx-auto mt-4 max-w-[600px] font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
-            我们专注于全球最具传奇色彩的汽车品牌，每一辆都代表着汽车工业黄金时代的巅峰之作。
+          <p className="mx-auto mt-4 max-w-[600px] font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
+            We focus on the world's most iconic automotive brands — each representing the pinnacle of motoring's golden age.
           </p>
         </div>
 

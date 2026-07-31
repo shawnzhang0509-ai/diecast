@@ -56,11 +56,11 @@ function StorySection({ title, paragraphs, image, imageLeft, stats }: StorySecti
 
   const contentEl = (
     <div ref={contentRef} className="flex flex-col justify-center" style={{ padding: '0 40px' }}>
-      <h3 className="font-display text-[28px] font-light leading-[1.3] tracking-[0.05em] text-[#F7F7F7] sm:text-[36px]">
+      <h3 className="font-display text-[28px] font-light leading-[1.3] tracking-[0.05em] text-driftae-white sm:text-[36px]">
         {title}
       </h3>
       {paragraphs.map((p, i) => (
-        <p key={i} className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-[#777777]">
+        <p key={i} className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
           {p}
         </p>
       ))}
@@ -68,10 +68,10 @@ function StorySection({ title, paragraphs, image, imageLeft, stats }: StorySecti
         <div className="mt-8 grid grid-cols-3 gap-8">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <p className="font-display text-[28px] font-light leading-[1.0] tracking-[-1px] text-[#C7A96B]">
+              <p className="font-display text-[28px] font-light leading-[1.0] tracking-[-1px] text-driftae-gold">
                 {stat.value}
               </p>
-              <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
+              <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">
                 {stat.label}
               </p>
             </div>
@@ -129,43 +129,43 @@ export default function AboutPage() {
           <Logo variant="full" showTagline />
         </div>
         <p className="animate-in mt-8 max-w-[640px] font-body text-[14px] font-normal leading-[1.7] text-driftae-muted">
-          DRIFTAE 由收藏家创立，为收藏家服务。我们致力于连接汽车爱好者与全球最优秀的经典老爷车，让每一辆传世之作找到它的归宿。
+          Founded by collectors, for collectors. DRIFTAE connects automotive enthusiasts with the world's finest classic and vintage automobiles.
         </p>
       </div>
 
       <div className="mx-auto" style={{ maxWidth: 1400 }}>
         <StorySection
-          title="我们的起点"
+          title="Our Beginning"
           paragraphs={[
-            '一切始于对经典汽车的纯粹热爱。创始人是一位终身汽车爱好者，他意识到市场缺乏一个专注于经典老爷车的精品平台——一个以博物馆级标准对待每一辆车的平台。',
-            '2019 年，DRIFTAE 应运而生，使命简单而明确：为收藏家甄选全球最优秀的经典老爷车。每一辆车都经过严格筛选、专业鉴定，并以画廊展览般的标准呈现。',
+            'What started as a personal passion for automotive excellence has evolved into a global destination for discerning collectors. Our founder, a lifelong car enthusiast, recognized that the market lacked a curated platform for classic automobiles — one that treats every vehicle with the reverence of a gallery exhibition.',
+            'In 2019, DRIFTAE was born with a simple mission: to connect collectors with the finest classic and vintage automobiles from around the world. Every vehicle we offer is rigorously vetted, professionally inspected, and presented with museum-grade care.',
           ]}
           image="/images/about-craft.png"
           imageLeft={false}
         />
 
         <StorySection
-          title="匠心甄选"
+          title="Curated Excellence"
           paragraphs={[
-            '我们与全球顶级经典车经销商、拍卖行和私人收藏家保持紧密合作，确保每一辆车源真实可靠、手续齐全。我们的甄选标准毫不妥协：只有车况优良、历史清晰、具有收藏价值的经典车才能进入我们的展厅。',
-            '每辆车都配有详细的鉴定报告、高清摄影和完整的历史档案。我们相信，在收藏经典老爷车时，透明度至关重要。',
+            'We maintain close relationships with the world\'s leading classic car dealers, auction houses, and private collectors — ensuring every vehicle is authentic, fully documented, and legally clear. Our selection criteria are uncompromising: only vehicles with exceptional condition, clear provenance, and genuine collector value enter our showroom.',
+            'Each listing includes a comprehensive inspection report, high-resolution photography, and complete historical documentation. We believe transparency is essential when investing in automotive heritage.',
           ]}
           image="/images/collection-lifestyle.png"
           imageLeft={true}
         />
 
         <StorySection
-          title="全球收藏家社区"
+          title="Global Community"
           paragraphs={[
-            '如今，DRIFTAE 已为全球超过 85 个国家的收藏家提供服务。我们的客户从首次购买经典车的入门者，到追寻数十年梦想的资深藏家。我们深知，每一次交易都代表着对汽车历史的情感连接。',
-            '我们的专业顾问团队提供个性化服务——无论是帮您选择第一辆经典车、提供保养与存储建议，还是协助寻找稀有的传世之作。',
+            'Today, DRIFTAE serves collectors in over 85 countries. Our community ranges from first-time buyers seeking their dream classic to seasoned collectors completing decades-long pursuits. We understand that every acquisition represents both a financial investment and an emotional connection to automotive history.',
+            'Our dedicated advisory team provides personalized guidance — whether you need help selecting your first classic, advice on storage and maintenance, or assistance tracking down a rare automotive treasure.',
           ]}
           image="/images/hero-showroom.png"
           imageLeft={false}
           stats={[
-            { value: '10,000+', label: '收藏家' },
-            { value: '85', label: '国家' },
-            { value: '98%', label: '满意度' },
+            { value: '10,000+', label: 'Collectors' },
+            { value: '85', label: 'Countries' },
+            { value: '98%', label: 'Satisfaction' },
           ]}
         />
       </div>

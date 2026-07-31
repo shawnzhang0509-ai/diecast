@@ -23,9 +23,9 @@ export default function Navigation() {
   const isHome = location.pathname === '/';
 
   const navItems = [
-    { label: '收藏', href: '/#new-arrivals' },
-    { label: '最新上架', href: '/#new-arrivals' },
-    { label: '关于我们', href: '/about' },
+    { label: 'Collection', href: '/#new-arrivals' },
+    { label: 'New Arrivals', href: '/#new-arrivals' },
+    { label: 'About', href: '/about' },
   ];
 
   return (
