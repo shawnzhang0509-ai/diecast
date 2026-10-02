@@ -78,6 +78,29 @@ function slugId(raw) {
   return `r2-${raw}`.replace(/[^\w-]+/g, '-').toLowerCase();
 }
 
+/** Folder `06-太阳星…/` → stable id `r2-06` (relist-safe). */
+function stableIdFromGroupKey(groupKey) {
+  const num = groupKey.match(/^(\d+)/);
+  if (num) return `r2-${num[1].padStart(2, '0')}`;
+  return slugId(groupKey);
+}
+
+function titleFromGroupKey(groupKey) {
+  return groupKey.replace(/^\d+[-_\s]+/, '').trim() || groupKey;
+}
+
+function sortImageKeys(keys) {
+  const rank = (key) => {
+    const base = key.split('/').pop() ?? key;
+    if (/主图/i.test(base)) return 0;
+    if (/cover/i.test(base)) return 1;
+    if (/^webwx/i.test(base)) return 2;
+    if (/^\d+\.(jpe?g|png|webp)$/i.test(base)) return 4;
+    return 3;
+  };
+  return [...keys].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, 'en', { numeric: true }));
+}
+
 function groupIntoProducts(keys) {
   const imageKeys = keys.filter((k) => IMAGE_EXT.test(k) && k !== 'products.json');
   const groups = new Map();
@@ -95,18 +118,11 @@ function groupIntoProducts(keys) {
     groups.get(groupKey).push(key);
   }
 
-  for (const arr of groups.values()) {
-    arr.sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
+  for (const [k, arr] of groups) {
+    groups.set(k, sortImageKeys(arr));
   }
 
   return groups;
-}
-
-function titleFromKey(key, groupKey) {
-  const filename = key.split('/').pop() ?? key;
-  let name = filename.replace(IMAGE_EXT, '');
-  name = name.replace(/^\d+[-_\s]+/, '');
-  return name.trim() || groupKey;
 }
 
 function loadOverrides() {
@@ -132,10 +148,9 @@ async function main() {
   const products = [...groups.entries()]
     .sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
     .map(([groupKey, keysForProduct]) => {
-      const primaryKey = keysForProduct[0];
-      const name = titleFromKey(primaryKey, groupKey);
       const images = keysForProduct.map(publicUrlFromKey);
-      const id = slugId(groupKey);
+      const id = stableIdFromGroupKey(groupKey);
+      const name = titleFromGroupKey(groupKey);
       const o = overrides[id] ?? {};
 
       return {
