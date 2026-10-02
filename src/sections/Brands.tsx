@@ -1,11 +1,14 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { brands } from '../data/products';
+import { deriveBrands } from '../data/products';
+import { useProducts } from '../context/ProductsContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Brands() {
+  const { products } = useProducts();
+  const brands = deriveBrands(products);
   const sectionRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
