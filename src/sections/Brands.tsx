@@ -52,7 +52,7 @@ export default function Brands() {
             Legendary Marques
           </h2>
           <p className="mx-auto mt-4 max-w-[600px] font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
-            We focus on the world's most iconic automotive brands — each representing the pinnacle of motoring's golden age.
+            Diecast models of the marques we love — from WRC legends to modern classics.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export default function Brands() {
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className="group flex flex-col items-center justify-center border border-[#1F1F1F] py-12 transition-colors duration-300 hover:bg-[#141414] md:py-16"
+              className="group flex flex-col items-center justify-center rounded-xl border border-[#1F1F1F] py-12 transition-colors duration-300 hover:border-driftae-gold/20 hover:bg-[#141414] md:py-16"
             >
               <h3 className="font-display text-[18px] font-light tracking-[0.1em] text-[#F7F7F7] transition-colors duration-300 group-hover:text-[#C7A96B] md:text-[20px]">
                 {brand.name}

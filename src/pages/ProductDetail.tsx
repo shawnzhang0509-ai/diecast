@@ -6,7 +6,7 @@ import { ShieldCheck, Truck, RotateCcw, Headphones, Heart, ExternalLink } from '
 import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
 import ProductImage from '../components/ProductImage';
-import { productMetaLine } from '../data/products';
+import { productMetaLine, extractMarque } from '../data/products';
 
 function RelatedCard({ product }: { product: Product }) {
   return (
@@ -81,7 +81,7 @@ export default function ProductDetail() {
           <span>/</span>
           <span className="cursor-pointer transition-colors hover:text-driftae-white">Collection</span>
           <span>/</span>
-          <span className="text-driftae-white">{product.brand}</span>
+          <span className="text-driftae-white">{extractMarque(product) || product.brand}</span>
         </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
@@ -114,7 +114,7 @@ export default function ProductDetail() {
           <div className="lg:col-span-2 lg:pl-8">
             <div className="mb-3 flex items-center gap-2">
               <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-driftae-gold">
-                {product.brand.toUpperCase()}
+                {(extractMarque(product) || product.brand).toUpperCase()}
               </span>
             </div>
 
