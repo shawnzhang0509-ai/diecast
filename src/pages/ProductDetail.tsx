@@ -12,10 +12,10 @@ function RelatedCard({ product }: { product: Product }) {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group block bg-driftae-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+      className="group block overflow-hidden rounded-2xl border border-white/[0.06] bg-driftae-black p-2 transition-all duration-300 hover:-translate-y-1 hover:border-driftae-gold/20 hover:shadow-[0_12px_36px_rgba(0,0,0,0.4)]"
       data-cursor-hover
     >
-      <ProductImage src={product.image} alt={product.name} aspectRatio="4/3" hoverScale />
+      <ProductImage src={product.image} alt={product.name} aspectRatio="4/3" hoverScale className="rounded-xl" />
       <div style={{ padding: 20 }}>
         <p className="font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">{product.brand}</p>
         <h3 className="mt-1 font-display text-[14px] font-medium leading-[1.4] text-driftae-white">{product.name}</h3>
@@ -91,7 +91,7 @@ export default function ProductDetail() {
               alt={product.name}
               aspectRatio="4/3"
               padding="lg"
-              className="bg-driftae-surface"
+              className="rounded-2xl bg-driftae-surface"
             />
 
             {product.images.length > 1 && (
@@ -100,11 +100,11 @@ export default function ProductDetail() {
                   <button
                     key={i}
                     onClick={() => setActiveImage(i)}
-                    className={`relative h-20 w-20 flex-shrink-0 overflow-hidden border-2 transition-colors ${
-                      i === activeImage ? 'border-driftae-gold' : 'border-transparent'
+                    className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 bg-[#1a1a1a] transition-colors ${
+                      i === activeImage ? 'border-driftae-gold' : 'border-white/10'
                     }`}
                   >
-                    <img src={img} alt="" className="h-full w-full object-contain bg-[#1a1a1a] p-0.5" />
+                    <img src={img} alt="" className="h-full w-full object-contain p-1" />
                   </button>
                 ))}
               </div>

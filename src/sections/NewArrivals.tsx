@@ -17,10 +17,16 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group block bg-[#0D0D0D] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+      className="group block overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0D0D0D] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-driftae-gold/20 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
       data-cursor-hover
     >
-      <ProductImage src={product.image} alt={product.name} aspectRatio="4/3" hoverScale />
+      <ProductImage
+        src={product.image}
+        alt={product.name}
+        aspectRatio="4/3"
+        hoverScale
+        className="rounded-xl"
+      />
 
       <div style={{ padding: 24 }}>
         {statusLabel && (

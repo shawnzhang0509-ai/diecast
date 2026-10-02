@@ -52,8 +52,6 @@ export default function FeaturedModel() {
         ? [{ label: 'Brand', value: featured.brand }]
         : [];
 
-  const headline = featured.name.split(/\s+/).slice(0, 3);
-
   return (
     <section
       ref={sectionRef}
@@ -62,24 +60,16 @@ export default function FeaturedModel() {
     >
       <div className="mx-auto flex min-h-screen flex-col lg:flex-row" style={{ maxWidth: 1400 }}>
         <div className="relative flex-1 lg:max-w-[55%]">
-          <div className="relative h-[50vh] lg:h-screen">
-            <ProductImage src={featured.image} alt={featured.name} fill padding="lg" className="h-full" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
-            <div className="absolute bottom-12 left-8 right-8">
-              <h2
-                className="font-display text-[48px] font-light uppercase leading-[0.9] tracking-[0.1em] text-white sm:text-[64px] lg:text-[80px]"
-                style={{
-                  textShadow: '0 4px 30px rgba(0,0,0,0.5)',
-                  WebkitTextStroke: '1px rgba(255,255,255,0.1)',
-                }}
-              >
-                {headline.map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    {i < headline.length - 1 && <br />}
-                  </span>
-                ))}
-              </h2>
+          <div className="relative flex h-[50vh] items-stretch p-4 sm:p-6 lg:h-screen lg:p-10">
+            <div className="relative min-h-0 flex-1">
+              <ProductImage
+                src={featured.image}
+                alt={featured.name}
+                fill
+                padding="lg"
+                className="h-full rounded-2xl"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-[#141414]/90 via-transparent to-transparent" />
             </div>
           </div>
         </div>

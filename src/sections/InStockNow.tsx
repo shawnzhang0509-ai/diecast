@@ -58,7 +58,7 @@ export default function InStockNow() {
             <Link
               key={`${product.id}-${index}`}
               to={`/product/${product.id}`}
-              className="group relative flex-shrink-0"
+              className="group relative flex-shrink-0 overflow-hidden rounded-2xl border border-white/[0.06] bg-[#111111] p-3 transition-all duration-300 hover:border-driftae-gold/25 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
               style={{ width: 340 }}
               data-cursor-hover
             >
@@ -69,7 +69,7 @@ export default function InStockNow() {
                   aspectRatio="1/1"
                   padding="md"
                   hoverScale
-                  className="rounded-sm"
+                  className="rounded-xl"
                 />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-500 group-hover:bg-black/30">
                   <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -77,7 +77,7 @@ export default function InStockNow() {
                   </span>
                 </div>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 px-1 pb-1">
                 <p className="font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
                   {productMetaLine(product)}
                 </p>
