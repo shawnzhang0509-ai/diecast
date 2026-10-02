@@ -156,11 +156,33 @@ async function main() {
     });
 
   const outPath = join(root, 'public', 'products.json');
-  writeFileSync(
-    outPath,
-    JSON.stringify({ generatedAt: new Date().toISOString(), products }, null, 2),
+  const catalogBody = JSON.stringify(
+    { generatedAt: new Date().toISOString(), products },
+    null,
+    2,
   );
-  console.log(`✓ ${products.length} products, ${keys.filter((k) => IMAGE_EXT.test(k)).length} images → public/products.json`);
+  writeFileSync(outPath, catalogBody);
+  console.log(
+    `✓ ${products.length} products, ${keys.filter((k) => IMAGE_EXT.test(k)).length} images → public/products.json`,
+  );
+
+  if (process.env.R2_UPLOAD_CATALOG === '1') {
+    const { S3Client, PutObjectCommand } = await import('@aws-sdk/client-s3');
+    const client = new S3Client({
+      region: 'auto',
+      endpoint: `https://${ACCOUNT_ID}.r2.cloudflarestorage.com`,
+      credentials: { accessKeyId: ACCESS_KEY, secretAccessKey: SECRET_KEY },
+    });
+    await client.send(
+      new PutObjectCommand({
+        Bucket: BUCKET,
+        Key: 'products.json',
+        Body: catalogBody,
+        ContentType: 'application/json',
+      }),
+    );
+    console.log(`✓ uploaded products.json → r2://${BUCKET}/products.json`);
+  }
 }
 
 main().catch((err) => {

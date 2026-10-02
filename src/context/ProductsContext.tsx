@@ -13,6 +13,8 @@ import { applyTrademeLinks, type TrademeLinksFile } from '../lib/trademe-links';
 const catalogUrl =
   import.meta.env.VITE_PRODUCTS_URL?.trim() || `${import.meta.env.BASE_URL}products.json`;
 
+const trademeLinksEnabled = import.meta.env.VITE_TRADEME_LINKS === 'true';
+
 const linksUrl =
   import.meta.env.VITE_TRADEME_LINKS_URL?.trim() ||
   `${import.meta.env.BASE_URL}trademe-links.json`;
@@ -43,19 +45,18 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
 
     (async () => {
       try {
-        const [catalogRes, linksRes] = await Promise.all([
-          fetch(catalogUrl, { cache: 'no-cache' }),
-          fetch(linksUrl, { cache: 'no-cache' }),
-        ]);
-
+        const catalogRes = await fetch(catalogUrl, { cache: 'no-cache' });
         if (!catalogRes.ok) throw new Error(`Could not load catalog (${catalogRes.status})`);
 
         const data = (await catalogRes.json()) as ProductsCatalog;
         let base = Array.isArray(data.products) ? data.products : [];
 
-        if (linksRes.ok) {
-          const linksRaw = (await linksRes.json()) as TrademeLinksFile;
-          base = applyTrademeLinks(base, stripMetaKeys(linksRaw));
+        if (trademeLinksEnabled) {
+          const linksRes = await fetch(linksUrl, { cache: 'no-cache' });
+          if (linksRes.ok) {
+            const linksRaw = (await linksRes.json()) as TrademeLinksFile;
+            base = applyTrademeLinks(base, stripMetaKeys(linksRaw));
+          }
         }
 
         if (!cancelled) {
