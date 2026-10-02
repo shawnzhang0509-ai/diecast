@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { formatPrice, pickFeaturedProduct } from '../data/products';
 import BrandTagline from '../components/BrandTagline';
 import { useProducts } from '../context/ProductsContext';
+import ProductImage from '../components/ProductImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,11 +63,7 @@ export default function FeaturedModel() {
       <div className="mx-auto flex min-h-screen flex-col lg:flex-row" style={{ maxWidth: 1400 }}>
         <div className="relative flex-1 lg:max-w-[55%]">
           <div className="relative h-[50vh] lg:h-screen">
-            <img
-              src={featured.image}
-              alt={featured.name}
-              className="h-full w-full object-cover"
-            />
+            <ProductImage src={featured.image} alt={featured.name} fill padding="lg" className="h-full" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
             <div className="absolute bottom-12 left-8 right-8">
               <h2

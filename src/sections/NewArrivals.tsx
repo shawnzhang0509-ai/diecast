@@ -3,9 +3,10 @@ import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
-import { formatPrice, pickNewArrivals } from '../data/products';
+import { formatPrice, pickNewArrivals, productMetaLine } from '../data/products';
 import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
+import ProductImage from '../components/ProductImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,13 +20,7 @@ function ProductCard({ product }: { product: Product }) {
       className="group block bg-[#0D0D0D] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
       data-cursor-hover
     >
-      <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
-        <img
-          src={product.image}
-          alt={product.name}
-          className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-105"
-        />
-      </div>
+      <ProductImage src={product.image} alt={product.name} aspectRatio="4/3" hoverScale />
 
       <div style={{ padding: 24 }}>
         {statusLabel && (
@@ -37,7 +32,7 @@ function ProductCard({ product }: { product: Product }) {
           {product.name}
         </h3>
         <p className="mt-1 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
-          {product.year} · {product.mileage}
+          {productMetaLine(product)}
         </p>
         <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#C7A96B]">
           {formatPrice(product.price)}
@@ -107,7 +102,7 @@ export default function NewArrivals() {
           )}
           {!loading && newArrivals.length === 0 && (
             <p className="col-span-full font-body text-sm text-driftae-muted">
-              暂无商品。在电脑上运行 <code className="text-driftae-gold">npm run sync:r2</code> 从 R2 同步。
+              No models in catalog yet. Run sync from R2 to populate the shop.
             </p>
           )}
           {newArrivals.map((product) => (

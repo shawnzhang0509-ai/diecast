@@ -6,4 +6,5 @@ export {
   pickNewArrivals,
   pickMarqueeProducts,
   pickFeaturedProduct,
+  productMetaLine,
 } from '../lib/product-utils';

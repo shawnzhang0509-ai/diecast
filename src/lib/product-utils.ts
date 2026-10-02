@@ -17,7 +17,7 @@ export function getRelatedProducts(
 }
 
 export function formatPrice(price: number): string {
-  if (!price || price <= 0) return '询价';
+  if (!price || price <= 0) return 'Inquire';
   if (price >= 1_000_000) {
     return `NZ$${(price / 1_000_000).toFixed(price % 1_000_000 === 0 ? 0 : 1)}M`;
   }
@@ -52,4 +52,9 @@ export function pickMarqueeProducts(products: Product[], limit = 12): Product[] 
 
 export function pickFeaturedProduct(products: Product[]): Product | undefined {
   return products.find((p) => p.status === 'new') ?? products[0];
+}
+
+export function productMetaLine(product: Product): string {
+  const scale = product.specs?.Scale;
+  return [product.brand, product.year || scale].filter(Boolean).join(' · ');
 }

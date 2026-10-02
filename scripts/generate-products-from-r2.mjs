@@ -9,6 +9,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { buildEnglishCopy } from './product-copy.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -145,30 +146,55 @@ async function main() {
   const keys = await listAllKeys();
   const groups = groupIntoProducts(keys);
 
-  const products = [...groups.entries()]
-    .sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
-    .map(([groupKey, keysForProduct]) => {
+  const { S3Client, GetObjectCommand } = await import('@aws-sdk/client-s3');
+  const s3 = new S3Client({
+    region: 'auto',
+    endpoint: `https://${ACCOUNT_ID}.r2.cloudflarestorage.com`,
+    credentials: { accessKeyId: ACCESS_KEY, secretAccessKey: SECRET_KEY },
+  });
+
+  async function readIntro(groupKey) {
+    const introKey = keys.find(
+      (k) => k.startsWith(`${groupKey}/`) && /产品介绍\.txt$/i.test(k),
+    );
+    if (!introKey) return '';
+    try {
+      const res = await s3.send(new GetObjectCommand({ Bucket: BUCKET, Key: introKey }));
+      return await res.Body.transformToString('utf8');
+    } catch {
+      return '';
+    }
+  }
+
+  const entries = [...groups.entries()].sort(([a], [b]) =>
+    a.localeCompare(b, 'en', { numeric: true }),
+  );
+
+  const products = await Promise.all(
+    entries.map(async ([groupKey, keysForProduct]) => {
       const images = keysForProduct.map(publicUrlFromKey);
       const id = stableIdFromGroupKey(groupKey);
-      const name = titleFromGroupKey(groupKey);
+      const introRaw = await readIntro(groupKey);
+      const en = buildEnglishCopy({ productId: id, folderName: groupKey, introRaw });
       const o = overrides[id] ?? {};
 
       return {
         id,
-        name: o.name ?? name,
-        brand: o.brand ?? 'Driftae',
-        brandShort: o.brandShort ?? 'Driftae',
-        year: o.year ?? '',
-        mileage: o.mileage ?? '',
+        name: o.name ?? en.name,
+        brand: o.brand ?? en.brand,
+        brandShort: o.brandShort ?? en.brandShort,
+        year: o.year ?? en.year,
+        mileage: '',
         price: typeof o.price === 'number' ? o.price : 0,
         image: images[0],
         images,
         status: o.status ?? 'instock',
-        description: o.description ?? name,
-        specs: o.specs ?? {},
+        description: o.description ?? en.description,
+        specs: { ...en.specs, ...(o.specs ?? {}) },
         tags: o.tags ?? [],
       };
-    });
+    }),
+  );
 
   const outPath = join(root, 'public', 'products.json');
   const catalogBody = JSON.stringify(
