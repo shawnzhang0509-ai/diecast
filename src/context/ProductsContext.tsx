@@ -8,9 +8,14 @@ import {
 } from 'react';
 import type { Product, ProductsCatalog } from '../types/product';
 import { getRelatedProducts as relatedFromList } from '../lib/product-utils';
+import { applyTrademeLinks, type TrademeLinksFile } from '../lib/trademe-links';
 
 const catalogUrl =
   import.meta.env.VITE_PRODUCTS_URL?.trim() || `${import.meta.env.BASE_URL}products.json`;
+
+const linksUrl =
+  import.meta.env.VITE_TRADEME_LINKS_URL?.trim() ||
+  `${import.meta.env.BASE_URL}trademe-links.json`;
 
 type ProductsContextValue = {
   products: Product[];
@@ -22,6 +27,12 @@ type ProductsContextValue = {
 
 const ProductsContext = createContext<ProductsContextValue | null>(null);
 
+function stripMetaKeys(raw: TrademeLinksFile): TrademeLinksFile {
+  return Object.fromEntries(
+    Object.entries(raw).filter(([key]) => !key.startsWith('_')),
+  );
+}
+
 export function ProductsProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -32,11 +43,23 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
 
     (async () => {
       try {
-        const res = await fetch(catalogUrl, { cache: 'no-cache' });
-        if (!res.ok) throw new Error(`Could not load catalog (${res.status})`);
-        const data = (await res.json()) as ProductsCatalog;
+        const [catalogRes, linksRes] = await Promise.all([
+          fetch(catalogUrl, { cache: 'no-cache' }),
+          fetch(linksUrl, { cache: 'no-cache' }),
+        ]);
+
+        if (!catalogRes.ok) throw new Error(`Could not load catalog (${catalogRes.status})`);
+
+        const data = (await catalogRes.json()) as ProductsCatalog;
+        let base = Array.isArray(data.products) ? data.products : [];
+
+        if (linksRes.ok) {
+          const linksRaw = (await linksRes.json()) as TrademeLinksFile;
+          base = applyTrademeLinks(base, stripMetaKeys(linksRaw));
+        }
+
         if (!cancelled) {
-          setProducts(Array.isArray(data.products) ? data.products : []);
+          setProducts(base);
           setError(null);
         }
       } catch (e) {

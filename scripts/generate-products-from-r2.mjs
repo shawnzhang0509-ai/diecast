@@ -152,7 +152,6 @@ async function main() {
         description: o.description ?? name,
         specs: o.specs ?? {},
         tags: o.tags ?? [],
-        ...(o.trademeUrl ? { trademeUrl: o.trademeUrl } : {}),
       };
     });
 

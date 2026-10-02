@@ -14,7 +14,9 @@ export interface Product {
   description: string;
   specs: Record<string, string>;
   tags: string[];
+  /** Resolved at runtime from trademe-links.json (changes when you relist). */
   trademeUrl?: string;
+  trademeListingId?: string;
 }
 
 export interface ProductsCatalog {
