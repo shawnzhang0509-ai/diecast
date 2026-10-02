@@ -5,6 +5,8 @@ import { formatPrice } from '../data/products';
 import { ShieldCheck, Truck, RotateCcw, Headphones, Heart, ExternalLink } from 'lucide-react';
 import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
+import ProductImage from '../components/ProductImage';
+import { productMetaLine } from '../data/products';
 
 function RelatedCard({ product }: { product: Product }) {
   return (
@@ -13,13 +15,7 @@ function RelatedCard({ product }: { product: Product }) {
       className="group block bg-driftae-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
       data-cursor-hover
     >
-      <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
-        <img
-          src={product.image}
-          alt={product.name}
-          className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-105"
-        />
-      </div>
+      <ProductImage src={product.image} alt={product.name} aspectRatio="4/3" hoverScale />
       <div style={{ padding: 20 }}>
         <p className="font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">{product.brand}</p>
         <h3 className="mt-1 font-display text-[14px] font-medium leading-[1.4] text-driftae-white">{product.name}</h3>
@@ -73,7 +69,7 @@ export default function ProductDetail() {
     );
   }
 
-  const subtitle = [product.year, product.mileage, product.edition].filter(Boolean).join(' · ');
+  const subtitle = productMetaLine(product) || product.edition || '';
 
   const specEntries = Object.entries(product.specs);
 
@@ -90,13 +86,13 @@ export default function ProductDetail() {
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <div className="relative overflow-hidden bg-driftae-surface" style={{ aspectRatio: '4/3' }}>
-              <img
-                src={product.images[activeImage]}
-                alt={product.name}
-                className="h-full w-full object-cover transition-opacity duration-300"
-              />
-            </div>
+            <ProductImage
+              src={product.images[activeImage]}
+              alt={product.name}
+              aspectRatio="4/3"
+              padding="lg"
+              className="bg-driftae-surface"
+            />
 
             {product.images.length > 1 && (
               <div className="mt-4 flex gap-3 overflow-x-auto">
@@ -108,7 +104,7 @@ export default function ProductDetail() {
                       i === activeImage ? 'border-driftae-gold' : 'border-transparent'
                     }`}
                   >
-                    <img src={img} alt="" className="h-full w-full object-cover" />
+                    <img src={img} alt="" className="h-full w-full object-contain bg-[#1a1a1a] p-0.5" />
                   </button>
                 ))}
               </div>
@@ -158,12 +154,12 @@ export default function ProductDetail() {
                   rel="noopener noreferrer"
                   className="btn-gold flex w-full items-center justify-center gap-2 py-4"
                 >
-                  在 Trade Me 购买
+                  Buy on Trade Me
                   <ExternalLink size={16} strokeWidth={1.5} />
                 </a>
               ) : (
                 <button type="button" className="btn-gold w-full py-4">
-                  联系购买
+                  Inquire to purchase
                 </button>
               )}
               <button
@@ -177,10 +173,10 @@ export default function ProductDetail() {
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
-                { icon: ShieldCheck, label: 'Authenticated' },
-                { icon: Truck, label: 'Insured Shipping' },
-                { icon: RotateCcw, label: 'Full Inspection' },
-                { icon: Headphones, label: 'Dedicated Advisor' },
+                { icon: ShieldCheck, label: 'Authentic diecast' },
+                { icon: Truck, label: 'NZ shipping' },
+                { icon: RotateCcw, label: 'Carefully packed' },
+                { icon: Headphones, label: 'Questions welcome' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2">
                   <Icon size={16} strokeWidth={1.5} className="flex-shrink-0 text-driftae-gold" />

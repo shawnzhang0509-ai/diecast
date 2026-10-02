@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
-import { formatPrice, pickMarqueeProducts } from '../data/products';
+import { formatPrice, pickMarqueeProducts, productMetaLine } from '../data/products';
+import ProductImage from '../components/ProductImage';
 import { useProducts } from '../context/ProductsContext';
 
 export default function InStockNow() {
@@ -42,7 +43,7 @@ export default function InStockNow() {
           In Stock Now
         </h2>
         <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">
-          Limited classic vehicles available for immediate delivery.
+          1:18 diecast models — available to ship from New Zealand.
         </p>
       </div>
 
@@ -61,22 +62,24 @@ export default function InStockNow() {
               style={{ width: 340 }}
               data-cursor-hover
             >
-              <div className="relative overflow-hidden bg-[#141414]" style={{ aspectRatio: '3/4' }}>
-                <img
+              <div className="relative">
+                <ProductImage
                   src={product.image}
                   alt={product.name}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-105"
+                  aspectRatio="1/1"
+                  padding="md"
+                  hoverScale
+                  className="rounded-sm"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-500 group-hover:bg-black/30">
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-500 group-hover:bg-black/30">
                   <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     View
                   </span>
                 </div>
               </div>
-
               <div className="mt-4">
                 <p className="font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
-                  {product.brand} · {product.year}
+                  {productMetaLine(product)}
                 </p>
                 <h3 className="mt-1 font-display text-[16px] font-medium leading-[1.4] tracking-[0.05em] text-[#F7F7F7]">
                   {product.name}

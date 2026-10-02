@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-02T03:29:39.163Z",
+  "generatedAt": "2026-10-02T03:38:50.338Z",
   "products": [
     {
       "id": "r2-06",
-      "name": "太阳星 斯巴鲁 翼豹 S6 伯恩斯 WRC拉力赛车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
+      "name": "Sun Star Subaru Impreza S6 Richard Burns WRC Rally car diecast model",
+      "brand": "Sun Star",
+      "brandShort": "Sun Star",
       "year": "",
       "mileage": "",
       "price": 0,
@@ -24,15 +24,22 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/06-%E5%A4%AA%E9%98%B3%E6%98%9F%20%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20S6%20%E4%BC%AF%E6%81%A9%E6%96%AF%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/1745359855.jpg"
       ],
       "status": "instock",
-      "description": "太阳星 斯巴鲁 翼豹 S6 伯恩斯 WRC拉力赛车 合金汽车模型",
-      "specs": {},
+      "description": "2000 WRC Rally of Portugal winner driven by Richard Burns. Burns often removed the left mirror on his rally cars; the model correctly omits the left mirror.",
+      "specs": {
+        "Brand": "Sun Star",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Suspension on wheels, Open grille mesh, Open front vent detail",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
+        "Packaging": "Foam inner tray with outer colour box"
+      },
       "tags": []
     },
     {
       "id": "r2-07",
-      "name": "太阳星 斯巴鲁 翼豹 S5 麦克雷 WRC97拉力赛车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
+      "name": "Sun Star Subaru Impreza S5 Colin McRae WRC97rally car diecast model",
+      "brand": "Sun Star",
+      "brandShort": "Sun Star",
       "year": "",
       "mileage": "",
       "price": 0,
@@ -49,16 +56,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/07-%E5%A4%AA%E9%98%B3%E6%98%9F%20%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20S5%20%E9%BA%A6%E5%85%8B%E9%9B%B7%20WRC97%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/989825496.jpg"
       ],
       "status": "instock",
-      "description": "太阳星 斯巴鲁 翼豹 S5 麦克雷 WRC97拉力赛车 合金汽车模型",
-      "specs": {},
+      "description": "1997 WRC RAC Rally of Great Britain winner driven by Colin McRae. McRae preferred to remove the right mirror; the model omits the right mirror.",
+      "specs": {
+        "Brand": "Sun Star",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Suspension on wheels, Open grille mesh, Open front vent detail",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
+        "Packaging": "Foam inner tray with outer colour box"
+      },
       "tags": []
     },
     {
       "id": "r2-13",
-      "name": "太阳星 DeLorean DMC-12 1981 回到未来原型车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "Sun Star DeLorean DMC-12 1981 Back to the Future Prototype diecast model",
+      "brand": "Sun Star",
+      "brandShort": "Sun Star",
+      "year": "1981",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/13-%E5%A4%AA%E9%98%B3%E6%98%9F%20DeLorean%20DMC-12%201981%20%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5%E5%8E%9F%E5%9E%8B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/559607899.jpg",
@@ -71,16 +85,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/13-%E5%A4%AA%E9%98%B3%E6%98%9F%20DeLorean%20DMC-12%201981%20%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5%E5%8E%9F%E5%9E%8B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/1890069520.jpg"
       ],
       "status": "instock",
-      "description": "太阳星 DeLorean DMC-12 1981 回到未来原型车 合金汽车模型",
-      "specs": {},
+      "description": "DeLorean DMC-12 as the Back to the Future hero car. Opening doors; steering linked to the front wheels. Semi-transparent display packaging with base.",
+      "specs": {
+        "Brand": "SunStar",
+        "Scale": "1:18",
+        "Material": "diecast metal body, metal chassis, 内部结构塑料, rubber tires",
+        "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels",
+        "Dimensions": "Length approx. 25 cm,, width approx. 10 cm,, height approx. 7 cm",
+        "Packaging": "Semi-transparent display box with base"
+      },
       "tags": []
     },
     {
       "id": "r2-15",
-      "name": "NOREV 保时捷 911 Speedster 1993 跑车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "NOREV Porsche 911 Speedster 1993 sports car diecast model",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1993",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/15-NOREV%20%E4%BF%9D%E6%97%B6%E6%8D%B7%20911%20Speedster%201993%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/%E4%B8%BB%E5%9B%BE.jpg",
@@ -97,16 +118,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/15-NOREV%20%E4%BF%9D%E6%97%B6%E6%8D%B7%20911%20Speedster%201993%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/2115487086.jpg"
       ],
       "status": "instock",
-      "description": "NOREV 保时捷 911 Speedster 1993 跑车 合金汽车模型",
-      "specs": {},
+      "description": "1993 Porsche 911 Speedster in 1:18 scale by NOREV. Opening doors, flocked interior, steering function. Foam tray packaging.",
+      "specs": {
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels；Flocked interior",
+        "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 8 cm",
+        "Packaging": "Foam tray packaging"
+      },
       "tags": []
     },
     {
       "id": "r2-22",
-      "name": "NOREV 大众 VW Karmann Ghia 1500 1963 跑车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "NOREV Volkswagen VW Karmann Ghia 1500 1963 sports car diecast model",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1963",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/22-NOREV%20%E5%A4%A7%E4%BC%97%20VW%20Karmann%20Ghia%201500%201963%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/%E4%B8%BB%E5%9B%BE.jpg",
@@ -122,16 +150,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/22-NOREV%20%E5%A4%A7%E4%BC%97%20VW%20Karmann%20Ghia%201500%201963%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/2117587556.jpg"
       ],
       "status": "instock",
-      "description": "NOREV 大众 VW Karmann Ghia 1500 1963 跑车 合金汽车模型",
-      "specs": {},
+      "description": "1963 Volkswagen Karmann Ghia 1500 by NOREV. Rear-engine layout with opening engine bay panel. All doors open with steering function.",
+      "specs": {
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, No suspension on wheels, Rear-engine layout, Opening engine bay panel",
+        "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 7 cm",
+        "Packaging": "Foam inner tray with outer carton"
+      },
       "tags": []
     },
     {
       "id": "r2-28",
-      "name": "NOREV 奔驰 R107 450SL 1975 跑车 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "NOREV Mercedes-Benz R107 450SL 1975 sports car diecast model",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1975",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/28-NOREV%20%E5%A5%94%E9%A9%B0%20R107%20450SL%201975%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/%E4%B8%BB%E5%9B%BE.jpg",
@@ -146,16 +181,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/28-NOREV%20%E5%A5%94%E9%A9%B0%20R107%20450SL%201975%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/2064165079.jpg"
       ],
       "status": "instock",
-      "description": "NOREV 奔驰 R107 450SL 1975 跑车 合金汽车模型",
-      "specs": {},
+      "description": "1975 Mercedes-Benz R107 450SL by NOREV. Opening doors, flocked interior, removable hardtop included. Clear display case with base.",
+      "specs": {
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Flocked interior, Removable hardtop included",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 7 cm",
+        "Packaging": "Clear display case with base"
+      },
       "tags": []
     },
     {
       "id": "r2-30",
-      "name": "NOREV 阿尔法 Alfa Romeo Giulia TI 1964 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "NOREV Alfa Romeo Alfa Romeo Giulia TI 1964 diecast model",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1964",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/30-NOREV%20%E9%98%BF%E5%B0%94%E6%B3%95%20Alfa%20Romeo%20Giulia%20TI%201964%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/%E4%B8%BB%E5%9B%BE.jpg",
@@ -169,16 +211,23 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/30-NOREV%20%E9%98%BF%E5%B0%94%E6%B3%95%20Alfa%20Romeo%20Giulia%20TI%201964%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/1063121020.jpg"
       ],
       "status": "instock",
-      "description": "NOREV 阿尔法 Alfa Romeo Giulia TI 1964 合金汽车模型",
-      "specs": {},
+      "description": "1964 Alfa Romeo Giulia TI by NOREV. Sealed body (doors do not open) with steering. Semi-transparent display case with base.",
+      "specs": {
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Material": "diecast metal body, plastic chassis and interior",
+        "Features": "Sealed body (doors do not open), 前轮转向, No suspension on wheels",
+        "Dimensions": "Length approx. 25 cm,, width approx. 9 cm,, height approx. 8 cm",
+        "Packaging": "半透明包装盒带底座"
+      },
       "tags": []
     },
     {
       "id": "r2-audi-sport-quattro-1985-black",
       "name": "Audi Sport Quattro 1985 black",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1985",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20black/3e92d09c7dd01b22eebc9459ea4cc3.JPG",
@@ -191,16 +240,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20black/c4cb72af95af9ab12e5e5a82bf4189.JPG"
       ],
       "status": "instock",
-      "description": "Audi Sport Quattro 1985 black",
+      "description": "1:18 scale Audi Sport Quattro 1985 black.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-audi-sport-quattro-1985-red",
       "name": "Audi Sport Quattro 1985 red",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1985",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20red/192960_1-3.jpg",
@@ -212,16 +261,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20red/192960-3.jpg"
       ],
       "status": "instock",
-      "description": "Audi Sport Quattro 1985 red",
+      "description": "1:18 scale Audi Sport Quattro 1985 red.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-audi-sport-quattro-1985-white",
       "name": "Audi Sport Quattro 1985 white",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1985",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20white/1b65fcadf02f1392b0409694cac70d.JPG",
@@ -236,16 +285,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Audi%20Sport%20Quattro%201985%20white/f38ca0015c898cb07fbe27fe80cd64.JPG"
       ],
       "status": "instock",
-      "description": "Audi Sport Quattro 1985 white",
+      "description": "1:18 scale Audi Sport Quattro 1985 white.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-ford-mustang-coupe-1966-nightmist-blue-metallic",
       "name": "Ford Mustang Coupe 1966 Nightmist Blue metallic",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1966",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Ford%20Mustang%20Coupe%201966%20Nightmist%20Blue%20metallic/Ford%20Mustang%20Coupe%201966_1.jpg",
@@ -254,16 +303,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Ford%20Mustang%20Coupe%201966%20Nightmist%20Blue%20metallic/Ford%20Mustang%20Coupe%201966_2.jpg"
       ],
       "status": "instock",
-      "description": "Ford Mustang Coupe 1966 Nightmist Blue metallic",
+      "description": "1:18 scale Ford Mustang Coupe 1966 Nightmist Blue metallic.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-mercedes-benz-300-sl-1954-blue",
       "name": "Mercedes-Benz 300 SL 1954 Blue",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1954",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Mercedes-Benz%20300%20SL%201954%20Blue/1c742a237abd767abb08c7011cfc94.JPG",
@@ -279,16 +328,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Mercedes-Benz%20300%20SL%201954%20Blue/f0ec665ee295dc483395f88c404015.JPG"
       ],
       "status": "instock",
-      "description": "Mercedes-Benz 300 SL 1954 Blue",
+      "description": "1:18 scale Mercedes-Benz 300 SL 1954 Blue.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-mercedes-benz-cle-coupe-2024-hightech-silver",
       "name": "Mercedes-Benz CLE Coupé 2024 Hightech Silver",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "2024",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Mercedes-Benz%20CLE%20Coupe%CC%81%202024%20Hightech%20Silver/183939_1.jpeg",
@@ -301,14 +350,14 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Mercedes-Benz%20CLE%20Coupe%CC%81%202024%20Hightech%20Silver/183939.jpeg"
       ],
       "status": "instock",
-      "description": "Mercedes-Benz CLE Coupé 2024 Hightech Silver",
+      "description": "1:18 scale Mercedes-Benz CLE Coupé 2024 Hightech Silver.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-mini",
       "name": "MINI",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
       "year": "",
       "mileage": "",
@@ -331,15 +380,15 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/mini-cooper-mk2-innocenti-1968-blue-ivory-mitica-mitica205005-d.jpg"
       ],
       "status": "instock",
-      "description": "MINI",
+      "description": "1:18 scale MINI.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-1-18-vw-1303-cabriolet-",
-      "name": "NOREV 1-18 大众 甲壳虫 VW 1303 Cabriolet 敞篷版 合金汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
+      "name": "NOREV 1-18 Volkswagen 甲壳虫 VW 1303 Cabriolet 敞篷版 diecast model",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
       "year": "",
       "mileage": "",
       "price": 0,
@@ -375,16 +424,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/ScreenShot_2026-08-25_100501_097.png"
       ],
       "status": "instock",
-      "description": "NOREV 1-18 大众 甲壳虫 VW 1303 Cabriolet 敞篷版 合金汽车模型",
+      "description": "1:18 scale NOREV 1-18 Volkswagen 甲壳虫 VW 1303 Cabriolet 敞篷版 diecast model.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-1-18-ford-escort-cosworth-1992-",
       "name": "NOREV 1-18 福特 Ford Escort Cosworth 1992 合金仿真汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1992",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
@@ -400,16 +449,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/ScreenShot_2026-08-25_100227_896.png"
       ],
       "status": "instock",
-      "description": "NOREV 1-18 福特 Ford Escort Cosworth 1992 合金仿真汽车模型",
+      "description": "1:18 scale NOREV 1-18 福特 Ford Escort Cosworth 1992 合金仿真汽车模型.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-alpine-a110-r-turini-2025-rmb-297",
       "name": "NOREV Alpine A110 R Turini 2025-RMB 297",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "2025",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Alpine%20A110%20R%20Turini%202025-RMB%20297/IMG_9387.JPG",
@@ -425,16 +474,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Alpine%20A110%20R%20Turini%202025-RMB%20297/IMG_9395.JPG"
       ],
       "status": "instock",
-      "description": "NOREV Alpine A110 R Turini 2025-RMB 297",
+      "description": "1:18 scale NOREV Alpine A110 R Turini 2025-RMB 297.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-ford-escort-cosworth-1992-rmb327",
       "name": "NOREV Ford Escort Cosworth 1992-RMB327",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1992",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9311.JPG",
@@ -448,16 +497,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9318.JPG"
       ],
       "status": "instock",
-      "description": "NOREV Ford Escort Cosworth 1992-RMB327",
+      "description": "1:18 scale NOREV Ford Escort Cosworth 1992-RMB327.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-ford-fiesta-xr2-1981-rmb-336",
       "name": "NOREV Ford Fiesta XR2 1981-RMB 336",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1981",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Fiesta%20XR2%201981-RMB%20336/IMG_9425.JPG",
@@ -474,16 +523,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Fiesta%20XR2%201981-RMB%20336/IMG_9434.JPG"
       ],
       "status": "instock",
-      "description": "NOREV Ford Fiesta XR2 1981-RMB 336",
+      "description": "1:18 scale NOREV Ford Fiesta XR2 1981-RMB 336.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-lancia-fulvia-1971-rmb-518",
       "name": "NOREV Lancia Fulvia 1971-RMB 518",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1971",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Lancia%20Fulvia%201971-RMB%20518/IMG_9319.JPG",
@@ -498,16 +547,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Lancia%20Fulvia%201971-RMB%20518/IMG_9337.PNG"
       ],
       "status": "instock",
-      "description": "NOREV Lancia Fulvia 1971-RMB 518",
+      "description": "1:18 scale NOREV Lancia Fulvia 1971-RMB 518.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-opel-manta-gsi-1987-rmb-386",
       "name": "NOREV Opel Manta GSi 1987-RMB 386",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1987",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Opel%20Manta%20GSi%201987-RMB%20386/IMG_9407.JPG",
@@ -521,16 +570,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Opel%20Manta%20GSi%201987-RMB%20386/IMG_9413.JPG"
       ],
       "status": "instock",
-      "description": "NOREV Opel Manta GSi 1987-RMB 386",
+      "description": "1:18 scale NOREV Opel Manta GSi 1987-RMB 386.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-peugeot-306-s16-1997-rmb-374",
       "name": "NOREV Peugeot 306 S16 1997-RMB 374",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1997",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Peugeot%20306%20S16%201997-RMB%20374/IMG_9414.JPG",
@@ -548,16 +597,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Peugeot%20306%20S16%201997-RMB%20374/IMG_9424.JPG"
       ],
       "status": "instock",
-      "description": "NOREV Peugeot 306 S16 1997-RMB 374",
+      "description": "1:18 scale NOREV Peugeot 306 S16 1997-RMB 374.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-porsche-911-turbo-3-3-1980--rmb-518",
       "name": "NOREV Porsche 911 Turbo 3.3 1980 圣诞树-RMB 518",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1980",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Porsche%20911%20Turbo%203.3%201980%20%E5%9C%A3%E8%AF%9E%E6%A0%91-RMB%20518/IMG_9396.JPG",
@@ -574,16 +623,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Porsche%20911%20Turbo%203.3%201980%20%E5%9C%A3%E8%AF%9E%E6%A0%91-RMB%20518/IMG_9406.PNG"
       ],
       "status": "instock",
-      "description": "NOREV Porsche 911 Turbo 3.3 1980 圣诞树-RMB 518",
+      "description": "1:18 scale NOREV Porsche 911 Turbo 3.3 1980 圣诞树-RMB 518.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-vw-golf-mk1-gti-1976-rmb-431",
       "name": "NOREV VW Golf MK1 GTI 1976-RMB 431",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1976",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Golf%20MK1%20GTI%201976-RMB%20431/IMG_9351.JPG",
@@ -599,16 +648,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Golf%20MK1%20GTI%201976-RMB%20431/IMG_9359.JPG"
       ],
       "status": "instock",
-      "description": "NOREV VW Golf MK1 GTI 1976-RMB 431",
+      "description": "1:18 scale NOREV VW Golf MK1 GTI 1976-RMB 431.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-vw-golf-mk2-gti-1989-rmb-451",
       "name": "NOREV VW Golf MK2 GTI 1989-RMB 451",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1989",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Golf%20MK2%20GTI%201989-RMB%20451/IMG_9338.JPG",
@@ -625,16 +674,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Golf%20MK2%20GTI%201989-RMB%20451/IMG_9350.JPG"
       ],
       "status": "instock",
-      "description": "NOREV VW Golf MK2 GTI 1989-RMB 451",
+      "description": "1:18 scale NOREV VW Golf MK2 GTI 1989-RMB 451.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383",
       "name": "NOREV VW Scirocco GTX 16V 1988 - RMB 383",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1988",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Scirocco%20GTX%2016V%201988%20-%20RMB%20383/IMG_9324.JPG",
@@ -650,16 +699,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20VW%20Scirocco%20GTX%2016V%201988%20-%20RMB%20383/IMG_9332.JPG"
       ],
       "status": "instock",
-      "description": "NOREV VW Scirocco GTX 16V 1988 - RMB 383",
+      "description": "1:18 scale NOREV VW Scirocco GTX 16V 1988 - RMB 383.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-norev-230sl-1963-",
-      "name": "Norev 奔驰230SL 1963 敞篷带顶",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "Norev Mercedes-Benz230SL 1963 敞篷带顶",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1963",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Norev%20%E5%A5%94%E9%A9%B0230SL%201963%20%E6%95%9E%E7%AF%B7%E5%B8%A6%E9%A1%B6/IMG_4913.JPG",
@@ -676,16 +725,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Norev%20%E5%A5%94%E9%A9%B0230SL%201963%20%E6%95%9E%E7%AF%B7%E5%B8%A6%E9%A1%B6/Screenshot%202026-08-24%20at%2011.34.09.png"
       ],
       "status": "instock",
-      "description": "Norev 奔驰230SL 1963 敞篷带顶",
+      "description": "1:18 scale Norev Mercedes-Benz230SL 1963 敞篷带顶.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-porsche-911-gt3-touring-2025-silver",
-      "name": "Porsche 911  GT3 Touring 2025 Silver",
-      "brand": "Driftae",
+      "name": "Porsche 911 GT3 Touring 2025 Silver",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "2025",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Porsche%20911%20%20GT3%20Touring%202025%20Silver/0cbfe122f798769433352e06e62776.JPG",
@@ -701,14 +750,14 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/Porsche%20911%20%20GT3%20Touring%202025%20Silver/fc4ed08a261e343176402e288a1b59.JPG"
       ],
       "status": "instock",
-      "description": "Porsche 911  GT3 Touring 2025 Silver",
+      "description": "1:18 scale Porsche 911 GT3 Touring 2025 Silver.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-return-mustang",
       "name": "return Mustang",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
       "year": "",
       "mileage": "",
@@ -722,16 +771,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/return%20Mustang/ChatGPT%20Image%20Aug%2018%2C%202026%2C%2010_53_29%20AM.jpeg"
       ],
       "status": "instock",
-      "description": "return Mustang",
+      "description": "1:18 scale return Mustang.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-vw-1303-cabriolet-1972-ivory",
       "name": "VW 1303 Cabriolet 1972 Ivory",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1972",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/VW%201303%20Cabriolet%201972%20Ivory/188535_1.jpeg",
@@ -742,16 +791,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/VW%201303%20Cabriolet%201972%20Ivory/188535.jpeg"
       ],
       "status": "instock",
-      "description": "VW 1303 Cabriolet 1972 Ivory",
+      "description": "1:18 scale VW 1303 Cabriolet 1972 Ivory.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2-vw-golf-gti-edition-blue-1991-moonlight-blue-metallic",
       "name": "VW Golf GTI Edition Blue 1991 Moonlight Blue metallic",
-      "brand": "Driftae",
+      "brand": "Driftae Collection",
       "brandShort": "Driftae",
-      "year": "",
+      "year": "1991",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/VW%20Golf%20GTI%20Edition%20Blue%201991%20Moonlight%20Blue%20metallic/0cbe938bf3d562a8385e4139ef0173.JPG",
@@ -763,15 +812,15 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/VW%20Golf%20GTI%20Edition%20Blue%201991%20Moonlight%20Blue%20metallic/5410b86e8a83a49e0946be4a6c06cb.JPG"
       ],
       "status": "instock",
-      "description": "VW Golf GTI Edition Blue 1991 Moonlight Blue metallic",
+      "description": "1:18 scale VW Golf GTI Edition Blue 1991 Moonlight Blue metallic.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2--94-555-wrc-",
-      "name": "太阳星 斯巴鲁 翼豹 麦克雷 94新西兰 555 WRC拉力赛汽车模型",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
+      "name": "Sun Star Subaru Impreza Colin McRae 94新西兰 555 WRC拉力赛汽车模型",
+      "brand": "Sun Star",
+      "brandShort": "Sun Star",
       "year": "",
       "mileage": "",
       "price": 0,
@@ -796,16 +845,16 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/%E5%A4%AA%E9%98%B3%E6%98%9F%20%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20%E9%BA%A6%E5%85%8B%E9%9B%B7%2094%E6%96%B0%E8%A5%BF%E5%85%B0%20555%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/%E6%99%AE%E9%80%9A%E7%89%88/09_clean.jpg"
       ],
       "status": "instock",
-      "description": "太阳星 斯巴鲁 翼豹 麦克雷 94新西兰 555 WRC拉力赛汽车模型",
+      "description": "1:18 scale Sun Star Subaru Impreza Colin McRae 94新西兰 555 WRC拉力赛汽车模型.",
       "specs": {},
       "tags": []
     },
     {
       "id": "r2--wrc-1997-",
-      "name": "太阳星斯巴鲁 翼豹 WRC拉力赛车 1997新西兰站",
-      "brand": "Driftae",
-      "brandShort": "Driftae",
-      "year": "",
+      "name": "Sun StarSubaru Impreza WRC Rally car 1997新西兰站",
+      "brand": "Sun Star",
+      "brandShort": "Sun Star",
+      "year": "1997",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/%E5%A4%AA%E9%98%B3%E6%98%9F%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%201997%E6%96%B0%E8%A5%BF%E5%85%B0%E7%AB%99/ChatGPT%20Image%20Sep%2022%2C%202026%2C%2010_39_50%20AM.png",
@@ -823,7 +872,7 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/%E5%A4%AA%E9%98%B3%E6%98%9F%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%201997%E6%96%B0%E8%A5%BF%E5%85%B0%E7%AB%99/subaru_wrc97_08.png"
       ],
       "status": "instock",
-      "description": "太阳星斯巴鲁 翼豹 WRC拉力赛车 1997新西兰站",
+      "description": "1:18 scale Sun StarSubaru Impreza WRC Rally car 1997新西兰站.",
       "specs": {},
       "tags": []
     }
