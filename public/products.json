@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-02T03:38:34.329Z",
+  "generatedAt": "2026-10-02T03:38:50.338Z",
   "products": [
     {
       "id": "r2-06",
-      "name": "Sun Star Subaru Impreza S6 Richard Burns WRCrally car diecast model",
+      "name": "Sun Star Subaru Impreza S6 Richard Burns WRC Rally car diecast model",
       "brand": "Sun Star",
       "brandShort": "Sun Star",
       "year": "",
@@ -28,9 +28,9 @@
       "specs": {
         "Brand": "Sun Star",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior，rubber tires",
-        "Features": "All doors open，Steering wheel linked to front wheels，Suspension on wheels，Open grille mesh，Open front vent detail",
-        "Dimensions": "Length approx. 26 cm，, width approx. 10 cm，, height approx. 8 cm",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Suspension on wheels, Open grille mesh, Open front vent detail",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam inner tray with outer colour box"
       },
       "tags": []
@@ -60,16 +60,16 @@
       "specs": {
         "Brand": "Sun Star",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior，rubber tires",
-        "Features": "All doors open，Steering wheel linked to front wheels，Suspension on wheels，Open grille mesh，Open front vent detail",
-        "Dimensions": "Length approx. 26 cm，, width approx. 10 cm，, height approx. 8 cm",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Suspension on wheels, Open grille mesh, Open front vent detail",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam inner tray with outer colour box"
       },
       "tags": []
     },
     {
       "id": "r2-13",
-      "name": "Sun Star DeLorean DMC-12 1981 Back to the Futureprototype diecast model",
+      "name": "Sun Star DeLorean DMC-12 1981 Back to the Future Prototype diecast model",
       "brand": "Sun Star",
       "brandShort": "Sun Star",
       "year": "1981",
@@ -89,9 +89,9 @@
       "specs": {
         "Brand": "SunStar",
         "Scale": "1:18",
-        "Material": "diecast metal body，metal chassis，内部结构塑料，rubber tires",
+        "Material": "diecast metal body, metal chassis, 内部结构塑料, rubber tires",
         "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels",
-        "Dimensions": "Length approx. 25 cm，, width approx. 10 cm，, height approx. 7 cm",
+        "Dimensions": "Length approx. 25 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Semi-transparent display box with base"
       },
       "tags": []
@@ -122,9 +122,9 @@
       "specs": {
         "Brand": "NOREV",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior，rubber tires",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
         "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels；Flocked interior",
-        "Dimensions": "Length approx. 24 cm，, width approx. 10 cm，, height approx. 8 cm",
+        "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam tray packaging"
       },
       "tags": []
@@ -154,9 +154,9 @@
       "specs": {
         "Brand": "NOREV",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior，rubber tires",
-        "Features": "All doors open，Steering wheel linked to front wheels，No suspension on wheels，Rear-engine layout，Opening engine bay panel",
-        "Dimensions": "Length approx. 24 cm，, width approx. 10 cm，, height approx. 7 cm",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, No suspension on wheels, Rear-engine layout, Opening engine bay panel",
+        "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Foam inner tray with outer carton"
       },
       "tags": []
@@ -185,9 +185,9 @@
       "specs": {
         "Brand": "NOREV",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior，rubber tires",
-        "Features": "All doors open，Steering wheel linked to front wheels，Flocked interior，Removable hardtop included",
-        "Dimensions": "Length approx. 26 cm，, width approx. 10 cm，, height approx. 7 cm",
+        "Material": "diecast metal body, plastic chassis and interior, rubber tires",
+        "Features": "All doors open, Steering wheel linked to front wheels, Flocked interior, Removable hardtop included",
+        "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Clear display case with base"
       },
       "tags": []
@@ -215,9 +215,9 @@
       "specs": {
         "Brand": "NOREV",
         "Scale": "1:18",
-        "Material": "diecast metal body，plastic chassis and interior",
-        "Features": "Sealed body (doors do not open)，前轮转向，No suspension on wheels",
-        "Dimensions": "Length approx. 25 cm，, width approx. 9 cm，, height approx. 8 cm",
+        "Material": "diecast metal body, plastic chassis and interior",
+        "Features": "Sealed body (doors do not open), 前轮转向, No suspension on wheels",
+        "Dimensions": "Length approx. 25 cm,, width approx. 9 cm,, height approx. 8 cm",
         "Packaging": "半透明包装盒带底座"
       },
       "tags": []
@@ -851,7 +851,7 @@
     },
     {
       "id": "r2--wrc-1997-",
-      "name": "Sun StarSubaru Impreza WRCrally car 1997新西兰站",
+      "name": "Sun StarSubaru Impreza WRC Rally car 1997新西兰站",
       "brand": "Sun Star",
       "brandShort": "Sun Star",
       "year": "1997",
@@ -872,7 +872,7 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/%E5%A4%AA%E9%98%B3%E6%98%9F%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%201997%E6%96%B0%E8%A5%BF%E5%85%B0%E7%AB%99/subaru_wrc97_08.png"
       ],
       "status": "instock",
-      "description": "1:18 scale Sun StarSubaru Impreza WRCrally car 1997新西兰站.",
+      "description": "1:18 scale Sun StarSubaru Impreza WRC Rally car 1997新西兰站.",
       "specs": {},
       "tags": []
     }

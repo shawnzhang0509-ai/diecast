@@ -51,8 +51,6 @@ const PHRASES = [
   ['伯恩斯', 'Richard Burns'],
   ['科林', 'Colin '],
   ['理查德', 'Richard '],
-  ['WRC拉力赛车', 'WRC rally car'],
-  ['WRC97拉力赛车', 'WRC97 rally car'],
   ['发动机后置', 'Rear-engine layout'],
   ['发动机舱内盖板可打开', 'Opening engine bay panel'],
   ['全封闭不能开门', 'Sealed body (doors do not open)'],
@@ -99,7 +97,13 @@ function applyPhrases(text) {
   for (const [zh, en] of PHRASES) {
     out = out.split(zh).join(en);
   }
-  return out.replace(/\s+/g, ' ').trim();
+  return out
+    .replace(/，/g, ', ')
+    .replace(/,/g, ', ')
+    .replace(/\s+/g, ' ')
+    .replace(/ ,/g, ',')
+    .replace(/WRCrally/gi, 'WRC Rally')
+    .trim();
 }
 
 export function translateSpecsValues(specs) {
