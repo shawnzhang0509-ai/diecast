@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T03:38:50.338Z",
+  "generatedAt": "2026-10-02T04:54:21.598Z",
   "products": [
     {
       "id": "r2-06",
@@ -24,8 +24,9 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/06-%E5%A4%AA%E9%98%B3%E6%98%9F%20%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20S6%20%E4%BC%AF%E6%81%A9%E6%96%AF%20WRC%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/1745359855.jpg"
       ],
       "status": "instock",
-      "description": "2000 WRC Rally of Portugal winner driven by Richard Burns. Burns often removed the left mirror on his rally cars; the model correctly omits the left mirror.",
+      "description": "Subaru Impreza S6 Richard Burns. 2000 WRC Rally of Portugal winner driven by Richard Burns. Burns often removed the left mirror on his rally cars; the model correctly omits the left mirror.",
       "specs": {
+        "Model": "Impreza S6 Richard Burns",
         "Brand": "Sun Star",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior, rubber tires",
@@ -33,7 +34,12 @@
         "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam inner tray with outer colour box"
       },
-      "tags": []
+      "marque": "Subaru",
+      "vehicleModel": "Impreza S6 Richard Burns",
+      "tags": [
+        "marque:Subaru",
+        "subaru"
+      ]
     },
     {
       "id": "r2-07",
@@ -56,8 +62,9 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/07-%E5%A4%AA%E9%98%B3%E6%98%9F%20%E6%96%AF%E5%B7%B4%E9%B2%81%20%E7%BF%BC%E8%B1%B9%20S5%20%E9%BA%A6%E5%85%8B%E9%9B%B7%20WRC97%E6%8B%89%E5%8A%9B%E8%B5%9B%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/989825496.jpg"
       ],
       "status": "instock",
-      "description": "1997 WRC RAC Rally of Great Britain winner driven by Colin McRae. McRae preferred to remove the right mirror; the model omits the right mirror.",
+      "description": "Subaru Impreza S5 Colin McRae. 1997 WRC RAC Rally of Great Britain winner driven by Colin McRae. McRae preferred to remove the right mirror; the model omits the right mirror.",
       "specs": {
+        "Model": "Impreza S5 Colin McRae",
         "Brand": "Sun Star",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior, rubber tires",
@@ -65,7 +72,12 @@
         "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam inner tray with outer colour box"
       },
-      "tags": []
+      "marque": "Subaru",
+      "vehicleModel": "Impreza S5 Colin McRae",
+      "tags": [
+        "marque:Subaru",
+        "subaru"
+      ]
     },
     {
       "id": "r2-13",
@@ -87,14 +99,20 @@
       "status": "instock",
       "description": "DeLorean DMC-12 as the Back to the Future hero car. Opening doors; steering linked to the front wheels. Semi-transparent display packaging with base.",
       "specs": {
+        "Model": "DMC-12",
         "Brand": "SunStar",
         "Scale": "1:18",
-        "Material": "diecast metal body, metal chassis, 内部结构塑料, rubber tires",
-        "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels",
+        "Material": "diecast metal body, metal chassis, plastic interior structure, rubber tires",
+        "Features": "All doors open; No suspension on wheels; Steering wheel linked to front wheels",
         "Dimensions": "Length approx. 25 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Semi-transparent display box with base"
       },
-      "tags": []
+      "marque": "DeLorean",
+      "vehicleModel": "DMC-12",
+      "tags": [
+        "marque:DeLorean",
+        "delorean"
+      ]
     },
     {
       "id": "r2-15",
@@ -120,14 +138,20 @@
       "status": "instock",
       "description": "1993 Porsche 911 Speedster in 1:18 scale by NOREV. Opening doors, flocked interior, steering function. Foam tray packaging.",
       "specs": {
+        "Model": "911 Speedster",
         "Brand": "NOREV",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior, rubber tires",
-        "Features": "All doors open；No suspension on wheels；Steering wheel linked to front wheels；Flocked interior",
+        "Features": "All doors open; No suspension on wheels; Steering wheel linked to front wheels; Flocked interior",
         "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 8 cm",
         "Packaging": "Foam tray packaging"
       },
-      "tags": []
+      "marque": "Porsche",
+      "vehicleModel": "911 Speedster",
+      "tags": [
+        "marque:Porsche",
+        "porsche"
+      ]
     },
     {
       "id": "r2-22",
@@ -150,8 +174,9 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/22-NOREV%20%E5%A4%A7%E4%BC%97%20VW%20Karmann%20Ghia%201500%201963%20%E8%B7%91%E8%BD%A6%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/2117587556.jpg"
       ],
       "status": "instock",
-      "description": "1963 Volkswagen Karmann Ghia 1500 by NOREV. Rear-engine layout with opening engine bay panel. All doors open with steering function.",
+      "description": "Volkswagen VW Karmann Ghia 1500. 1963 Volkswagen Karmann Ghia 1500 by NOREV. Rear-engine layout with opening engine bay panel. All doors open with steering function.",
       "specs": {
+        "Model": "VW Karmann Ghia 1500",
         "Brand": "NOREV",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior, rubber tires",
@@ -159,7 +184,12 @@
         "Dimensions": "Length approx. 24 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Foam inner tray with outer carton"
       },
-      "tags": []
+      "marque": "Volkswagen",
+      "vehicleModel": "VW Karmann Ghia 1500",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
     },
     {
       "id": "r2-28",
@@ -183,6 +213,7 @@
       "status": "instock",
       "description": "1975 Mercedes-Benz R107 450SL by NOREV. Opening doors, flocked interior, removable hardtop included. Clear display case with base.",
       "specs": {
+        "Model": "R107 450SL",
         "Brand": "NOREV",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior, rubber tires",
@@ -190,7 +221,12 @@
         "Dimensions": "Length approx. 26 cm,, width approx. 10 cm,, height approx. 7 cm",
         "Packaging": "Clear display case with base"
       },
-      "tags": []
+      "marque": "Mercedes-Benz",
+      "vehicleModel": "R107 450SL",
+      "tags": [
+        "marque:Mercedes-Benz",
+        "mercedes-benz"
+      ]
     },
     {
       "id": "r2-30",
@@ -213,6 +249,7 @@
       "status": "instock",
       "description": "1964 Alfa Romeo Giulia TI by NOREV. Sealed body (doors do not open) with steering. Semi-transparent display case with base.",
       "specs": {
+        "Model": "Alfa Romeo Giulia TI",
         "Brand": "NOREV",
         "Scale": "1:18",
         "Material": "diecast metal body, plastic chassis and interior",
@@ -220,7 +257,12 @@
         "Dimensions": "Length approx. 25 cm,, width approx. 9 cm,, height approx. 8 cm",
         "Packaging": "半透明包装盒带底座"
       },
-      "tags": []
+      "marque": "Alfa Romeo",
+      "vehicleModel": "Alfa Romeo Giulia TI",
+      "tags": [
+        "marque:Alfa Romeo",
+        "alfa-romeo"
+      ]
     },
     {
       "id": "r2-audi-sport-quattro-1985-black",
@@ -241,8 +283,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Audi Sport Quattro 1985 black.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Sport Quattro"
+      },
+      "marque": "Audi",
+      "vehicleModel": "Sport Quattro",
+      "tags": [
+        "marque:Audi",
+        "audi"
+      ]
     },
     {
       "id": "r2-audi-sport-quattro-1985-red",
@@ -262,8 +311,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Audi Sport Quattro 1985 red.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Sport Quattro"
+      },
+      "marque": "Audi",
+      "vehicleModel": "Sport Quattro",
+      "tags": [
+        "marque:Audi",
+        "audi"
+      ]
     },
     {
       "id": "r2-audi-sport-quattro-1985-white",
@@ -286,8 +342,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Audi Sport Quattro 1985 white.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Sport Quattro"
+      },
+      "marque": "Audi",
+      "vehicleModel": "Sport Quattro",
+      "tags": [
+        "marque:Audi",
+        "audi"
+      ]
     },
     {
       "id": "r2-ford-mustang-coupe-1966-nightmist-blue-metallic",
@@ -304,8 +367,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Ford Mustang Coupe 1966 Nightmist Blue metallic.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Mustang Coupe"
+      },
+      "marque": "Ford",
+      "vehicleModel": "Mustang Coupe",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
     },
     {
       "id": "r2-mercedes-benz-300-sl-1954-blue",
@@ -329,8 +399,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Mercedes-Benz 300 SL 1954 Blue.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "300 SL"
+      },
+      "marque": "Mercedes-Benz",
+      "vehicleModel": "300 SL",
+      "tags": [
+        "marque:Mercedes-Benz",
+        "mercedes-benz"
+      ]
     },
     {
       "id": "r2-mercedes-benz-cle-coupe-2024-hightech-silver",
@@ -351,8 +428,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Mercedes-Benz CLE Coupé 2024 Hightech Silver.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "CLE Coupé"
+      },
+      "marque": "Mercedes-Benz",
+      "vehicleModel": "CLE Coupé",
+      "tags": [
+        "marque:Mercedes-Benz",
+        "mercedes-benz"
+      ]
     },
     {
       "id": "r2-mini",
@@ -382,7 +466,12 @@
       "status": "instock",
       "description": "1:18 scale MINI.",
       "specs": {},
-      "tags": []
+      "marque": "MINI",
+      "vehicleModel": "",
+      "tags": [
+        "marque:MINI",
+        "mini"
+      ]
     },
     {
       "id": "r2-norev-1-18-vw-1303-cabriolet-",
@@ -425,8 +514,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV 1-18 Volkswagen 甲壳虫 VW 1303 Cabriolet 敞篷版 diecast model.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "甲壳虫 VW 1303 Cabriolet 敞篷版"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "甲壳虫 VW 1303 Cabriolet 敞篷版",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
     },
     {
       "id": "r2-norev-1-18-ford-escort-cosworth-1992-",
@@ -450,8 +546,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV 1-18 福特 Ford Escort Cosworth 1992 合金仿真汽车模型.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Escort Cosworth"
+      },
+      "marque": "Ford",
+      "vehicleModel": "Escort Cosworth",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
     },
     {
       "id": "r2-norev-alpine-a110-r-turini-2025-rmb-297",
@@ -476,6 +579,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV Alpine A110 R Turini 2025-RMB 297.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -498,8 +603,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV Ford Escort Cosworth 1992-RMB327.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Escort Cosworth"
+      },
+      "marque": "Ford",
+      "vehicleModel": "Escort Cosworth",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
     },
     {
       "id": "r2-norev-ford-fiesta-xr2-1981-rmb-336",
@@ -524,8 +636,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV Ford Fiesta XR2 1981-RMB 336.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Fiesta XR2"
+      },
+      "marque": "Ford",
+      "vehicleModel": "Fiesta XR2",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
     },
     {
       "id": "r2-norev-lancia-fulvia-1971-rmb-518",
@@ -549,6 +668,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV Lancia Fulvia 1971-RMB 518.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -572,6 +693,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV Opel Manta GSi 1987-RMB 386.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -598,8 +721,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV Peugeot 306 S16 1997-RMB 374.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "306 S16"
+      },
+      "marque": "Peugeot",
+      "vehicleModel": "306 S16",
+      "tags": [
+        "marque:Peugeot",
+        "peugeot"
+      ]
     },
     {
       "id": "r2-norev-porsche-911-turbo-3-3-1980--rmb-518",
@@ -624,8 +754,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale NOREV Porsche 911 Turbo 3.3 1980 圣诞树-RMB 518.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "911 Turbo 3.3"
+      },
+      "marque": "Porsche",
+      "vehicleModel": "911 Turbo 3.3",
+      "tags": [
+        "marque:Porsche",
+        "porsche"
+      ]
     },
     {
       "id": "r2-norev-vw-golf-mk1-gti-1976-rmb-431",
@@ -650,6 +787,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV VW Golf MK1 GTI 1976-RMB 431.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -676,6 +815,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV VW Golf MK2 GTI 1989-RMB 451.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -701,6 +842,8 @@
       "status": "instock",
       "description": "1:18 scale NOREV VW Scirocco GTX 16V 1988 - RMB 383.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -727,6 +870,8 @@
       "status": "instock",
       "description": "1:18 scale Norev Mercedes-Benz230SL 1963 敞篷带顶.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -751,8 +896,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Porsche 911 GT3 Touring 2025 Silver.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "911 GT3 Touring"
+      },
+      "marque": "Porsche",
+      "vehicleModel": "911 GT3 Touring",
+      "tags": [
+        "marque:Porsche",
+        "porsche"
+      ]
     },
     {
       "id": "r2-return-mustang",
@@ -773,7 +925,12 @@
       "status": "instock",
       "description": "1:18 scale return Mustang.",
       "specs": {},
-      "tags": []
+      "marque": "Ford",
+      "vehicleModel": "",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
     },
     {
       "id": "r2-vw-1303-cabriolet-1972-ivory",
@@ -793,6 +950,8 @@
       "status": "instock",
       "description": "1:18 scale VW 1303 Cabriolet 1972 Ivory.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -814,6 +973,8 @@
       "status": "instock",
       "description": "1:18 scale VW Golf GTI Edition Blue 1991 Moonlight Blue metallic.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     },
     {
@@ -846,8 +1007,15 @@
       ],
       "status": "instock",
       "description": "1:18 scale Sun Star Subaru Impreza Colin McRae 94新西兰 555 WRC拉力赛汽车模型.",
-      "specs": {},
-      "tags": []
+      "specs": {
+        "Model": "Impreza Colin McRae 94新西兰 555"
+      },
+      "marque": "Subaru",
+      "vehicleModel": "Impreza Colin McRae 94新西兰 555",
+      "tags": [
+        "marque:Subaru",
+        "subaru"
+      ]
     },
     {
       "id": "r2--wrc-1997-",
@@ -874,6 +1042,8 @@
       "status": "instock",
       "description": "1:18 scale Sun StarSubaru Impreza WRC Rally car 1997新西兰站.",
       "specs": {},
+      "marque": "",
+      "vehicleModel": "",
       "tags": []
     }
   ]

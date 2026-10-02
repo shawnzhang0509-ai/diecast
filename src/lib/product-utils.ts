@@ -51,10 +51,9 @@ const MARQUE_TAGLINES: Record<string, string> = {
 };
 
 export function extractMarque(product: Product): string {
-  if (product.tags?.includes('marque:')) {
-    const t = product.tags.find((x) => x.startsWith('marque:'));
-    if (t) return t.slice(7);
-  }
+  if (product.marque?.trim()) return product.marque.trim();
+  const t = product.tags?.find((x) => x.startsWith('marque:'));
+  if (t) return t.slice(7);
   let title = product.name.replace(MAKERS, ' ').replace(/\s+/g, ' ').trim();
   for (const m of MARQUES) {
     const re = new RegExp(`\\b${m.replace(/-/g, '[- ]')}\\b`, 'i');
@@ -99,15 +98,20 @@ export function deriveBrands(products: Product[]) {
     counts.set(marque, (counts.get(marque) ?? 0) + 1);
   }
 
-  const list = [...counts.entries()]
+  return [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .map(([name, count]) => ({
-      name: name.toUpperCase(),
-      descriptor: MARQUE_TAGLINES[name] ?? `${count} model${count === 1 ? '' : 's'}`,
+    .map(([marque, count]) => ({
+      name: marque.toUpperCase(),
+      slug: marque,
+      descriptor: MARQUE_TAGLINES[marque] ?? `${count} model${count === 1 ? '' : 's'}`,
       country: '',
     }));
+}
 
-  return list.length ? list : [{ name: 'COLLECTORS', descriptor: '1:18 diecast', country: 'NZ' }];
+export function filterByMarque(products: Product[], marqueSlug: string | null | undefined) {
+  if (!marqueSlug?.trim()) return products;
+  const want = marqueSlug.trim().toLowerCase();
+  return products.filter((p) => extractMarque(p).toLowerCase() === want);
 }
 
 export function pickNewArrivals(products: Product[], limit = 8): Product[] {
@@ -127,5 +131,6 @@ export function pickFeaturedProduct(products: Product[]): Product | undefined {
 export function productMetaLine(product: Product): string {
   const scale = product.specs?.Scale;
   const marque = extractMarque(product);
-  return [marque || product.brand, product.year || scale].filter(Boolean).join(' · ');
+  const model = product.vehicleModel || product.specs?.Model;
+  return [marque || product.brand, model, product.year || scale].filter(Boolean).join(' · ');
 }

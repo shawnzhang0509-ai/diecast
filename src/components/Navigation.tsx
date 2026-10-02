@@ -23,7 +23,7 @@ export default function Navigation() {
   const isHome = location.pathname === '/';
 
   const navItems = [
-    { label: 'Collection', href: '/#new-arrivals' },
+    { label: 'Collection', href: '/collection' },
     { label: 'New Arrivals', href: '/#new-arrivals' },
     { label: 'About', href: '/about' },
   ];

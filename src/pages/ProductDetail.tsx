@@ -79,9 +79,20 @@ export default function ProductDetail() {
         <nav className="mb-8 flex items-center gap-2 font-body text-[12px] tracking-[0.05em] text-driftae-muted">
           <Link to="/" className="transition-colors hover:text-driftae-white">Home</Link>
           <span>/</span>
-          <span className="cursor-pointer transition-colors hover:text-driftae-white">Collection</span>
-          <span>/</span>
-          <span className="text-driftae-white">{extractMarque(product) || product.brand}</span>
+          <Link to="/collection" className="transition-colors hover:text-driftae-white">
+            Collection
+          </Link>
+          {extractMarque(product) && (
+            <>
+              <span>/</span>
+              <Link
+                to={`/collection?marque=${encodeURIComponent(extractMarque(product))}`}
+                className="transition-colors hover:text-driftae-white"
+              >
+                {extractMarque(product)}
+              </Link>
+            </>
+          )}
         </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
@@ -122,8 +133,13 @@ export default function ProductDetail() {
               {product.name}
             </h1>
 
+            {(product.vehicleModel || product.specs?.Model) && (
+              <p className="mt-2 font-display text-[18px] text-driftae-white">
+                {product.vehicleModel || product.specs.Model}
+              </p>
+            )}
             {subtitle && (
-              <p className="mt-2 font-body text-[14px] text-driftae-muted">{subtitle}</p>
+              <p className="mt-1 font-body text-[14px] text-driftae-muted">{subtitle}</p>
             )}
 
             <div className="mt-6">

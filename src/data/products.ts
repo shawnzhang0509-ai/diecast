@@ -8,4 +8,5 @@ export {
   pickFeaturedProduct,
   productMetaLine,
   extractMarque,
+  filterByMarque,
 } from '../lib/product-utils';

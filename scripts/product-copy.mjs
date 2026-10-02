@@ -1,5 +1,11 @@
 /** Parse R2 产品介绍.txt and produce English catalog copy. */
 
+import {
+  extractMarqueFromTitle,
+  extractVehicleModel,
+  marqueTags,
+} from './marque.mjs';
+
 const FIELD_LABELS = {
   品牌: 'Brand',
   比例: 'Scale',
@@ -29,6 +35,8 @@ const PHRASES = [
   ['WRC97拉力赛车', 'WRC97 Rally Car'],
   ['车身合金', 'diecast metal body'],
   ['底盘和内部结构塑料', 'plastic chassis and interior'],
+  ['内部结构塑料', 'plastic interior structure'],
+  ['，', ', '],
   ['底盘合金', 'metal chassis'],
   ['车轮橡胶', 'rubber tires'],
   ['全部车门可开', 'All doors open'],
@@ -98,6 +106,7 @@ function applyPhrases(text) {
     out = out.split(zh).join(en);
   }
   return out
+    .replace(/；/g, '; ')
     .replace(/，/g, ', ')
     .replace(/,/g, ', ')
     .replace(/\s+/g, ' ')
@@ -141,8 +150,8 @@ export function extractBrand(title, specs) {
 export function buildEnglishCopy({ productId, folderName, introRaw }) {
   const name = englishTitleFromFolder(folderName);
   const year = extractYear(folderName + ' ' + name);
-  const { specs, overviewZh } = parseIntroTxt(introRaw);
-  const specsEn = translateSpecsValues(specs);
+  const { specs: specsZh, overviewZh } = parseIntroTxt(introRaw);
+  const specsEn = translateSpecsValues(specsZh);
   const { brand, brandShort } = extractBrand(name, specsEn);
 
   let description =
@@ -152,5 +161,23 @@ export function buildEnglishCopy({ productId, folderName, introRaw }) {
 
   description = description.replace(/Reference retail \(CNY\) \d+/g, '').trim();
 
-  return { name, brand, brandShort, year, specs: specsEn, description };
+  const marque = extractMarqueFromTitle(name);
+  const vehicleModel = extractVehicleModel(name, marque);
+  const specsOut = { ...(vehicleModel ? { Model: vehicleModel } : {}), ...specsEn };
+
+  if (vehicleModel && !description.toLowerCase().includes(vehicleModel.toLowerCase().slice(0, 8))) {
+    description = `${marque ? `${marque} ` : ''}${vehicleModel}. ${description}`.trim();
+  }
+
+  return {
+    name,
+    brand,
+    brandShort,
+    year,
+    marque,
+    vehicleModel,
+    tags: marqueTags(marque),
+    specs: specsOut,
+    description,
+  };
 }

@@ -191,7 +191,9 @@ async function main() {
         status: o.status ?? 'instock',
         description: o.description ?? en.description,
         specs: { ...en.specs, ...(o.specs ?? {}) },
-        tags: o.tags ?? [],
+        marque: o.marque ?? en.marque,
+        vehicleModel: o.vehicleModel ?? en.vehicleModel,
+        tags: [...new Set([...(en.tags ?? []), ...(o.tags ?? [])])],
       };
     }),
   );

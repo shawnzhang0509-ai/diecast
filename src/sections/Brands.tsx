@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router';
 import { deriveBrands } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
 
@@ -61,17 +62,19 @@ export default function Brands() {
           className="grid grid-cols-2 border border-[#1F1F1F] md:grid-cols-4"
         >
           {brands.map((brand) => (
-            <div
+            <Link
               key={brand.name}
+              to={`/collection?marque=${encodeURIComponent(brand.slug)}`}
               className="group flex flex-col items-center justify-center rounded-xl border border-[#1F1F1F] py-12 transition-colors duration-300 hover:border-driftae-gold/20 hover:bg-[#141414] md:py-16"
+              data-cursor-hover
             >
               <h3 className="font-display text-[18px] font-light tracking-[0.1em] text-[#F7F7F7] transition-colors duration-300 group-hover:text-[#C7A96B] md:text-[20px]">
                 {brand.name}
               </h3>
-              <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
+              <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-[#777777] group-hover:text-driftae-muted">
                 {brand.descriptor}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

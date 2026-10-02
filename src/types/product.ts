@@ -14,6 +14,9 @@ export interface Product {
   description: string;
   specs: Record<string, string>;
   tags: string[];
+  /** Vehicle marque (Subaru, Porsche…) — from sync, used for collection filters. */
+  marque?: string;
+  vehicleModel?: string;
   /** Resolved at runtime from trademe-links.json (changes when you relist). */
   trademeUrl?: string;
   trademeListingId?: string;

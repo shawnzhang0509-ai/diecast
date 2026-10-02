@@ -7,6 +7,7 @@ import Logo from './components/Logo';
 import HomePage from './pages/HomePage';
 import ProductDetail from './pages/ProductDetail';
 import AboutPage from './pages/AboutPage';
+import CollectionPage from './pages/CollectionPage';
 import { ProductsProvider } from './context/ProductsContext';
 
 function LoadingScreen() {
@@ -67,6 +68,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/collection" element={<CollectionPage />} />
           </Routes>
         </ProductsProvider>
       )}
