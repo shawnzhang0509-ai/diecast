@@ -44,8 +44,15 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      });
+      return;
+    }
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="min-h-screen bg-driftae-black">

@@ -169,6 +169,58 @@ export default function AboutPage() {
           ]}
         />
       </div>
+
+      <div
+        className="mx-auto border-t border-driftae-gold/20 bg-driftae-surface"
+        style={{ maxWidth: 1400, padding: '80px 40px' }}
+      >
+        <section id="shipping" className="scroll-mt-28">
+          <h2 className="font-display text-[28px] font-light text-driftae-white">Shipping & Delivery</h2>
+          <p className="mt-4 max-w-[720px] font-body text-[14px] leading-relaxed text-driftae-muted">
+            We ship across New Zealand via tracked courier. Most diecast models are packed in original
+            boxes with extra protection. International shipping is available on request — contact us
+            before ordering.
+          </p>
+        </section>
+
+        <section id="faq" className="mt-16 scroll-mt-28">
+          <h2 className="font-display text-[28px] font-light text-driftae-white">FAQ</h2>
+          <ul className="mt-6 max-w-[720px] space-y-4 font-body text-[14px] leading-relaxed text-driftae-muted">
+            <li>
+              <strong className="text-driftae-white">Where do I buy?</strong> — Many items are listed
+              on our{' '}
+              <a
+                href="https://www.trademe.co.nz/a/search?member_listing=5600782"
+                className="text-driftae-gold hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trade Me shop
+              </a>
+              . Use &quot;Inquire&quot; on this site to ask about availability.
+            </li>
+            <li>
+              <strong className="text-driftae-white">Are photos exact?</strong> — We photograph the
+              actual model where possible. Colours may vary slightly by screen.
+            </li>
+            <li>
+              <strong className="text-driftae-white">Consignment</strong> — We can list your collectibles
+              on Trade Me; get in touch below.
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" className="mt-16 scroll-mt-28">
+          <h2 className="font-display text-[28px] font-light text-driftae-white">Contact</h2>
+          <p className="mt-4 font-body text-[14px] text-driftae-muted">
+            Email{' '}
+            <a href="mailto:hello@driftae.co.nz" className="text-driftae-gold hover:underline">
+              hello@driftae.co.nz
+            </a>{' '}
+            or message us on Facebook / TikTok.
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

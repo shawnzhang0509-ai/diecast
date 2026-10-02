@@ -34,6 +34,7 @@ export default function InStockNow() {
 
   return (
     <section
+      id="in-stock"
       ref={sectionRef}
       className="relative overflow-hidden bg-[#0D0D0D]"
       style={{ paddingTop: 120, paddingBottom: 120 }}

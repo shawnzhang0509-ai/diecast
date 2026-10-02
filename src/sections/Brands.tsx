@@ -41,6 +41,7 @@ export default function Brands() {
 
   return (
     <section
+      id="brands"
       ref={sectionRef}
       className="bg-[#0D0D0D]"
       style={{ padding: '120px 0' }}
