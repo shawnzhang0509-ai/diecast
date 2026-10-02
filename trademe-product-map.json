@@ -1,0 +1,6 @@
+{
+  "_comment": "Stable shop id → Trade Me listing id. Relist: only change listingId here, then npm run sync:trademe",
+  "example-r2-06": {
+    "listingId": 1234567890
+  }
+}
