@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router';
 import gsap from 'gsap';
-import { getProductById, getRelatedProducts, formatPrice } from '../data/products';
-import { ShieldCheck, Truck, RotateCcw, Headphones, Heart } from 'lucide-react';
+import { formatPrice } from '../data/products';
+import { ShieldCheck, Truck, RotateCcw, Headphones, Heart, ExternalLink } from 'lucide-react';
 import type { Product } from '../data/products';
+import { useProducts } from '../context/ProductsContext';
 
 function RelatedCard({ product }: { product: Product }) {
   return (
@@ -30,6 +31,7 @@ function RelatedCard({ product }: { product: Product }) {
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
+  const { getProductById, getRelatedProducts, loading } = useProducts();
   const product = getProductById(id || '');
   const related = product ? getRelatedProducts(product.id, 4) : [];
   const [activeImage, setActiveImage] = useState(0);
@@ -52,16 +54,26 @@ export default function ProductDetail() {
     );
   }, [id]);
 
+  if (loading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-driftae-black">
+        <p className="font-body text-driftae-muted">Loading…</p>
+      </div>
+    );
+  }
+
   if (!product) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-driftae-black">
         <div className="text-center">
-          <h2 className="font-display text-[24px] text-driftae-white">Vehicle Not Found</h2>
+          <h2 className="font-display text-[24px] text-driftae-white">Product Not Found</h2>
           <Link to="/" className="mt-4 inline-block text-driftae-gold hover:underline">Return to Home</Link>
         </div>
       </div>
     );
   }
+
+  const subtitle = [product.year, product.mileage, product.edition].filter(Boolean).join(' · ');
 
   const specEntries = Object.entries(product.specs);
 
@@ -114,19 +126,14 @@ export default function ProductDetail() {
               {product.name}
             </h1>
 
-            <p className="mt-2 font-body text-[14px] text-driftae-muted">
-              {product.year} · {product.mileage} — {product.edition || 'Classic Collection'}
-            </p>
+            {subtitle && (
+              <p className="mt-2 font-body text-[14px] text-driftae-muted">{subtitle}</p>
+            )}
 
             <div className="mt-6">
               <p className="font-display text-[28px] font-normal text-driftae-gold">
                 {formatPrice(product.price)}
               </p>
-              {product.price < 1000000 && (
-                <p className="mt-1 font-body text-[12px] text-driftae-muted">
-                  or 4 interest-free payments of ${(product.price / 4).toLocaleString()}
-                </p>
-              )}
             </div>
 
             {specEntries.length > 0 && (
@@ -144,10 +151,25 @@ export default function ProductDetail() {
             )}
 
             <div className="mt-8">
-              <button className="btn-gold w-full py-4">
-                Schedule Viewing
-              </button>
-              <button className="mt-3 flex w-full items-center justify-center gap-2 border border-driftae-border bg-transparent py-4 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-white transition-colors duration-200 hover:border-driftae-gold">
+              {product.trademeUrl ? (
+                <a
+                  href={product.trademeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold flex w-full items-center justify-center gap-2 py-4"
+                >
+                  在 Trade Me 购买
+                  <ExternalLink size={16} strokeWidth={1.5} />
+                </a>
+              ) : (
+                <button type="button" className="btn-gold w-full py-4">
+                  联系购买
+                </button>
+              )}
+              <button
+                type="button"
+                className="mt-3 flex w-full items-center justify-center gap-2 border border-driftae-border bg-transparent py-4 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-white transition-colors duration-200 hover:border-driftae-gold"
+              >
                 <Heart size={16} strokeWidth={1.5} />
                 Add to Wishlist
               </button>

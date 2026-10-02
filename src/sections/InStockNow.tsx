@@ -1,12 +1,16 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
-import { marqueeProducts, formatPrice } from '../data/products';
+import { formatPrice, pickMarqueeProducts } from '../data/products';
+import { useProducts } from '../context/ProductsContext';
 
 export default function InStockNow() {
+  const { products } = useProducts();
+  const marqueeProducts = pickMarqueeProducts(products);
   const sectionRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (marqueeProducts.length === 0) return;
     const track = trackRef.current;
     if (!track) return;
 
@@ -21,7 +25,9 @@ export default function InStockNow() {
 
     const raf = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [marqueeProducts.length]);
+
+  if (marqueeProducts.length === 0) return null;
 
   const doubledProducts = [...marqueeProducts, ...marqueeProducts];
 

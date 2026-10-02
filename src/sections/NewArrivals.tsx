@@ -3,8 +3,9 @@ import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
-import { newArrivals, formatPrice } from '../data/products';
+import { formatPrice, pickNewArrivals } from '../data/products';
 import type { Product } from '../data/products';
+import { useProducts } from '../context/ProductsContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,8 @@ function ProductCard({ product }: { product: Product }) {
 }
 
 export default function NewArrivals() {
+  const { products, loading } = useProducts();
+  const newArrivals = pickNewArrivals(products);
   const sectionRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -99,6 +102,14 @@ export default function NewArrivals() {
           ref={gridRef}
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
+          {loading && (
+            <p className="col-span-full font-body text-sm text-driftae-muted">Loading collection…</p>
+          )}
+          {!loading && newArrivals.length === 0 && (
+            <p className="col-span-full font-body text-sm text-driftae-muted">
+              暂无商品。在电脑上运行 <code className="text-driftae-gold">npm run sync:r2</code> 从 R2 同步。
+            </p>
+          )}
           {newArrivals.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -2,12 +2,15 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { formatPrice } from '../data/products';
+import { formatPrice, pickFeaturedProduct } from '../data/products';
 import BrandTagline from '../components/BrandTagline';
+import { useProducts } from '../context/ProductsContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedModel() {
+  const { products } = useProducts();
+  const featured = pickFeaturedProduct(products);
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -28,22 +31,27 @@ export default function FeaturedModel() {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 60%',
+            start: 'top 70%',
             toggleActions: 'play none none none',
           },
-        }
+        },
       );
     }, section);
 
     return () => ctx.revert();
-  }, []);
+  }, [featured?.id]);
 
-  const specs = [
-    { label: 'Year', value: '1962' },
-    { label: 'Mileage', value: '8,200 mi' },
-    { label: 'Engine', value: 'Colombo V12' },
-    { label: 'Condition', value: 'Concours' },
-  ];
+  if (!featured) return null;
+
+  const specEntries = Object.entries(featured.specs).slice(0, 4);
+  const displaySpecs =
+    specEntries.length > 0
+      ? specEntries.map(([label, value]) => ({ label, value }))
+      : featured.brand
+        ? [{ label: 'Brand', value: featured.brand }]
+        : [];
+
+  const headline = featured.name.split(/\s+/).slice(0, 3);
 
   return (
     <section
@@ -55,8 +63,8 @@ export default function FeaturedModel() {
         <div className="relative flex-1 lg:max-w-[55%]">
           <div className="relative h-[50vh] lg:h-screen">
             <img
-              src="/images/product-ferrari-250gto.png"
-              alt="Ferrari 250 GTO 1962"
+              src={featured.image}
+              alt={featured.name}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
@@ -68,11 +76,12 @@ export default function FeaturedModel() {
                   WebkitTextStroke: '1px rgba(255,255,255,0.1)',
                 }}
               >
-                FERRARI
-                <br />
-                250
-                <br />
-                GTO
+                {headline.map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < headline.length - 1 && <br />}
+                  </span>
+                ))}
               </h2>
             </div>
           </div>
@@ -82,34 +91,36 @@ export default function FeaturedModel() {
           ref={contentRef}
           className="flex flex-1 flex-col justify-center px-8 py-16 lg:max-w-[45%] lg:px-16"
         >
-          <BrandTagline text="Featured Classic" className="mb-4" />
+          <BrandTagline text="Featured" className="mb-4" />
           <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
-            Ferrari 250 GTO
+            {featured.name}
           </h2>
 
-          <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-4">
-            {specs.map((spec) => (
-              <div key={spec.label}>
-                <p className="font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
-                  {spec.label}
-                </p>
-                <p className="mt-1 font-display text-[14px] font-medium text-[#F7F7F7]">
-                  {spec.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          {displaySpecs.length > 0 && (
+            <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-4">
+              {displaySpecs.map((spec) => (
+                <div key={spec.label}>
+                  <p className="font-body text-[12px] font-normal tracking-[0.05em] text-[#777777]">
+                    {spec.label}
+                  </p>
+                  <p className="mt-1 font-display text-[14px] font-medium text-[#F7F7F7]">
+                    {spec.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
 
           <p className="mt-8 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
-            The holy grail of classic automobiles. One of only 36 ever built, this 1962 Ferrari 250 GTO features the legendary Colombo V12 and a proven racing pedigree.
+            {featured.description}
           </p>
 
           <p className="mt-6 font-display text-[24px] font-normal text-[#C7A96B]">
-            {formatPrice(48500000)}
+            {formatPrice(featured.price)}
           </p>
 
           <Link
-            to="/product/ferrari-250-gto"
+            to={`/product/${featured.id}`}
             className="mt-8 inline-block self-start border border-[#C7A96B] bg-transparent px-8 py-3.5 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-[#C7A96B] transition-all duration-300 hover:bg-[#C7A96B] hover:text-[#0D0D0D]"
           >
             View Details
