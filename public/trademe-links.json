@@ -1,3 +1,16 @@
 {
-  "_comment": "relist 后只改 listingId。独立站 URL /product/r2-06 永远不变。"
+  "_comment": "relist 后只改 listingId。独立站 URL /product/r2-06 永远不变。",
+  "r2--94-555-wrc-": { "listingId": 6170913266, "price": 249 },
+  "r2-13": { "listingId": 6170913511, "price": 239 },
+  "r2-15": { "listingId": 6170913428, "price": 219 },
+  "r2-28": { "listingId": 6170913400, "price": 219 },
+  "r2-audi-sport-quattro-1985-black": { "listingId": 6170913696, "price": 249 },
+  "r2-audi-sport-quattro-1985-red": { "listingId": 6170913718, "price": 249 },
+  "r2-audi-sport-quattro-1985-white": { "listingId": 6170913474, "price": 249 },
+  "r2-mercedes-benz-300-sl-1954-blue": { "listingId": 6170913605, "price": 269 },
+  "r2-porsche-911-gt3-touring-2025-silver": { "listingId": 6170913748, "price": 299 },
+  "r2-norev-230sl-1963-": { "listingId": 6170913339, "price": 219 },
+  "r2-norev-vw-golf-mk1-gti-1976-rmb-431": { "listingId": 6170936983, "price": 229 },
+  "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383": { "listingId": 6170955234, "price": 219 },
+  "r2-norev-porsche-911-turbo-3-3-1980--rmb-518": { "listingId": 6170968956, "price": 259 }
 }
