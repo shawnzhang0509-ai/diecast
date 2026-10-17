@@ -1,65 +1,82 @@
 {
-  "_comment": "Display fixes on top of the R2 folder names (cost prices and Chinese notes must never reach the site). Applied by npm run sync:r2 and npm run apply:overrides.",
+  "_comment": "Display fixes on top of the R2 folder names (cost prices and Chinese notes must never reach the site). Applied by npm run sync:r2 and npm run apply:overrides. Keys are the final product ids; _renames maps the id derived from the R2 folder name to that final id (the old URL redirects in vercel.json).",
+  "_renames": {
+    "r2-norev-alpine-a110-r-turini-2025-rmb-297": "r2-norev-alpine-a110-r-turini-2025",
+    "r2-norev-ford-escort-cosworth-1992-rmb327": "r2-norev-ford-escort-cosworth-1992",
+    "r2-norev-ford-fiesta-xr2-1981-rmb-336": "r2-norev-ford-fiesta-xr2-1981",
+    "r2-norev-lancia-fulvia-1971-rmb-518": "r2-norev-lancia-fulvia-1971",
+    "r2-norev-opel-manta-gsi-1987-rmb-386": "r2-norev-opel-manta-gsi-1987",
+    "r2-norev-peugeot-306-s16-1997-rmb-374": "r2-norev-peugeot-306-s16-1997",
+    "r2-norev-porsche-911-turbo-3-3-1980--rmb-518": "r2-norev-porsche-911-turbo-3-3-1980",
+    "r2-norev-vw-golf-mk1-gti-1976-rmb-431": "r2-norev-vw-golf-mk1-gti-1976",
+    "r2-norev-vw-golf-mk2-gti-1989-rmb-451": "r2-norev-vw-golf-mk2-gti-1989",
+    "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383": "r2-norev-vw-scirocco-gtx-16v-1988"
+  },
   "r2-30": {
-    "specs": { "Features": "Sealed body (doors do not open), Front-wheel steering, No suspension on wheels", "Packaging": "Clear display case with base" }
+    "specs": {
+      "Features": "Sealed body (doors do not open), Front-wheel steering, No suspension on wheels",
+      "Packaging": "Clear display case with base"
+    }
   },
   "r2-norev-1-18-vw-1303-cabriolet-": {
-    "name": "NOREV Volkswagen Beetle 1303 Cabriolet",
-    "description": "1:18 scale Volkswagen Beetle 1303 Cabriolet by NOREV.",
-    "specs": { "Model": "VW Beetle 1303 Cabriolet" },
-    "vehicleModel": "Beetle 1303 Cabriolet"
+    "name": "NOREV Volkswagen Beetle 1303 (1972/73)",
+    "description": "1:18 scale Volkswagen Beetle 1303 (1972/73) by NOREV.",
+    "specs": {
+      "Model": "VW Beetle 1303"
+    },
+    "vehicleModel": "Beetle 1303"
   },
   "r2-norev-1-18-ford-escort-cosworth-1992-": {
     "name": "NOREV Ford Escort RS Cosworth 1992",
     "description": "1:18 scale Ford Escort RS Cosworth (1992) by NOREV."
   },
-  "r2-norev-alpine-a110-r-turini-2025-rmb-297": {
+  "r2-norev-alpine-a110-r-turini-2025": {
     "name": "NOREV Alpine A110 R Turini 2025",
     "description": "1:18 scale Alpine A110 R Turini (2025) by NOREV.",
     "marque": "Alpine",
     "vehicleModel": "A110 R Turini"
   },
-  "r2-norev-ford-escort-cosworth-1992-rmb327": {
+  "r2-norev-ford-escort-cosworth-1992": {
     "name": "NOREV Ford Escort RS Cosworth 1992",
     "description": "1:18 scale Ford Escort RS Cosworth (1992) by NOREV."
   },
-  "r2-norev-ford-fiesta-xr2-1981-rmb-336": {
+  "r2-norev-ford-fiesta-xr2-1981": {
     "name": "NOREV Ford Fiesta XR2 1981",
     "description": "1:18 scale Ford Fiesta XR2 (1981) by NOREV."
   },
-  "r2-norev-lancia-fulvia-1971-rmb-518": {
+  "r2-norev-lancia-fulvia-1971": {
     "name": "NOREV Lancia Fulvia 1971",
     "description": "1:18 scale Lancia Fulvia (1971) by NOREV.",
     "marque": "Lancia",
     "vehicleModel": "Fulvia"
   },
-  "r2-norev-opel-manta-gsi-1987-rmb-386": {
+  "r2-norev-opel-manta-gsi-1987": {
     "name": "NOREV Opel Manta GSi 1987",
     "description": "1:18 scale Opel Manta GSi (1987) by NOREV.",
     "marque": "Opel",
     "vehicleModel": "Manta GSi"
   },
-  "r2-norev-peugeot-306-s16-1997-rmb-374": {
+  "r2-norev-peugeot-306-s16-1997": {
     "name": "NOREV Peugeot 306 S16 1997",
     "description": "1:18 scale Peugeot 306 S16 (1997) by NOREV."
   },
-  "r2-norev-porsche-911-turbo-3-3-1980--rmb-518": {
+  "r2-norev-porsche-911-turbo-3-3-1980": {
     "name": "NOREV Porsche 911 Turbo 3.3 1980 – Christmas Edition",
     "description": "1:18 scale Porsche 911 Turbo 3.3 (1980), Christmas Edition, by NOREV."
   },
-  "r2-norev-vw-golf-mk1-gti-1976-rmb-431": {
+  "r2-norev-vw-golf-mk1-gti-1976": {
     "name": "NOREV VW Golf Mk1 GTI 1976 – Red",
     "description": "1:18 scale Volkswagen Golf Mk1 GTI (1976) in red by NOREV.",
     "marque": "Volkswagen",
     "vehicleModel": "Golf Mk1 GTI"
   },
-  "r2-norev-vw-golf-mk2-gti-1989-rmb-451": {
+  "r2-norev-vw-golf-mk2-gti-1989": {
     "name": "NOREV VW Golf Mk2 GTI 1989",
     "description": "1:18 scale Volkswagen Golf Mk2 GTI (1989) by NOREV.",
     "marque": "Volkswagen",
     "vehicleModel": "Golf Mk2 GTI"
   },
-  "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383": {
+  "r2-norev-vw-scirocco-gtx-16v-1988": {
     "name": "NOREV VW Scirocco GTX 16V 1988 – Silver",
     "description": "1:18 scale Volkswagen Scirocco GTX 16V (1988) in silver by NOREV.",
     "marque": "Volkswagen",
@@ -82,7 +99,9 @@
   "r2--94-555-wrc-": {
     "name": "Sun Star Subaru Impreza 555 #2 Colin McRae – 1994 Rally New Zealand Winner",
     "description": "1:18 scale Subaru Impreza 555 (#2, Colin McRae), winner of the 1994 Rally New Zealand, by Sun Star.",
-    "specs": { "Model": "Impreza 555 Colin McRae 1994" },
+    "specs": {
+      "Model": "Impreza 555 Colin McRae 1994"
+    },
     "vehicleModel": "Impreza 555 Colin McRae 1994"
   },
   "r2--wrc-1997-": {

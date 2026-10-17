@@ -208,17 +208,17 @@ export default function ProductDetail() {
                   Email us
                 </a>
               </div>
-              {!product.trademeUrl && (
-                <p className="mt-3 font-body text-[12px] text-driftae-muted">
-                  Not listed on Trade Me right now — message us and we&apos;ll confirm availability and price.
-                </p>
-              )}
+              <p className="mt-3 font-body text-[12px] leading-relaxed text-driftae-muted">
+                {product.trademeUrl
+                  ? 'Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed.'
+                  : 'Not listed on Trade Me right now — message us and we’ll confirm availability, price and delivery time.'}
+              </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { icon: ShieldCheck, label: 'Authentic diecast' },
-                { icon: Truck, label: 'NZ shipping' },
+                { icon: Truck, label: 'NZ-wide delivery' },
                 { icon: RotateCcw, label: 'Carefully packed' },
                 { icon: Headphones, label: 'Questions welcome' },
               ].map(({ icon: Icon, label }) => (

@@ -52,7 +52,7 @@ export default function Craftsmanship() {
   }, []);
 
   const stats = [
-    { value: products.length ? String(products.length) : '—', label: 'Models in stock' },
+    { value: products.length ? String(products.length) : '—', label: 'Models available' },
     { value: '1:18', label: 'Collector scale' },
     { value: 'NZ', label: 'Tracked shipping' },
   ];
@@ -74,7 +74,7 @@ export default function Craftsmanship() {
           </p>
 
           <p className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
-            Every model is brand new in its original box, checked before it ships and packed carefully for the courier. Questions about a model? Message us. We&apos;re collectors too.
+            Every model is brand new in its original manufacturer packaging, sourced from trusted suppliers and inspected before it ships to you. Questions about a model? Message us. We&apos;re collectors too.
           </p>
 
           <div className="mt-10 grid grid-cols-3 gap-8">

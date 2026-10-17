@@ -121,7 +121,7 @@ export default function Footer() {
                 {CONTACT_EMAIL}
               </a>
             </p>
-            <p className="text-[13px] text-driftae-muted">In stock in Auckland · Ships NZ-wide</p>
+            <p className="text-[13px] text-driftae-muted">Based in New Zealand · Delivered NZ-wide</p>
           </div>
         </div>
 

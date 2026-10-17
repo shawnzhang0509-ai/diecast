@@ -142,7 +142,7 @@ export default function AboutPage() {
           title="Why DRIFTAE"
           paragraphs={[
             'We collect 1:18 diecast ourselves, and in New Zealand the good ones are hard to find: rally cars that won here, the Porsches and Mercedes we grew up with, the hot hatches of the 70s and 80s.',
-            'DRIFTAE brings those models in from makers like NOREV and Sun Star, keeps them in stock in Auckland, and ships them NZ-wide. Every model is brand new in its original box.',
+            'DRIFTAE sources those models from trusted suppliers of makers like NOREV and Sun Star and delivers them NZ-wide. Every model is brand new in its original manufacturer packaging and inspected before dispatch.',
           ]}
           image="/images/about-craft.jpg"
           imageLeft={false}
@@ -166,9 +166,9 @@ export default function AboutPage() {
         <section id="shipping" className="scroll-mt-28">
           <h2 className="font-display text-[28px] font-light text-driftae-white">Shipping & Delivery</h2>
           <p className="mt-4 max-w-[720px] font-body text-[14px] leading-relaxed text-driftae-muted">
-            Models are in stock in Auckland and ship NZ-wide by tracked courier (Aramex / NZ Post), packed
-            in their original box with extra protection. Pick-up in Auckland is also available. For
-            delivery outside New Zealand, message us before ordering.
+            We source each model from trusted overseas suppliers, inspect it, and dispatch it within New
+            Zealand by tracked courier (Aramex / NZ Post). Delivery is usually about 2–3 weeks after your
+            order is confirmed. Need it sooner, or outside New Zealand? Message us before ordering.
           </p>
         </section>
 
@@ -190,7 +190,7 @@ export default function AboutPage() {
             </li>
             <li>
               <strong className="text-driftae-white">Are they new?</strong> — Yes, every model is brand
-              new in its original box.
+              new in its original manufacturer packaging.
             </li>
             <li>
               <strong className="text-driftae-white">Are photos exact?</strong> — Photos show the model

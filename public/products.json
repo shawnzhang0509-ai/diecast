@@ -475,7 +475,7 @@
     },
     {
       "id": "r2-norev-1-18-vw-1303-cabriolet-",
-      "name": "NOREV Volkswagen Beetle 1303 Cabriolet",
+      "name": "NOREV Volkswagen Beetle 1303 (1972/73)",
       "brand": "NOREV",
       "brandShort": "NOREV",
       "year": "",
@@ -513,12 +513,12 @@
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/ScreenShot_2026-08-25_100501_097.png"
       ],
       "status": "instock",
-      "description": "1:18 scale Volkswagen Beetle 1303 Cabriolet by NOREV.",
+      "description": "1:18 scale Volkswagen Beetle 1303 (1972/73) by NOREV.",
       "specs": {
-        "Model": "VW Beetle 1303 Cabriolet"
+        "Model": "VW Beetle 1303"
       },
       "marque": "Volkswagen",
-      "vehicleModel": "Beetle 1303 Cabriolet",
+      "vehicleModel": "Beetle 1303",
       "tags": [
         "marque:Volkswagen",
         "volkswagen"
@@ -557,7 +557,7 @@
       ]
     },
     {
-      "id": "r2-norev-alpine-a110-r-turini-2025-rmb-297",
+      "id": "r2-norev-alpine-a110-r-turini-2025",
       "name": "NOREV Alpine A110 R Turini 2025",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -586,7 +586,7 @@
       ]
     },
     {
-      "id": "r2-norev-ford-escort-cosworth-1992-rmb327",
+      "id": "r2-norev-ford-escort-cosworth-1992",
       "name": "NOREV Ford Escort RS Cosworth 1992",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -616,7 +616,7 @@
       ]
     },
     {
-      "id": "r2-norev-ford-fiesta-xr2-1981-rmb-336",
+      "id": "r2-norev-ford-fiesta-xr2-1981",
       "name": "NOREV Ford Fiesta XR2 1981",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -649,7 +649,7 @@
       ]
     },
     {
-      "id": "r2-norev-lancia-fulvia-1971-rmb-518",
+      "id": "r2-norev-lancia-fulvia-1971",
       "name": "NOREV Lancia Fulvia 1971",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -677,7 +677,7 @@
       ]
     },
     {
-      "id": "r2-norev-opel-manta-gsi-1987-rmb-386",
+      "id": "r2-norev-opel-manta-gsi-1987",
       "name": "NOREV Opel Manta GSi 1987",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -704,7 +704,7 @@
       ]
     },
     {
-      "id": "r2-norev-peugeot-306-s16-1997-rmb-374",
+      "id": "r2-norev-peugeot-306-s16-1997",
       "name": "NOREV Peugeot 306 S16 1997",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -738,7 +738,7 @@
       ]
     },
     {
-      "id": "r2-norev-porsche-911-turbo-3-3-1980--rmb-518",
+      "id": "r2-norev-porsche-911-turbo-3-3-1980",
       "name": "NOREV Porsche 911 Turbo 3.3 1980 – Christmas Edition",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -771,7 +771,7 @@
       ]
     },
     {
-      "id": "r2-norev-vw-golf-mk1-gti-1976-rmb-431",
+      "id": "r2-norev-vw-golf-mk1-gti-1976",
       "name": "NOREV VW Golf Mk1 GTI 1976 – Red",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -800,7 +800,7 @@
       ]
     },
     {
-      "id": "r2-norev-vw-golf-mk2-gti-1989-rmb-451",
+      "id": "r2-norev-vw-golf-mk2-gti-1989",
       "name": "NOREV VW Golf Mk2 GTI 1989",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -830,7 +830,7 @@
       ]
     },
     {
-      "id": "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383",
+      "id": "r2-norev-vw-scirocco-gtx-16v-1988",
       "name": "NOREV VW Scirocco GTX 16V 1988 – Silver",
       "brand": "NOREV",
       "brandShort": "NOREV",
@@ -1064,6 +1064,149 @@
       "vehicleModel": "Impreza WRC 1997",
       "tags": [
         "marque:Subaru"
+      ]
+    },
+    {
+      "id": "norev-ford-mustang-gt-1968-1-12-green",
+      "name": "NOREV Ford Mustang GT 1968 – Light Green Metallic (1:12)",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1968",
+      "mileage": "",
+      "price": 0,
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/a13623d1-adaf-4557-bed1-77b572f83b78.jpg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/a13623d1-adaf-4557-bed1-77b572f83b78.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/4e4960bd-0eb0-4dfb-a4ff-49a9a0851c72.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/a35ee250-0577-4c01-b276-9abf932c558e.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/53c5698b-5e4f-47c5-affb-f89aa9f89e1d.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/5e95453b-59a6-4d89-b675-fa42419082eb.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/5bc89207-b7b8-44fd-aecb-24ab604087f7.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/8f951219-a411-4a8e-9958-563c13dbe83e.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/11fd60a3-1275-441a-b4d0-ef24fa261028.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-ford-mustang-gt-1968-1-12-green/567faa35-9af5-4148-ae9d-ffc80507282c.jpg"
+      ],
+      "status": "instock",
+      "description": "The 1968 Ford Mustang GT in Light Green Metallic, recreated by NOREV in large 1:12 scale — far more presence on the shelf than a 1:18 model, and a centrepiece for any Mustang or American classic collection.",
+      "specs": {
+        "Model": "Ford Mustang GT",
+        "Brand": "NOREV",
+        "Scale": "1:12",
+        "Colour": "Light Green Metallic",
+        "Features": "Large-format collector model, detailed interior and exterior",
+        "Packaging": "Original manufacturer packaging"
+      },
+      "marque": "Ford",
+      "vehicleModel": "Mustang GT",
+      "tags": [
+        "marque:Ford",
+        "ford"
+      ]
+    },
+    {
+      "id": "norev-fiat-500l-christmas",
+      "name": "NOREV Fiat 500L – Christmas Edition",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "",
+      "mileage": "",
+      "price": 0,
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/f64dfd92-b4c0-459b-ad27-b0948cb7ef43.jpg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/f64dfd92-b4c0-459b-ad27-b0948cb7ef43.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/00e57730-c51b-4dcd-bd86-c51a949d4b6c.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/57c54468-a3eb-4a97-bc26-4807178ca2d1.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/4fd5bdbf-1eb1-4721-b24d-902bebd8d474.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/58028e74-70d1-4fd2-996b-b809a558c5f8.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-fiat-500l-christmas/b954ed9b-cb8d-4b33-b1d3-f1e45e3c4dfb.jpg"
+      ],
+      "status": "instock",
+      "description": "The little Fiat 500L in festive red, with a snow-covered Christmas tree and wrapped presents on the roof, in a tartan-style display box. A charming seasonal piece and a lovely gift for classic car fans.",
+      "specs": {
+        "Model": "Fiat 500L",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Red",
+        "Features": "Christmas tree and miniature presents on the roof; sealed body (doors, bonnet and boot do not open); fixed front wheels; no working suspension",
+        "Dimensions": "Approx. 17 × 8 × 10 cm",
+        "Packaging": "Festive display box"
+      },
+      "marque": "Fiat",
+      "vehicleModel": "500L Christmas Edition",
+      "tags": [
+        "marque:Fiat",
+        "fiat"
+      ]
+    },
+    {
+      "id": "norev-vw-beetle-1303-1973-christmas",
+      "name": "NOREV VW Beetle 1303 1973 – Christmas Edition",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1973",
+      "mileage": "",
+      "price": 0,
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/8340308b-d105-4b31-8908-8cdec14197b1.jpg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/8340308b-d105-4b31-8908-8cdec14197b1.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/6f96adc5-a901-4f52-9f22-7dc071f8d188.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/b87f25fb-855a-4ae8-b921-ecbdcb875e7e.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/e1de1460-2ec1-4067-97be-48a8422e8f1a.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/ff0f222b-6f24-46b4-b54a-ba23e3bda1ae.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/d8c510f5-0bff-4c6d-a8a2-f797fbe0a7f9.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-beetle-1303-1973-christmas/9784eb4c-238e-4c71-8296-b03d1762e2aa.jpg"
+      ],
+      "status": "instock",
+      "description": "A cheerful red 1973 Volkswagen Beetle 1303 with a snow-covered Christmas tree on the roof, presented in a red and green tartan-style display box. A delightful Christmas gift for VW and classic car lovers.",
+      "specs": {
+        "Model": "Volkswagen Beetle 1303",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Red",
+        "Features": "Christmas tree roof decoration; sealed body (doors, bonnet and boot do not open); fixed front wheels; no working suspension",
+        "Dimensions": "Approx. 23 × 10 × 14 cm",
+        "Packaging": "Festive display box"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "Beetle 1303 Christmas Edition",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
+    },
+    {
+      "id": "norev-vw-golf-gti-mk4-1998-cosmic-green",
+      "name": "NOREV VW Golf GTI Mk4 1998 – Cosmic Green",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1998",
+      "mileage": "",
+      "price": 0,
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/c3748607-b3c7-44e7-b0ad-139e9a085ba5.jpg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/c3748607-b3c7-44e7-b0ad-139e9a085ba5.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/ea161389-23f3-436d-ac03-f10eef1c8c70.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/b80e3a2e-4e0e-4b6f-89fe-e5f263c5c843.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/1338946c-8df8-42bf-959a-2660a060ae79.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/0d63e7e1-7e28-4255-b871-39d30d2de5c4.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/e51f1753-6e7f-4990-aae9-a7855114ca62.jpg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/uploads/2026-10-17/norev-vw-golf-gti-mk4-1998-cosmic-green/4e285147-d964-4567-8114-b3412b40eb51.jpg"
+      ],
+      "status": "instock",
+      "description": "The fourth-generation Volkswagen Golf GTI from 1998 in distinctive Cosmic Green — the Mk4 that carried the GTI name into the modern era. A great piece for VW, GTI and modern classic collectors.",
+      "specs": {
+        "Model": "Volkswagen Golf GTI Mk4",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Cosmic Green",
+        "Features": "Diecast model with detailed interior and exterior",
+        "Packaging": "Original manufacturer packaging"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "Golf GTI Mk4",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
       ]
     }
   ]

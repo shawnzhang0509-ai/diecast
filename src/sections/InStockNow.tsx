@@ -18,10 +18,10 @@ export default function InStockNow() {
     >
       <div className="mx-auto mb-12 px-5 sm:mb-16 sm:px-10" style={{ maxWidth: 1400 }}>
         <h2 className="font-display text-[24px] font-light leading-[1.3] text-driftae-white">
-          In Stock Now
+          Available Now
         </h2>
         <p className="mt-2 font-body text-[12px] font-normal tracking-[0.05em] text-driftae-muted">
-          1:18 diecast models — available to ship from New Zealand.
+          Brand-new diecast models, delivered NZ-wide.
         </p>
       </div>
 
