@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useProducts } from '../context/ProductsContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,7 @@ export default function Craftsmanship() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const { products } = useProducts();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -50,9 +52,9 @@ export default function Craftsmanship() {
   }, []);
 
   const stats = [
-    { value: '200+', label: 'Vehicles Curated' },
-    { value: '30+', label: 'Partner Marques' },
-    { value: '48H', label: 'Global Shipping' },
+    { value: products.length ? String(products.length) : '—', label: 'Models available' },
+    { value: '1:18', label: 'Collector scale' },
+    { value: 'NZ', label: 'Tracked shipping' },
   ];
 
   return (
@@ -62,17 +64,17 @@ export default function Craftsmanship() {
       style={{ padding: '120px 0' }}
     >
       <div className="mx-auto grid grid-cols-1 items-center gap-0 lg:grid-cols-2" style={{ maxWidth: 1400 }}>
-        <div ref={contentRef} style={{ padding: '0 40px' }}>
+        <div ref={contentRef} className="px-5 sm:px-10">
           <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
-            Curated Excellence
+            Chosen by Collectors
           </h2>
 
           <p className="mt-6 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
-            Every classic automobile in our collection is rigorously vetted by our specialist team. From engine condition to bodywork, from provenance to documentation — we apply museum-grade standards to every detail.
+            We pick the models we&apos;d want on our own shelves: rally winners, Porsche icons, classic Mercedes and the hot hatches of the 70s and 80s, mostly from NOREV and Sun Star.
           </p>
 
           <p className="mt-4 font-body text-[14px] font-normal leading-[1.6] text-driftae-muted">
-            We provide comprehensive vehicle inspection reports, service histories, and worldwide insured transport. Every acquisition becomes a legacy worth passing down.
+            Every model is brand new in its original manufacturer packaging, sourced from trusted suppliers and inspected before it ships to you. Questions about a model? Message us. We&apos;re collectors too.
           </p>
 
           <div className="mt-10 grid grid-cols-3 gap-8">
@@ -98,8 +100,8 @@ export default function Craftsmanship() {
 
         <div ref={imageRef} className="relative h-[400px] overflow-hidden lg:h-[600px]">
           <img
-            src="/images/collection-lifestyle.png"
-            alt="Classic automobile collection showcase"
+            src="/social/mcrae-555-rear.jpg"
+            alt="Sun Star 1:18 Subaru Impreza 555, Colin McRae 1994"
             className="h-[120%] w-full object-cover"
           />
         </div>

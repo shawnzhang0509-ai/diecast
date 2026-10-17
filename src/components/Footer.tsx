@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
-import { Facebook } from 'lucide-react';
+import { Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 import TikTokIcon from './TikTokIcon';
 import {
@@ -9,6 +9,7 @@ import {
   FACEBOOK_URL,
   TIKTOK_URL,
   CONTACT_EMAIL,
+  MESSENGER_URL,
 } from '@/config/site-links';
 
 function FooterLink({
@@ -47,16 +48,17 @@ function FooterLink({
 export default function Footer() {
   const social = [
     FACEBOOK_URL && { label: 'Facebook', href: FACEBOOK_URL, Icon: Facebook },
+    { label: 'Messenger', href: MESSENGER_URL, Icon: MessageCircle },
     TIKTOK_URL && { label: 'TikTok', href: TIKTOK_URL, Icon: TikTokIcon },
   ].filter(Boolean) as {
     label: string;
     href: string;
-    Icon: typeof Facebook | typeof TikTokIcon;
+    Icon: typeof Facebook | typeof MessageCircle | typeof TikTokIcon;
   }[];
 
   return (
     <footer className="border-t border-driftae-gold/20 bg-driftae-black">
-      <div className="mx-auto" style={{ maxWidth: 1400, padding: '80px 40px 40px' }}>
+      <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400, paddingTop: 80, paddingBottom: 40 }}>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="inline-block transition-opacity hover:opacity-80">
@@ -101,67 +103,37 @@ export default function Footer() {
               Connect
             </h4>
             <div className="mb-6 flex gap-4">
-              {social.length > 0 ? (
-                social.map(({ label, href, Icon }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="text-driftae-muted transition-colors duration-200 hover:text-driftae-gold"
-                  >
-                    {Icon === TikTokIcon ? (
-                      <TikTokIcon size={20} />
-                    ) : (
-                      <Icon size={20} strokeWidth={1.5} />
-                    )}
-                  </a>
-                ))
-              ) : (
-                <p className="text-[13px] text-driftae-muted">
-                  Add{' '}
-                  <code className="text-driftae-gold/80">VITE_FACEBOOK_URL</code> /{' '}
-                  <code className="text-driftae-gold/80">VITE_TIKTOK_URL</code> in env.
-                </p>
-              )}
+              {social.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-driftae-muted transition-colors duration-200 hover:text-driftae-gold"
+                >
+                  {Icon === TikTokIcon ? <TikTokIcon size={20} /> : <Icon size={20} strokeWidth={1.5} />}
+                </a>
+              ))}
             </div>
-            <p className="mb-4 text-[13px] text-driftae-muted">
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="transition-colors hover:text-driftae-gold"
-              >
+            <p className="mb-2 text-[13px] text-driftae-muted">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="transition-colors hover:text-driftae-gold">
                 {CONTACT_EMAIL}
               </a>
             </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 rounded-md border border-driftae-border bg-transparent px-4 py-2.5 text-[13px] text-driftae-white placeholder:text-driftae-muted/50 focus:border-driftae-gold focus:outline-none"
-              />
-              <button type="button" className="btn-gold rounded-md px-4 py-2.5 text-[12px]">
-                Subscribe
-              </button>
-            </div>
+            <p className="text-[13px] text-driftae-muted">Based in New Zealand · Delivered NZ-wide</p>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-driftae-gold/20 pt-8 sm:flex-row">
           <p className="text-[12px] text-driftae-muted">© 2026 DRIFTAE. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link
-              to="/about#contact"
+            <a
+              href="/privacy.html"
               className="text-[12px] text-driftae-muted transition-colors duration-200 hover:text-driftae-gold"
             >
               Privacy Policy
-            </Link>
-            <Link
-              to="/about#contact"
-              className="text-[12px] text-driftae-muted transition-colors duration-200 hover:text-driftae-gold"
-            >
-              Terms of Service
-            </Link>
+            </a>
           </div>
         </div>
       </div>

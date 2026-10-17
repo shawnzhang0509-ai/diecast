@@ -129,10 +129,10 @@ function groupIntoProducts(keys) {
 function loadOverrides() {
   try {
     const raw = JSON.parse(readFileSync(join(root, 'product-overrides.json'), 'utf8'));
-    const { _comment, ...rest } = raw;
-    return rest;
+    const { _comment, _renames = {}, ...rest } = raw;
+    return { overrides: rest, renames: _renames };
   } catch {
-    return {};
+    return { overrides: {}, renames: {} };
   }
 }
 
@@ -142,7 +142,7 @@ async function main() {
     process.exit(1);
   }
 
-  const overrides = loadOverrides();
+  const { overrides, renames } = loadOverrides();
   const keys = await listAllKeys();
   const groups = groupIntoProducts(keys);
 
@@ -173,7 +173,8 @@ async function main() {
   const products = await Promise.all(
     entries.map(async ([groupKey, keysForProduct]) => {
       const images = keysForProduct.map(publicUrlFromKey);
-      const id = stableIdFromGroupKey(groupKey);
+      const folderId = stableIdFromGroupKey(groupKey);
+      const id = renames[folderId] ?? folderId;
       const introRaw = await readIntro(groupKey);
       const en = buildEnglishCopy({ productId: id, folderName: groupKey, introRaw });
       const o = overrides[id] ?? {};
@@ -198,15 +199,25 @@ async function main() {
     }),
   );
 
+  // Products without an R2 folder (photos in the team photo library).
+  let extra = [];
+  try {
+    extra = JSON.parse(readFileSync(join(root, 'extra-products.json'), 'utf8')).products ?? [];
+  } catch {
+    /* optional */
+  }
+  const extraIds = new Set(extra.map((p) => p.id));
+  const allProducts = [...products.filter((p) => !extraIds.has(p.id)), ...extra];
+
   const outPath = join(root, 'public', 'products.json');
   const catalogBody = JSON.stringify(
-    { generatedAt: new Date().toISOString(), products },
+    { generatedAt: new Date().toISOString(), products: allProducts },
     null,
     2,
   );
   writeFileSync(outPath, catalogBody);
   console.log(
-    `✓ ${products.length} products, ${keys.filter((k) => IMAGE_EXT.test(k)).length} images → public/products.json`,
+    `✓ ${allProducts.length} products (${extra.length} extra), ${keys.filter((k) => IMAGE_EXT.test(k)).length} images → public/products.json`,
   );
 
   if (process.env.R2_UPLOAD_CATALOG === '1') {

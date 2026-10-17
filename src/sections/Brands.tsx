@@ -47,7 +47,7 @@ export default function Brands() {
       className="bg-[#0D0D0D]"
       style={{ padding: '120px 0' }}
     >
-      <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
+      <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400 }}>
         <div className="mb-16 text-center">
           <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
             Legendary Marques

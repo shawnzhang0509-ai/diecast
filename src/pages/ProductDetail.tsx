@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router';
 import gsap from 'gsap';
 import { formatPrice } from '../data/products';
-import { ShieldCheck, Truck, RotateCcw, Headphones, Heart, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Truck, RotateCcw, Headphones, ExternalLink, MessageCircle, Mail } from 'lucide-react';
 import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
 import ProductImage from '../components/ProductImage';
 import { productMetaLine, extractMarque } from '../data/products';
+import { mailtoFor, messengerUrlFor } from '@/config/site-links';
+import { usePageTitle } from '../hooks/use-page-title';
 
 function RelatedCard({ product }: { product: Product }) {
   return (
@@ -32,6 +34,7 @@ export default function ProductDetail() {
   const related = product ? getRelatedProducts(product.id, 4) : [];
   const [activeImage, setActiveImage] = useState(0);
   const pageRef = useRef<HTMLDivElement>(null);
+  usePageTitle(product?.name ?? (loading ? undefined : 'Model not found'));
 
   useEffect(() => {
     if (!product) return;
@@ -75,7 +78,7 @@ export default function ProductDetail() {
 
   return (
     <div ref={pageRef} className="bg-driftae-black">
-      <div className="mx-auto pt-20" style={{ maxWidth: 1400, padding: '120px 40px 0' }}>
+      <div className="mx-auto px-5 pt-28 sm:px-10 sm:pt-32" style={{ maxWidth: 1400 }}>
         <nav className="mb-8 flex items-center gap-2 font-body text-[12px] tracking-[0.05em] text-driftae-muted">
           <Link to="/" className="transition-colors hover:text-driftae-white">Home</Link>
           <span>/</span>
@@ -96,7 +99,7 @@ export default function ProductDetail() {
         </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-3">
+          <div className="min-w-0 lg:col-span-3">
             <ProductImage
               src={product.images[activeImage]}
               alt={product.name}
@@ -111,25 +114,26 @@ export default function ProductDetail() {
                   <button
                     key={i}
                     onClick={() => setActiveImage(i)}
+                    aria-label={`Photo ${i + 1}`}
                     className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 bg-[#1a1a1a] transition-colors ${
                       i === activeImage ? 'border-driftae-gold' : 'border-white/10'
                     }`}
                   >
-                    <img src={img} alt="" className="h-full w-full object-contain p-1" />
+                    <img src={img} alt="" loading="lazy" decoding="async" className="h-full w-full object-contain p-1" />
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          <div className="lg:col-span-2 lg:pl-8">
+          <div className="min-w-0 lg:col-span-2 lg:pl-8">
             <div className="mb-3 flex items-center gap-2">
               <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-driftae-gold">
                 {(extractMarque(product) || product.brand).toUpperCase()}
               </span>
             </div>
 
-            <h1 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[42px]">
+            <h1 className="font-display text-[28px] font-light leading-[1.2] tracking-[0.03em] text-driftae-white sm:text-[38px]">
               {product.name}
             </h1>
 
@@ -153,10 +157,10 @@ export default function ProductDetail() {
                 {specEntries.map(([key, value]) => (
                   <div
                     key={key}
-                    className="flex justify-between border-b border-driftae-border py-3"
+                    className="flex justify-between gap-6 border-b border-driftae-border py-3"
                   >
                     <span className="font-body text-[13px] text-driftae-muted">{key}</span>
-                    <span className="font-body text-[13px] text-driftae-white">{value}</span>
+                    <span className="text-right font-body text-[13px] text-driftae-white">{value.replace(/,{2,}/g, ',')}</span>
                   </div>
                 ))}
               </div>
@@ -174,23 +178,47 @@ export default function ProductDetail() {
                   <ExternalLink size={16} strokeWidth={1.5} />
                 </a>
               ) : (
-                <button type="button" className="btn-gold w-full py-4">
-                  Inquire to purchase
-                </button>
+                <a
+                  href={messengerUrlFor(product.id)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold flex w-full items-center justify-center gap-2 py-4"
+                >
+                  <MessageCircle size={16} strokeWidth={1.5} />
+                  Message us to buy
+                </a>
               )}
-              <button
-                type="button"
-                className="mt-3 flex w-full items-center justify-center gap-2 border border-driftae-border bg-transparent py-4 font-body text-[13px] font-medium uppercase tracking-[0.1em] text-driftae-white transition-colors duration-200 hover:border-driftae-gold"
-              >
-                <Heart size={16} strokeWidth={1.5} />
-                Add to Wishlist
-              </button>
+              <div className="mt-3 grid grid-cols-2 gap-3">
+                {product.trademeUrl && (
+                  <a
+                    href={messengerUrlFor(product.id)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border border-driftae-border py-3 font-body text-[12px] font-medium uppercase tracking-[0.1em] text-driftae-white transition-colors duration-200 hover:border-driftae-gold"
+                  >
+                    <MessageCircle size={14} strokeWidth={1.5} />
+                    Ask a question
+                  </a>
+                )}
+                <a
+                  href={mailtoFor(`Enquiry: ${product.name}`)}
+                  className={`flex items-center justify-center gap-2 border border-driftae-border py-3 font-body text-[12px] font-medium uppercase tracking-[0.1em] text-driftae-white transition-colors duration-200 hover:border-driftae-gold ${product.trademeUrl ? '' : 'col-span-2'}`}
+                >
+                  <Mail size={14} strokeWidth={1.5} />
+                  Email us
+                </a>
+              </div>
+              <p className="mt-3 font-body text-[12px] leading-relaxed text-driftae-muted">
+                {product.trademeUrl
+                  ? 'Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed.'
+                  : 'Not listed on Trade Me right now — message us and we’ll confirm availability, price and delivery time.'}
+              </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { icon: ShieldCheck, label: 'Authentic diecast' },
-                { icon: Truck, label: 'NZ shipping' },
+                { icon: Truck, label: 'NZ-wide delivery' },
                 { icon: RotateCcw, label: 'Carefully packed' },
                 { icon: Headphones, label: 'Questions welcome' },
               ].map(({ icon: Icon, label }) => (
@@ -209,8 +237,8 @@ export default function ProductDetail() {
       </div>
 
       {related.length > 0 && (
-        <section className="bg-driftae-surface" style={{ marginTop: 100, padding: '100px 0' }}>
-          <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
+        <section className="mt-20 bg-driftae-surface py-16 sm:mt-24 sm:py-24">
+          <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400 }}>
             <h2 className="mb-10 font-display text-[24px] font-light leading-[1.3] text-driftae-white">
               You May Also Like
             </h2>

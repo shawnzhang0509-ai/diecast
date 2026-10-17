@@ -1,0 +1,60 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/product/r2-norev-alpine-a110-r-turini-2025-rmb-297",
+      "destination": "/product/r2-norev-alpine-a110-r-turini-2025",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-ford-escort-cosworth-1992-rmb327",
+      "destination": "/product/r2-norev-ford-escort-cosworth-1992",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-ford-fiesta-xr2-1981-rmb-336",
+      "destination": "/product/r2-norev-ford-fiesta-xr2-1981",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-lancia-fulvia-1971-rmb-518",
+      "destination": "/product/r2-norev-lancia-fulvia-1971",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-opel-manta-gsi-1987-rmb-386",
+      "destination": "/product/r2-norev-opel-manta-gsi-1987",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-peugeot-306-s16-1997-rmb-374",
+      "destination": "/product/r2-norev-peugeot-306-s16-1997",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-porsche-911-turbo-3-3-1980--rmb-518",
+      "destination": "/product/r2-norev-porsche-911-turbo-3-3-1980",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-vw-golf-mk1-gti-1976-rmb-431",
+      "destination": "/product/r2-norev-vw-golf-mk1-gti-1976",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-vw-golf-mk2-gti-1989-rmb-451",
+      "destination": "/product/r2-norev-vw-golf-mk2-gti-1989",
+      "permanent": true
+    },
+    {
+      "source": "/product/r2-norev-vw-scirocco-gtx-16v-1988---rmb-383",
+      "destination": "/product/r2-norev-vw-scirocco-gtx-16v-1988",
+      "permanent": true
+    }
+  ]
+}

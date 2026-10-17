@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Logo from '../components/Logo';
+import { usePageTitle } from '../hooks/use-page-title';
+import { CONTACT_EMAIL, FACEBOOK_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,17 +47,18 @@ function StorySection({ title, paragraphs, image, imageLeft, stats }: StorySecti
   }, []);
 
   const imageEl = (
-    <div className="relative h-[350px] overflow-hidden lg:h-[450px]">
+    <div className="relative h-[300px] overflow-hidden lg:h-[450px]">
       <img
         src={image}
-        alt={title}
+        alt=""
+        loading="lazy"
         className="h-full w-full object-cover"
       />
     </div>
   );
 
   const contentEl = (
-    <div ref={contentRef} className="flex flex-col justify-center" style={{ padding: '0 40px' }}>
+    <div ref={contentRef} className="flex flex-col justify-center px-5 pt-8 sm:px-10 lg:pt-0">
       <h3 className="font-display text-[28px] font-light leading-[1.3] tracking-[0.05em] text-driftae-white sm:text-[36px]">
         {title}
       </h3>
@@ -104,6 +107,7 @@ function StorySection({ title, paragraphs, image, imageLeft, stats }: StorySecti
 
 export default function AboutPage() {
   const heroRef = useRef<HTMLDivElement>(null);
+  usePageTitle('About');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -123,63 +127,48 @@ export default function AboutPage() {
       <div
         ref={heroRef}
         className="flex flex-col items-center justify-center border-b border-driftae-gold/20 bg-driftae-surface text-center"
-        style={{ minHeight: '70vh', padding: '0 40px' }}
+        style={{ minHeight: '60vh', padding: '96px 20px 0' }}
       >
         <div className="animate-in">
           <Logo variant="full" showTagline />
         </div>
         <p className="animate-in mt-8 max-w-[640px] font-body text-[14px] font-normal leading-[1.7] text-driftae-muted">
-          Founded by collectors, for collectors. DRIFTAE connects automotive enthusiasts with the world's finest classic and vintage automobiles.
+          A small New Zealand shop for 1:18 diecast model cars, run by collectors for collectors.
         </p>
       </div>
 
       <div className="mx-auto" style={{ maxWidth: 1400 }}>
         <StorySection
-          title="Our Beginning"
+          title="Why DRIFTAE"
           paragraphs={[
-            'What started as a personal passion for automotive excellence has evolved into a global destination for discerning collectors. Our founder, a lifelong car enthusiast, recognized that the market lacked a curated platform for classic automobiles — one that treats every vehicle with the reverence of a gallery exhibition.',
-            'In 2019, DRIFTAE was born with a simple mission: to connect collectors with the finest classic and vintage automobiles from around the world. Every vehicle we offer is rigorously vetted, professionally inspected, and presented with museum-grade care.',
+            'We collect 1:18 diecast ourselves, and in New Zealand the good ones are hard to find: rally cars that won here, the Porsches and Mercedes we grew up with, the hot hatches of the 70s and 80s.',
+            'DRIFTAE sources those models from trusted suppliers of makers like NOREV and Sun Star and delivers them NZ-wide. Every model is brand new in its original manufacturer packaging and inspected before dispatch.',
           ]}
-          image="/images/about-craft.png"
+          image="/images/about-craft.jpg"
           imageLeft={false}
         />
 
         <StorySection
-          title="Curated Excellence"
+          title="Honest Listings"
           paragraphs={[
-            'We maintain close relationships with the world\'s leading classic car dealers, auction houses, and private collectors — ensuring every vehicle is authentic, fully documented, and legally clear. Our selection criteria are uncompromising: only vehicles with exceptional condition, clear provenance, and genuine collector value enter our showroom.',
-            'Each listing includes a comprehensive inspection report, high-resolution photography, and complete historical documentation. We believe transparency is essential when investing in automotive heritage.',
+            'Each model page shows the real photos, the maker, the scale and what opens or steers, so you know exactly what you are getting.',
+            'Most of our range is also on Trade Me, where you can buy with Trade Me\'s buyer protection. If a model is not listed right now, message us and we will confirm price and availability.',
           ]}
-          image="/images/collection-lifestyle.png"
+          image="/social/mcrae-555-rear.jpg"
           imageLeft={true}
-        />
-
-        <StorySection
-          title="Global Community"
-          paragraphs={[
-            'Today, DRIFTAE serves collectors in over 85 countries. Our community ranges from first-time buyers seeking their dream classic to seasoned collectors completing decades-long pursuits. We understand that every acquisition represents both a financial investment and an emotional connection to automotive history.',
-            'Our dedicated advisory team provides personalized guidance — whether you need help selecting your first classic, advice on storage and maintenance, or assistance tracking down a rare automotive treasure.',
-          ]}
-          image="/images/hero-showroom.png"
-          imageLeft={false}
-          stats={[
-            { value: '10,000+', label: 'Collectors' },
-            { value: '85', label: 'Countries' },
-            { value: '98%', label: 'Satisfaction' },
-          ]}
         />
       </div>
 
       <div
-        className="mx-auto border-t border-driftae-gold/20 bg-driftae-surface"
-        style={{ maxWidth: 1400, padding: '80px 40px' }}
+        className="mx-auto border-t border-driftae-gold/20 bg-driftae-surface px-5 py-20 sm:px-10"
+        style={{ maxWidth: 1400 }}
       >
         <section id="shipping" className="scroll-mt-28">
           <h2 className="font-display text-[28px] font-light text-driftae-white">Shipping & Delivery</h2>
           <p className="mt-4 max-w-[720px] font-body text-[14px] leading-relaxed text-driftae-muted">
-            We ship across New Zealand via tracked courier. Most diecast models are packed in original
-            boxes with extra protection. International shipping is available on request — contact us
-            before ordering.
+            We source each model from trusted overseas suppliers, inspect it, and dispatch it within New
+            Zealand by tracked courier (Aramex / NZ Post). Delivery is usually about 2–3 weeks after your
+            order is confirmed. Need it sooner, or outside New Zealand? Message us before ordering.
           </p>
         </section>
 
@@ -190,18 +179,22 @@ export default function AboutPage() {
               <strong className="text-driftae-white">Where do I buy?</strong> — Many items are listed
               on our{' '}
               <a
-                href="https://www.trademe.co.nz/a/search?member_listing=5600782"
+                href={TRADEME_SHOP_URL}
                 className="text-driftae-gold hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Trade Me shop
               </a>
-              . Use &quot;Inquire&quot; on this site to ask about availability.
+               — each model page has a &quot;Buy on Trade Me&quot; button when it&apos;s listed. Otherwise, message us.
             </li>
             <li>
-              <strong className="text-driftae-white">Are photos exact?</strong> — We photograph the
-              actual model where possible. Colours may vary slightly by screen.
+              <strong className="text-driftae-white">Are they new?</strong> — Yes, every model is brand
+              new in its original manufacturer packaging.
+            </li>
+            <li>
+              <strong className="text-driftae-white">Are photos exact?</strong> — Photos show the model
+              we sell. Colours may vary slightly by screen.
             </li>
             <li>
               <strong className="text-driftae-white">Consignment</strong> — We can list your collectibles
@@ -213,11 +206,19 @@ export default function AboutPage() {
         <section id="contact" className="mt-16 scroll-mt-28">
           <h2 className="font-display text-[28px] font-light text-driftae-white">Contact</h2>
           <p className="mt-4 font-body text-[14px] text-driftae-muted">
-            Email{' '}
-            <a href="mailto:hello@driftae.co.nz" className="text-driftae-gold hover:underline">
-              hello@driftae.co.nz
-            </a>{' '}
-            or message us on Facebook / TikTok.
+            Message us on{' '}
+            <a href={MESSENGER_URL} target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
+              Messenger
+            </a>
+            , find us on{' '}
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
+              Facebook
+            </a>
+            , or email{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-driftae-gold hover:underline">
+              {CONTACT_EMAIL}
+            </a>
+            .
           </p>
         </section>
       </div>

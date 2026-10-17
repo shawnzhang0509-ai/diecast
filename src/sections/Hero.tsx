@@ -40,7 +40,7 @@ export default function Hero() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: 'url(/images/hero-showroom.png)' }}
+        style={{ backgroundImage: 'url(/images/hero-showroom.jpg)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-driftae-black/80 via-driftae-black/40 to-driftae-black" />
 
@@ -59,17 +59,10 @@ export default function Hero() {
         <Logo variant="full" showTagline className="mb-10" />
 
         <p className="mt-2 max-w-[520px] font-body text-[14px] font-normal leading-[1.7] text-driftae-muted">
-          Curated classic and vintage automobiles from the world's most legendary marques. Every vehicle carries the spirit of automotive's golden age.
+          1:18 diecast model cars from NOREV and Sun Star — rally legends, classic Porsches, Mercedes and VW. Based in New Zealand, shipped NZ-wide.
         </p>
 
-        <Link
-          to="#new-arrivals"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('new-arrivals')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="btn-gold mt-10 px-12 py-4"
-        >
+        <Link to="/collection" className="btn-gold mt-10 px-12 py-4">
           Explore Collection
         </Link>
       </div>

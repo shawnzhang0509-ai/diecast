@@ -79,7 +79,7 @@ export default function Logo({
             className="font-display text-[9px] font-medium uppercase sm:text-[10px]"
             style={{ color: goldColor, letterSpacing: '0.25em' }}
           >
-            Premium Classic Automobiles
+            1:18 Diecast Model Cars
           </span>
           <span className="h-px w-12 sm:w-16" style={{ backgroundColor: goldColor }} />
         </div>

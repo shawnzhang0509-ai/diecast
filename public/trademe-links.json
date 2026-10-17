@@ -1,8 +1,28 @@
 {
   "_comment": "relist 后只改 listingId。独立站 URL /product/r2-06 永远不变。",
+  "norev-fiat-500l-christmas": {
+    "listingId": 6182818858,
+    "price": 209.0
+  },
+  "norev-ford-mustang-gt-1968-1-12-green": {
+    "listingId": 6182819200,
+    "price": 379.0
+  },
+  "norev-vw-beetle-1303-1973-christmas": {
+    "listingId": 6182818867,
+    "price": 239.0
+  },
+  "norev-vw-golf-gti-mk4-1998-cosmic-green": {
+    "listingId": 6182819142,
+    "price": 229.0
+  },
   "r2--94-555-wrc-": {
     "listingId": 6182819059,
     "price": 249.0
+  },
+  "r2-06": {
+    "listingId": 6182819187,
+    "price": 259.0
   },
   "r2-13": {
     "listingId": 6182819170,
@@ -32,23 +52,32 @@
     "listingId": 6182819032,
     "price": 269.0
   },
+  "r2-norev-1-18-ford-escort-cosworth-1992-": {
+    "listingId": 6182819069,
+    "price": 219.0
+  },
+  "r2-norev-1-18-vw-1303-cabriolet-": {
+    "listingId": 6182819102,
+    "price": 219.0
+  },
   "r2-norev-230sl-1963-": {
     "listingId": 6182819090,
     "price": 219.0
   },
-  "r2-norev-porsche-911-turbo-3-3-1980--rmb-518": {
-    "price": 259
-  },
-  "r2-norev-vw-golf-mk1-gti-1976-rmb-431": {
+  "r2-norev-vw-golf-mk1-gti-1976": {
     "listingId": 6182818917,
     "price": 229.0
   },
-  "r2-norev-vw-scirocco-gtx-16v-1988---rmb-383": {
+  "r2-norev-vw-scirocco-gtx-16v-1988": {
     "listingId": 6182818903,
     "price": 219.0
   },
   "r2-porsche-911-gt3-touring-2025-silver": {
     "listingId": 6182819009,
     "price": 299.0
+  },
+  "r2-vw-1303-cabriolet-1972-ivory": {
+    "listingId": 6182819102,
+    "price": 219.0
   }
 }
