@@ -6,6 +6,7 @@ import { ShieldCheck, Truck, RotateCcw, Headphones, ExternalLink, MessageCircle,
 import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
 import ProductImage from '../components/ProductImage';
+import ShippingEstimate from '../components/ShippingEstimate';
 import { productMetaLine, extractMarque } from '../data/products';
 import { mailtoFor, messengerUrlFor } from '@/config/site-links';
 import { usePageTitle } from '../hooks/use-page-title';
@@ -151,6 +152,8 @@ export default function ProductDetail() {
                 {formatPrice(product.price)}
               </p>
             </div>
+
+            <ShippingEstimate price={product.price} />
 
             {specEntries.length > 0 && (
               <div className="mt-8 border-t border-driftae-border">

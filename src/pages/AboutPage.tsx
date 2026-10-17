@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Logo from '../components/Logo';
 import { usePageTitle } from '../hooks/use-page-title';
 import { CONTACT_EMAIL, FACEBOOK_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
+import { SHIPPING_ZONES, formatNzd } from '@/config/shipping';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -170,6 +171,24 @@ export default function AboutPage() {
             Zealand by tracked courier (Aramex / NZ Post). Delivery is usually about 2–3 weeks after your
             order is confirmed. Need it sooner, or outside New Zealand? Message us before ordering.
           </p>
+          <table className="mt-6 w-full max-w-[520px] font-body text-[14px]">
+            <thead>
+              <tr className="border-b border-driftae-border text-left text-[12px] uppercase tracking-[0.1em] text-driftae-muted">
+                <th className="py-2 font-medium">Delivery to</th>
+                <th className="py-2 font-medium">Courier</th>
+                <th className="py-2 text-right font-medium">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              {SHIPPING_ZONES.map((z) => (
+                <tr key={z.id} className="border-b border-driftae-border text-driftae-muted">
+                  <td className="py-2 text-driftae-white">{z.label}</td>
+                  <td className="py-2">{z.courier}</td>
+                  <td className="py-2 text-right text-driftae-white">{formatNzd(z.price)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <section id="faq" className="mt-16 scroll-mt-28">
