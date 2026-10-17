@@ -19,6 +19,33 @@ const linksUrl =
   import.meta.env.VITE_TRADEME_LINKS_URL?.trim() ||
   `${import.meta.env.BASE_URL}trademe-links.json`;
 
+/** Live prices + Trade Me listing ids from the ledger app (refreshed by the ops server every 30 min). */
+const feedUrl =
+  import.meta.env.VITE_STOREFRONT_FEED_URL?.trim() || 'https://ledger-nu-ruddy.vercel.app/api/storefront';
+
+type FeedFile = { products?: Record<string, { price?: number; listingId?: string }> };
+
+async function fetchJson<T>(url: string, timeoutMs: number): Promise<T | null> {
+  try {
+    const res = await fetch(url, { cache: 'no-cache', signal: AbortSignal.timeout(timeoutMs) });
+    return res.ok ? ((await res.json()) as T) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** The live feed decides which listing is live; the static file only fills in a price the feed lacks. */
+function mergeLinks(staticLinks: TrademeLinksFile, feed: FeedFile | null): TrademeLinksFile {
+  if (!feed?.products) return staticLinks;
+  const out: TrademeLinksFile = {};
+  for (const id of new Set([...Object.keys(staticLinks), ...Object.keys(feed.products)])) {
+    const live = feed.products[id];
+    const price = live?.price ?? staticLinks[id]?.price;
+    out[id] = { ...(price ? { price } : {}), ...(live?.listingId ? { listingId: live.listingId } : {}) };
+  }
+  return out;
+}
+
 type ProductsContextValue = {
   products: Product[];
   loading: boolean;
@@ -52,11 +79,11 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
         let base = Array.isArray(data.products) ? data.products : [];
 
         if (trademeLinksEnabled) {
-          const linksRes = await fetch(linksUrl, { cache: 'no-cache' });
-          if (linksRes.ok) {
-            const linksRaw = (await linksRes.json()) as TrademeLinksFile;
-            base = applyTrademeLinks(base, stripMetaKeys(linksRaw));
-          }
+          const [linksRaw, feed] = await Promise.all([
+            fetchJson<TrademeLinksFile>(linksUrl, 5000),
+            fetchJson<FeedFile>(feedUrl, 3000),
+          ]);
+          base = applyTrademeLinks(base, mergeLinks(stripMetaKeys(linksRaw ?? {}), feed));
         }
 
         if (!cancelled) {
