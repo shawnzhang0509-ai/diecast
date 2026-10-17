@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/write-sitemap.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "sync:r2": "node scripts/generate-products-from-r2.mjs",
+    "apply:overrides": "node scripts/apply-overrides.mjs",
     "sync:trademe": "node scripts/sync-trademe-prices.mjs"
   },
   "dependencies": {

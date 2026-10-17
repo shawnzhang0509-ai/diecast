@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Search, User, ShoppingCart, Menu, X } from 'lucide-react';
+import { Facebook, MessageCircle, Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { FACEBOOK_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,7 @@ export default function Navigation() {
       }`}
       style={{ height: 80 }}
     >
-      <div className="mx-auto flex h-full items-center justify-between" style={{ maxWidth: 1400, padding: '0 40px' }}>
+      <div className="mx-auto flex h-full items-center justify-between px-5 sm:px-10" style={{ maxWidth: 1400 }}>
         <Link to="/" className="transition-opacity hover:opacity-80">
           <Logo variant="compact" />
         </Link>
@@ -56,22 +57,38 @@ export default function Navigation() {
         </div>
 
         <div className="hidden items-center gap-5 md:flex">
-          <button className="text-driftae-white transition-colors duration-200 hover:text-driftae-gold">
-            <Search size={20} strokeWidth={1.5} />
-          </button>
-          <button className="text-driftae-white transition-colors duration-200 hover:text-driftae-gold">
-            <User size={20} strokeWidth={1.5} />
-          </button>
-          <button className="relative text-driftae-white transition-colors duration-200 hover:text-driftae-gold">
-            <ShoppingCart size={20} strokeWidth={1.5} />
-            <span className="absolute -right-2 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-driftae-gold text-[10px] font-semibold text-driftae-black">
-              0
-            </span>
-          </button>
+          <a
+            href={TRADEME_SHOP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display text-[12px] uppercase tracking-[0.08em] text-driftae-gold transition-colors duration-200 hover:text-driftae-white"
+          >
+            Trade Me Shop
+          </a>
+          <a
+            href={MESSENGER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Message us on Messenger"
+            className="text-driftae-white transition-colors duration-200 hover:text-driftae-gold"
+          >
+            <MessageCircle size={20} strokeWidth={1.5} />
+          </a>
+          <a
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Driftae on Facebook"
+            className="text-driftae-white transition-colors duration-200 hover:text-driftae-gold"
+          >
+            <Facebook size={20} strokeWidth={1.5} />
+          </a>
         </div>
 
         <button
           className="text-driftae-white md:hidden"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,6 +107,22 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href={TRADEME_SHOP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-lg uppercase tracking-[0.08em] text-driftae-gold"
+            >
+              Trade Me Shop
+            </a>
+            <a
+              href={MESSENGER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-lg uppercase tracking-[0.08em] text-driftae-white"
+            >
+              Message us
+            </a>
           </div>
         </div>
       )}

@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
+const INTERACTIVE = 'a, button, [data-cursor-hover]';
+
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const hoveringRef = useRef(false);
   const [isTouch, setIsTouch] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -17,40 +20,40 @@ export default function CustomCursor() {
     let mouseY = 0;
     let cursorX = 0;
     let cursorY = 0;
+    let raf = 0;
 
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
     };
 
+    // One delegated listener, so elements rendered later (product cards) get the hover state too.
+    const handleMouseOver = (e: MouseEvent) => {
+      const over = e.target instanceof Element && e.target.closest(INTERACTIVE) !== null;
+      if (over !== hoveringRef.current) {
+        hoveringRef.current = over;
+        setIsHovering(over);
+      }
+    };
+
     const animate = () => {
       cursorX += (mouseX - cursorX) * 0.12;
       cursorY += (mouseY - cursorY) * 0.12;
-      cursor.style.transform = `translate(${cursorX - (isHovering ? 30 : 6)}px, ${cursorY - (isHovering ? 30 : 6)}px)`;
-      requestAnimationFrame(animate);
+      const offset = hoveringRef.current ? 30 : 6;
+      cursor.style.transform = `translate(${cursorX - offset}px, ${cursorY - offset}px)`;
+      raf = requestAnimationFrame(animate);
     };
-
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
 
     window.addEventListener('mousemove', handleMouseMove);
-    requestAnimationFrame(animate);
-
-    // Add hover listeners to interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, [data-cursor-hover]');
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', handleMouseEnter);
-      el.addEventListener('mouseleave', handleMouseLeave);
-    });
+    document.addEventListener('mouseover', handleMouseOver);
+    raf = requestAnimationFrame(animate);
 
     return () => {
+      cancelAnimationFrame(raf);
       window.removeEventListener('mousemove', handleMouseMove);
-      interactiveElements.forEach((el) => {
-        el.removeEventListener('mouseenter', handleMouseEnter);
-        el.removeEventListener('mouseleave', handleMouseLeave);
-      });
+      document.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [isHovering]);
+  }, []);
 
   if (isTouch) return null;
 

@@ -2,6 +2,7 @@ import { Link, useSearchParams } from 'react-router';
 import { useProducts } from '../context/ProductsContext';
 import { filterByMarque, formatPrice, productMetaLine } from '../data/products';
 import ProductImage from '../components/ProductImage';
+import { usePageTitle } from '../hooks/use-page-title';
 
 export default function CollectionPage() {
   const [params] = useSearchParams();
@@ -10,10 +11,11 @@ export default function CollectionPage() {
   const filtered = filterByMarque(products, marque);
 
   const title = marque ? marque : 'All models';
+  usePageTitle(marque ? `${marque} diecast models` : 'All diecast models');
 
   return (
     <div className="bg-driftae-black pt-28" style={{ paddingBottom: 100 }}>
-      <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
+      <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400 }}>
         <nav className="mb-6 flex items-center gap-2 font-body text-[12px] tracking-[0.05em] text-driftae-muted">
           <Link to="/" className="hover:text-driftae-white">
             Home
@@ -34,7 +36,7 @@ export default function CollectionPage() {
         <p className="mt-3 font-body text-[14px] text-driftae-muted">
           {marque
             ? `${filtered.length} diecast model${filtered.length === 1 ? '' : 's'}`
-            : `${products.length} models in catalog`}
+            : `${products.length} diecast models`}
         </p>
 
         {loading && <p className="mt-12 text-driftae-muted">Loading…</p>}

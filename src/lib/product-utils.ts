@@ -83,7 +83,7 @@ export function getRelatedProducts(
 }
 
 export function formatPrice(price: number): string {
-  if (!price || price <= 0) return 'Inquire';
+  if (!price || price <= 0) return 'Price on request';
   if (price >= 1_000_000) {
     return `NZ$${(price / 1_000_000).toFixed(price % 1_000_000 === 0 ? 0 : 1)}M`;
   }
@@ -120,8 +120,11 @@ export function pickNewArrivals(products: Product[], limit = 8): Product[] {
     .slice(0, limit);
 }
 
+/** Buyable now (live on Trade Me) first, then the rest. */
 export function pickMarqueeProducts(products: Product[], limit = 12): Product[] {
-  return products.length ? products.slice(0, limit) : [];
+  const live = products.filter((p) => p.trademeUrl);
+  const rest = products.filter((p) => !p.trademeUrl);
+  return [...live, ...rest].slice(0, limit);
 }
 
 export function pickFeaturedProduct(products: Product[]): Product | undefined {

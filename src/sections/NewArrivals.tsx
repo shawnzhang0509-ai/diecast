@@ -86,17 +86,20 @@ export default function NewArrivals() {
       id="new-arrivals"
       ref={sectionRef}
       className="bg-[#141414]"
-      style={{ padding: '120px 0' }}
+      style={{ padding: '96px 0' }}
     >
-      <div className="mx-auto" style={{ maxWidth: 1400, padding: '0 40px' }}>
+      <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400 }}>
         <div className="mb-12 flex items-end justify-between">
           <h2 className="font-display text-[36px] font-light leading-[1.2] tracking-[0.05em] text-driftae-white sm:text-[48px]">
             New Arrivals
           </h2>
-          <button className="group hidden items-center gap-2 font-body text-[14px] font-normal text-driftae-muted transition-colors duration-200 hover:text-driftae-white sm:flex">
+          <Link
+            to="/collection"
+            className="group flex items-center gap-2 font-body text-[14px] font-normal text-driftae-muted transition-colors duration-200 hover:text-driftae-white"
+          >
             View All
             <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
-          </button>
+          </Link>
         </div>
 
         <div
@@ -108,7 +111,7 @@ export default function NewArrivals() {
           )}
           {!loading && newArrivals.length === 0 && (
             <p className="col-span-full font-body text-sm text-driftae-muted">
-              No models in catalog yet. Run sync from R2 to populate the shop.
+              Couldn&apos;t load the collection. Please refresh the page.
             </p>
           )}
           {newArrivals.map((product) => (

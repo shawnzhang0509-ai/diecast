@@ -145,3 +145,23 @@ html.lenis, html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+/* In Stock Now strip: the track holds the list twice, so -50% is one seamless loop. */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .marquee-track {
+    animation: marquee 80s linear infinite;
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+}
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .marquee-clone {
+    display: none;
+  }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 12px)); }
+}
