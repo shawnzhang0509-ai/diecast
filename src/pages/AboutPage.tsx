@@ -196,10 +196,6 @@ export default function AboutPage() {
               <strong className="text-driftae-white">Are photos exact?</strong> — Photos show the model
               we sell. Colours may vary slightly by screen.
             </li>
-            <li>
-              <strong className="text-driftae-white">Consignment</strong> — We can list your collectibles
-              on Trade Me; get in touch below.
-            </li>
           </ul>
         </section>
 

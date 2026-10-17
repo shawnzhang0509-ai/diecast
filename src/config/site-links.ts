@@ -32,7 +32,6 @@ export const shopLinks = [
   { label: 'All Models', to: '/collection' },
   { label: 'New Arrivals', to: '/#new-arrivals' },
   { label: 'Trade Me Shop', href: TRADEME_SHOP_URL, external: true },
-  { label: 'Consignment', to: '/about#faq' },
 ] as const;
 
 export const companyLinks = [

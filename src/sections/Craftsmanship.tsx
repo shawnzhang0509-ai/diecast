@@ -9,14 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Craftsmanship() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
   const { products } = useProducts();
 
   useEffect(() => {
     const section = sectionRef.current;
     const content = contentRef.current;
-    const image = imageRef.current;
-    if (!section || !content || !image) return;
+    if (!section || !content) return;
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -35,17 +33,6 @@ export default function Craftsmanship() {
           },
         }
       );
-
-      gsap.to(image.querySelector('img'), {
-        yPercent: -8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
     }, section);
 
     return () => ctx.revert();
@@ -98,11 +85,15 @@ export default function Craftsmanship() {
           </Link>
         </div>
 
-        <div ref={imageRef} className="relative h-[400px] overflow-hidden lg:h-[600px]">
+        {/* The car fills the photo edge to edge, so the box keeps the photo's ratio instead of cropping it. */}
+        <div className="relative mt-12 aspect-[1816/951] overflow-hidden lg:mt-0">
           <img
             src="/social/mcrae-555-rear.jpg"
             alt="Sun Star 1:18 Subaru Impreza 555, Colin McRae 1994"
-            className="h-[120%] w-full object-cover"
+            width={1816}
+            height={951}
+            loading="lazy"
+            className="h-full w-full object-contain"
           />
         </div>
       </div>
