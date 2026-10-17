@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Logo from '../components/Logo';
 import { usePageTitle } from '../hooks/use-page-title';
-import { CONTACT_EMAIL, FACEBOOK_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
+import { CONTACT_EMAIL, FACEBOOK_URL, INSTAGRAM_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
 import { SHIPPING_ZONES, formatNzd } from '@/config/shipping';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -228,6 +228,10 @@ export default function AboutPage() {
             , find us on{' '}
             <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
               Facebook
+            </a>{' '}
+            and{' '}
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
+              Instagram
             </a>
             , or email{' '}
             <a href={`mailto:${CONTACT_EMAIL}`} className="text-driftae-gold hover:underline">

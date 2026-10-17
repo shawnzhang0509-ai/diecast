@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Facebook, MessageCircle, Menu, X } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Menu, X } from 'lucide-react';
 import Logo from './Logo';
-import { FACEBOOK_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
+import { FACEBOOK_URL, INSTAGRAM_URL, MESSENGER_URL, TRADEME_SHOP_URL } from '@/config/site-links';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -83,6 +83,15 @@ export default function Navigation() {
           >
             <Facebook size={20} strokeWidth={1.5} />
           </a>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Driftae on Instagram"
+            className="text-driftae-white transition-colors duration-200 hover:text-driftae-gold"
+          >
+            <Instagram size={20} strokeWidth={1.5} />
+          </a>
         </div>
 
         <button
@@ -122,6 +131,14 @@ export default function Navigation() {
               className="font-display text-lg uppercase tracking-[0.08em] text-driftae-white"
             >
               Message us
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-lg uppercase tracking-[0.08em] text-driftae-white"
+            >
+              Instagram
             </a>
           </div>
         </div>

@@ -14,6 +14,10 @@ export const FACEBOOK_URL =
 export const MESSENGER_URL =
   import.meta.env.VITE_MESSENGER_URL?.trim() || 'https://m.me/1421932517666374';
 
+/** Instagram @driftaenz. */
+export const INSTAGRAM_URL =
+  import.meta.env.VITE_INSTAGRAM_URL?.trim() || 'https://www.instagram.com/driftaenz/';
+
 export const TIKTOK_URL = import.meta.env.VITE_TIKTOK_URL?.trim() || '';
 
 export const CONTACT_EMAIL =
