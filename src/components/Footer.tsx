@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import { Facebook, Instagram, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
+import NewsletterSignup from './NewsletterSignup';
 import TikTokIcon from './TikTokIcon';
 import {
   shopLinks,
@@ -124,6 +125,9 @@ export default function Footer() {
               </a>
             </p>
             <p className="text-[13px] text-driftae-muted">Based in New Zealand · Delivered NZ-wide</p>
+            <div className="mt-8">
+              <NewsletterSignup />
+            </div>
           </div>
         </div>
 
