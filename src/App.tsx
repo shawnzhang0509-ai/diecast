@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router';
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -26,6 +27,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-driftae-black">
+      <Analytics />
       <CustomCursor />
       <Navigation />
 
