@@ -131,7 +131,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-driftae-gold/20 pt-8 sm:flex-row">
+        <div className="mt-12 text-center">
+          <p className="text-[12px] font-normal leading-relaxed tracking-tight text-driftae-white sm:text-[14px] sm:tracking-normal">
+            Found the same model cheaper in New Zealand? We'll beat it by 10%
+          </p>
+          <p className="mt-1 text-[11px] leading-relaxed text-driftae-muted sm:text-[12px]">
+            Same model and colour, in stock at a NZ retailer, their advertised price. Ask us before you buy.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-driftae-gold/20 pt-8 sm:flex-row">
           <p className="text-[12px] text-driftae-muted">© 2026 DRIFTAE. All rights reserved.</p>
           <div className="flex gap-6">
             <a
