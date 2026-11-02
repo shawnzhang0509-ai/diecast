@@ -149,6 +149,12 @@ export default function Footer() {
             >
               Privacy Policy
             </a>
+            <a
+              href="/terms.html"
+              className="text-[12px] text-driftae-muted transition-colors duration-200 hover:text-driftae-gold"
+            >
+              Terms of Sale
+            </a>
           </div>
         </div>
       </div>
