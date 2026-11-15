@@ -1,83 +1,198 @@
 {
   "_comment": "relist 后只改 listingId。独立站 URL /product/r2-06 永远不变。",
+  "gt-spirit-nissan-r390-gt1-32-calsonic-le-mans-1998-3rd": {
+    "listingId": 6229348910,
+    "price": 329.0
+  },
+  "kk-scale-chevrolet-corvette-c3-stingray-1972-blue": {
+    "listingId": 6230684778,
+    "price": 259.0
+  },
+  "kk-scale-ferrari-250-gto-34-dmv-avus-1963-silver": {
+    "listingId": 6227724246,
+    "price": 259.0
+  },
+  "kk-scale-lamborghini-espada-s2-1970": {
+    "listingId": 6222333331,
+    "price": 259.0
+  },
+  "kk-scale-porsche-911-930-turbo-3-0-1976": {
+    "listingId": 6230627068,
+    "price": 259.0
+  },
+  "kk-scale-porsche-911-carrera-rsr-3-0-9-bobby-allison-iroc": {
+    "listingId": 6220695664,
+    "price": 259.0
+  },
   "norev-fiat-500l-christmas": {
-    "listingId": 6182818858,
     "price": 209.0
   },
   "norev-ford-mustang-gt-1968-1-12-green": {
-    "listingId": 6182819200,
+    "listingId": 6222621052,
     "price": 379.0
   },
+  "norev-mercedes-190e-2-3-16-11-senna-race-of-champions-1984": {
+    "listingId": 6225375323,
+    "price": 299.0
+  },
   "norev-vw-beetle-1303-1973-christmas": {
-    "listingId": 6182818867,
-    "price": 239.0
+    "listingId": 6224386766,
+    "price": 259.0
   },
   "norev-vw-golf-gti-mk4-1998-cosmic-green": {
-    "listingId": 6182819142,
+    "listingId": 6222772049,
     "price": 229.0
   },
+  "quartzo-lotus-49b-rindt-1969-south-african-gp": {
+    "listingId": 6222621062,
+    "price": 289.0
+  },
   "r2--94-555-wrc-": {
-    "listingId": 6182819059,
     "price": 249.0
   },
+  "r2--wrc-1997-": {
+    "listingId": 6222583151,
+    "price": 289.0
+  },
   "r2-06": {
-    "listingId": 6182819187,
+    "listingId": 6222772074,
+    "price": 259.0
+  },
+  "r2-07": {
+    "listingId": 6223447502,
     "price": 259.0
   },
   "r2-13": {
-    "listingId": 6182819170,
+    "listingId": 6222818751,
     "price": 239.0
   },
   "r2-15": {
-    "listingId": 6182819024,
+    "listingId": 6222771959,
     "price": 219.0
+  },
+  "r2-22": {
+    "listingId": 6224478755,
+    "price": 259.0
   },
   "r2-28": {
-    "listingId": 6182818982,
-    "price": 219.0
+    "listingId": 6224649967,
+    "price": 259.0
+  },
+  "r2-30": {
+    "listingId": 6224478690,
+    "price": 259.0
   },
   "r2-audi-sport-quattro-1985-black": {
-    "listingId": 6182818936,
     "price": 249.0
   },
   "r2-audi-sport-quattro-1985-red": {
-    "listingId": 6182818949,
     "price": 249.0
   },
   "r2-audi-sport-quattro-1985-white": {
-    "listingId": 6182818958,
     "price": 249.0
   },
+  "r2-ford-mustang-coupe-1966-nightmist-blue-metallic": {
+    "listingId": 6224478661,
+    "price": 259.0
+  },
   "r2-mercedes-benz-300-sl-1954-blue": {
-    "listingId": 6182819032,
+    "listingId": 6222771988,
     "price": 269.0
   },
+  "r2-mercedes-benz-cle-coupe-2024-hightech-silver": {
+    "listingId": 6224478669,
+    "price": 259.0
+  },
   "r2-norev-1-18-ford-escort-cosworth-1992-": {
-    "listingId": 6182819069,
     "price": 219.0
   },
   "r2-norev-1-18-vw-1303-cabriolet-": {
-    "listingId": 6182819102,
     "price": 219.0
   },
   "r2-norev-230sl-1963-": {
-    "listingId": 6182819090,
     "price": 219.0
   },
+  "r2-norev-alpine-a110-r-turini-2025": {
+    "listingId": 6224478696,
+    "price": 259.0
+  },
+  "r2-norev-ford-fiesta-xr2-1981": {
+    "listingId": 6229641917,
+    "price": 259.0
+  },
+  "r2-norev-lancia-fulvia-1971": {
+    "listingId": 6224386783,
+    "price": 259.0
+  },
+  "r2-norev-opel-manta-gsi-1987": {
+    "listingId": 6224478717,
+    "price": 259.0
+  },
+  "r2-norev-peugeot-306-s16-1997": {
+    "listingId": 6224478726,
+    "price": 259.0
+  },
+  "r2-norev-porsche-911-turbo-3-3-1980": {
+    "listingId": 6224386773,
+    "price": 259.0
+  },
   "r2-norev-vw-golf-mk1-gti-1976": {
-    "listingId": 6182818917,
-    "price": 229.0
+    "listingId": 6224649988,
+    "price": 259.0
+  },
+  "r2-norev-vw-golf-mk2-gti-1989": {
+    "listingId": 6224478746,
+    "price": 259.0
   },
   "r2-norev-vw-scirocco-gtx-16v-1988": {
-    "listingId": 6182818903,
     "price": 219.0
   },
   "r2-porsche-911-gt3-touring-2025-silver": {
-    "listingId": 6182819009,
+    "listingId": 6222771921,
     "price": 299.0
   },
   "r2-vw-1303-cabriolet-1972-ivory": {
-    "listingId": 6182819102,
-    "price": 219.0
+    "listingId": 6224650018,
+    "price": 259.0
+  },
+  "r2-vw-golf-gti-edition-blue-1991-moonlight-blue-metallic": {
+    "listingId": 6224478679,
+    "price": 259.0
+  },
+  "sun-star-datsun-240z-1971-red-flared": {
+    "listingId": 6229334724,
+    "price": 299.0
+  },
+  "sun-star-ford-focus-rs-wrc-46-valentino-rossi-wales-rally-gb-2008": {
+    "listingId": 6229310630,
+    "price": 289.0
+  },
+  "sun-star-mg-metro-6r4-1-billy-coleman-donegal-rally-1986-winner": {
+    "listingId": 6230362685,
+    "price": 329.0
+  },
+  "sun-star-subaru-impreza-555-1-mcrae-sanremo-rally-italy-1996-winner": {
+    "listingId": 6230398409,
+    "price": 329.0
+  },
+  "werk83-mercedes-300-sel-amg-red-pig-spa-1971-35": {
+    "listingId": 6227724263,
+    "price": 269.0
+  },
+  "werk83-opel-manta-120-kissling-nurburgring-24h-2018": {
+    "listingId": 6229390333,
+    "price": 259.0
+  },
+  "werk83-porsche-908-03-3-elford-nurburgring-1000km-1971-winner": {
+    "listingId": 6228788843,
+    "price": 259.0
+  },
+  "werk83-porsche-917-lh-hippie-martini-3-le-mans-1970": {
+    "listingId": 6227724279,
+    "price": 259.0
+  },
+  "werk83-porsche-936-77-4-le-mans-1977-winner-martini": {
+    "listingId": 6220689147,
+    "price": 259.0
   }
 }
