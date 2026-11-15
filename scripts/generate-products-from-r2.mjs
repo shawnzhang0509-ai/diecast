@@ -42,6 +42,8 @@ const ACCESS_KEY = process.env.R2_ACCESS_KEY_ID;
 const SECRET_KEY = process.env.R2_SECRET_ACCESS_KEY;
 
 const IMAGE_EXT = /\.(jpe?g|png|webp|gif|avif)$/i;
+// Screenshots (supplier pages with their prices) never go to customers.
+const SCREENSHOT = /screen\s*shot|截图|截屏/i;
 
 async function listAllKeys() {
   if (!ACCOUNT_ID || !ACCESS_KEY || !SECRET_KEY) {
@@ -103,7 +105,7 @@ function sortImageKeys(keys) {
 }
 
 function groupIntoProducts(keys) {
-  const imageKeys = keys.filter((k) => IMAGE_EXT.test(k) && k !== 'products.json');
+  const imageKeys = keys.filter((k) => IMAGE_EXT.test(k) && !SCREENSHOT.test(k.split('/').pop() ?? k) && k !== 'products.json');
   const groups = new Map();
 
   for (const key of imageKeys) {
