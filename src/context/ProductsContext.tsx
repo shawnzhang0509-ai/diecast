@@ -56,6 +56,27 @@ type ProductsContextValue = {
 
 const ProductsContext = createContext<ProductsContextValue | null>(null);
 
+/** Supplier shop screenshots show our cost price: never on the site (same rule as scripts/generate-products-from-r2.mjs). */
+const SCREENSHOT_RE = /screen\s*_?shot|淘宝|旺旺|截图|截屏|taobao|wangwang/i;
+
+function isScreenshot(url: string): boolean {
+  let name = url.split('?')[0].split('/').pop() ?? url;
+  try {
+    name = decodeURIComponent(name);
+  } catch {
+    /* keep the raw name */
+  }
+  return SCREENSHOT_RE.test(name);
+}
+
+function dropScreenshots(list: Product[]): Product[] {
+  return list.map((p) => {
+    const images = (p.images ?? []).filter((u) => !isScreenshot(u));
+    if (images.length === (p.images ?? []).length && !isScreenshot(p.image)) return p;
+    return { ...p, images, image: isScreenshot(p.image) ? (images[0] ?? '') : p.image };
+  });
+}
+
 function stripMetaKeys(raw: TrademeLinksFile): TrademeLinksFile {
   return Object.fromEntries(
     Object.entries(raw).filter(([key]) => !key.startsWith('_')),
@@ -76,7 +97,7 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
         if (!catalogRes.ok) throw new Error(`Could not load catalog (${catalogRes.status})`);
 
         const data = (await catalogRes.json()) as ProductsCatalog;
-        let base = Array.isArray(data.products) ? data.products : [];
+        let base = dropScreenshots(Array.isArray(data.products) ? data.products : []);
 
         if (trademeLinksEnabled) {
           const [linksRaw, feed] = await Promise.all([
