@@ -914,6 +914,97 @@
         "marque:Opel",
         "opel"
       ]
+    },
+    {
+      "id": "norev-vw-beetle-1303-1972-pink",
+      "name": "NOREV Volkswagen Beetle 1303 1972 – Pink",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1972",
+      "description": "1:18 scale Volkswagen Beetle 1303 (1972) in Pink by NOREV.",
+      "specs": {
+        "Model": "VW Beetle 1303",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Pink"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "Beetle 1303",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01jRDnlR1pvKcD3yJtB_!!198605422.jpeg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01jRDnlR1pvKcD3yJtB_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN018YGdrJ1pvKcCp0ZX2_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01lgLsDE1pvKcD3yegf_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01Q3Pgqe1pvKcDJykxc_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN0161ay0S1pvKcCoyUas_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01TsyXgM1pvKcD4VflX_!!198605422.jpeg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
+    },
+    {
+      "id": "norev-vw-beetle-1303-1972-yellow",
+      "name": "NOREV Volkswagen Beetle 1303 1972 – Yellow",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1972",
+      "description": "1:18 scale Volkswagen Beetle 1303 (1972) in Yellow by NOREV.",
+      "specs": {
+        "Model": "VW Beetle 1303",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Yellow"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "Beetle 1303",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01mdvFM91pvKcCp1Zs0_!!198605422.jpeg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01mdvFM91pvKcCp1Zs0_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN013MVjlS1pvKcD96JJ0_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01Gg52Qd1pvKcCy0PW0_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01KskxrO1pvKcDJx4wp_!!198605422.jpeg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
+    },
+    {
+      "id": "norev-vw-beetle-1303-1972-yellow-black",
+      "name": "NOREV Volkswagen Beetle 1303 1972 – Yellow and Black",
+      "brand": "NOREV",
+      "brandShort": "NOREV",
+      "year": "1972",
+      "description": "1:18 scale Volkswagen Beetle 1303 (1972) in Yellow and Black by NOREV.",
+      "specs": {
+        "Model": "VW Beetle 1303",
+        "Brand": "NOREV",
+        "Scale": "1:18",
+        "Colour": "Yellow and Black"
+      },
+      "marque": "Volkswagen",
+      "vehicleModel": "Beetle 1303",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ybk9qT1pvKbZyjhQw_!!198605422.jpeg",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ybk9qT1pvKbZyjhQw_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01emrhED1pvKbZOwu16_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E5%A4%A7%E4%BC%97%20%E7%94%B2%E5%A3%B3%E8%99%AB%20VW%201303%20Cabriolet%20%E6%95%9E%E7%AF%B7%E7%89%88%20%E5%90%88%E9%87%91%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01fXtm3F1pvKbZgTGxc_!!198605422.jpeg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Volkswagen",
+        "volkswagen"
+      ]
     }
   ]
 }
