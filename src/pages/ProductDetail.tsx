@@ -10,6 +10,8 @@ import ShippingEstimate from '../components/ShippingEstimate';
 import { productMetaLine, extractMarque } from '../data/products';
 import { mailtoFor, messengerUrlFor } from '@/config/site-links';
 import { usePageTitle } from '../hooks/use-page-title';
+import { useProductJsonLd } from '../hooks/use-product-json-ld';
+import { arrivesBy } from '@/config/delivery';
 
 function RelatedCard({ product }: { product: Product }) {
   return (
@@ -36,6 +38,7 @@ export default function ProductDetail() {
   const [activeImage, setActiveImage] = useState(0);
   const pageRef = useRef<HTMLDivElement>(null);
   usePageTitle(product?.name ?? (loading ? undefined : 'Model not found'));
+  useProductJsonLd(product);
 
   useEffect(() => {
     if (!product) return;
@@ -213,7 +216,7 @@ export default function ProductDetail() {
               </div>
               <p className="mt-3 font-body text-[12px] leading-relaxed text-driftae-muted">
                 {product.trademeUrl
-                  ? 'Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed.'
+                  ? `Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed: order today and it arrives by ${arrivesBy()}.`
                   : 'Not listed on Trade Me right now — message us and we’ll confirm availability, price and delivery time.'}
               </p>
             </div>
