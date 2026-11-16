@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import ProductDetail from './pages/ProductDetail';
 import AboutPage from './pages/AboutPage';
 import CollectionPage from './pages/CollectionPage';
+import ReturnsPage from './pages/ReturnsPage';
 import NotFound from './pages/NotFound';
 import { ProductsProvider } from './context/ProductsContext';
 
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/collection" element={<CollectionPage />} />
+          <Route path="/returns" element={<ReturnsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ProductsProvider>

@@ -42,6 +42,7 @@ export const companyLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Brands', to: '/#brands' },
   { label: 'Shipping & Delivery', to: '/about#shipping' },
+  { label: 'Returns & Refunds', to: '/returns' },
   { label: 'FAQ', to: '/about#faq' },
   { label: 'Contact', to: '/about#contact' },
 ] as const;
