@@ -62,7 +62,7 @@ export default function Footer() {
   }[];
 
   return (
-    <footer className="border-t border-driftae-gold/20 bg-driftae-black">
+    <footer id="footer" className="scroll-mt-0 border-t border-driftae-gold/20 bg-driftae-black">
       <div className="mx-auto px-5 sm:px-10" style={{ maxWidth: 1400, paddingTop: 80, paddingBottom: 40 }}>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
