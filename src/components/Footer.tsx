@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
-import { Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Youtube } from 'lucide-react';
 import Logo from './Logo';
 import NewsletterSignup from './NewsletterSignup';
 import TikTokIcon from './TikTokIcon';
@@ -10,6 +10,7 @@ import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
   TIKTOK_URL,
+  YOUTUBE_URL,
   CONTACT_EMAIL,
   MESSENGER_URL,
 } from '@/config/site-links';
@@ -52,11 +53,12 @@ export default function Footer() {
     FACEBOOK_URL && { label: 'Facebook', href: FACEBOOK_URL, Icon: Facebook },
     INSTAGRAM_URL && { label: 'Instagram', href: INSTAGRAM_URL, Icon: Instagram },
     { label: 'Messenger', href: MESSENGER_URL, Icon: MessageCircle },
+    { label: 'YouTube', href: YOUTUBE_URL, Icon: Youtube },
     TIKTOK_URL && { label: 'TikTok', href: TIKTOK_URL, Icon: TikTokIcon },
   ].filter(Boolean) as {
     label: string;
     href: string;
-    Icon: typeof Facebook | typeof Instagram | typeof MessageCircle | typeof TikTokIcon;
+    Icon: typeof Facebook | typeof Instagram | typeof MessageCircle | typeof Youtube | typeof TikTokIcon;
   }[];
 
   return (

@@ -37,6 +37,12 @@ export default function PrivacyPage() {
             and the{' '}
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={link}>Google Privacy Policy</a>.
           </p>
+          <p className="mt-2">
+            The only YouTube data we keep is our own channel's sign-in token, stored on our server. Access can be revoked at
+            any time in{' '}
+            <a href="https://security.google.com/settings/security/permissions" target="_blank" rel="noopener noreferrer" className={link}>Google security settings</a>;
+            once revoked we delete the stored token within 7 days.
+          </p>
         </section>
         <section>
           <h2 className={h2}>Your rights</h2>

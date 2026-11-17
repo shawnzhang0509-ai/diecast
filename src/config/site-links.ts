@@ -18,6 +18,10 @@ export const MESSENGER_URL =
 export const INSTAGRAM_URL =
   import.meta.env.VITE_INSTAGRAM_URL?.trim() || 'https://www.instagram.com/driftaenz/';
 
+/** YouTube channel DriftaeNZ (owner 2026-11-17). */
+export const YOUTUBE_URL =
+  import.meta.env.VITE_YOUTUBE_URL?.trim() || 'https://www.youtube.com/channel/UCVtLZTL_sRKOKCB6jVYWqJA';
+
 export const TIKTOK_URL = import.meta.env.VITE_TIKTOK_URL?.trim() || '';
 
 export const CONTACT_EMAIL =
@@ -44,6 +48,7 @@ export const companyLinks = [
   { label: 'Shipping & Delivery', to: '/about#shipping' },
   { label: 'Returns & Refunds', to: '/returns' },
   { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Terms of Service', to: '/terms' },
   { label: 'FAQ', to: '/about#faq' },
   { label: 'Contact', to: '/about#contact' },
 ] as const;
