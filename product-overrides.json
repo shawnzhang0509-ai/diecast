@@ -53,7 +53,20 @@
   },
   "r2-norev-ford-escort-cosworth-1992": {
     "name": "NOREV Ford Escort RS Cosworth 1992",
-    "description": "1:18 scale Ford Escort RS Cosworth (1992) by NOREV."
+    "description": "1:18 scale Ford Escort RS Cosworth (1992) by NOREV.",
+    "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
+    "images": [
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01IqlIwP1pvKaixQw7l_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01pgNqfJ1pvKadX13Gx_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01YmNlp91pvKaicNqEx_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01Mt1rHV1pvKaileb3c_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01SqTHy41pvKaj774an_!!198605422.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01kITYc11pvKahrjj46_!!198605422%202.jpeg",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9316.JPG",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9317.JPG",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9318.JPG"
+    ]
   },
   "r2-norev-ford-fiesta-xr2-1981": {
     "name": "NOREV Ford Fiesta XR2 1981",
@@ -153,6 +166,30 @@
     "description": "Ford Mustang diecast model. Message us for details."
   },
   "r2-mini": {
-    "description": "MINI diecast model. Message us for details."
-  }
+    "description": "1:18 scale Mini in orange by MITICA. Brand new in the maker's box.",
+    "name": "MITICA Mini 1:18 – Orange",
+    "brand": "MITICA",
+    "brandShort": "MITICA",
+    "year": "",
+    "specs": {
+      "Model": "Mini",
+      "Brand": "MITICA",
+      "Scale": "1:18",
+      "Colour": "Orange"
+    },
+    "marque": "Mini",
+    "vehicleModel": "Mini",
+    "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/0b51114ccc6e578b1cc3affd144cac.JPG",
+    "images": [
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/0b51114ccc6e578b1cc3affd144cac.JPG",
+      "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/482082878_1020255546816803_5680031717541142406_n.jpg"
+    ],
+    "tags": [
+      "marque:Mini",
+      "mini"
+    ]
+  },
+  "_drop": [
+    "r2-norev-1-18-ford-escort-cosworth-1992-"
+  ]
 }

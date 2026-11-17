@@ -135,10 +135,10 @@ function groupIntoProducts(keys) {
 function loadOverrides() {
   try {
     const raw = JSON.parse(readFileSync(join(root, 'product-overrides.json'), 'utf8'));
-    const { _comment, _renames = {}, ...rest } = raw;
-    return { overrides: rest, renames: _renames };
+    const { _comment, _renames = {}, _drop = [], ...rest } = raw;
+    return { overrides: rest, renames: _renames, drop: _drop };
   } catch {
-    return { overrides: {}, renames: {} };
+    return { overrides: {}, renames: {}, drop: [] };
   }
 }
 
@@ -148,7 +148,7 @@ async function main() {
     process.exit(1);
   }
 
-  const { overrides, renames } = loadOverrides();
+  const { overrides, renames, drop } = loadOverrides();
   const keys = await listAllKeys();
   const groups = groupIntoProducts(keys);
 
@@ -213,7 +213,7 @@ async function main() {
     /* optional */
   }
   const extraIds = new Set(extra.map((p) => p.id));
-  const allProducts = [...products.filter((p) => !extraIds.has(p.id)), ...extra];
+  const allProducts = [...products.filter((p) => !extraIds.has(p.id) && !drop.includes(p.id)), ...extra];
 
   const outPath = join(root, 'public', 'products.json');
   const catalogBody = JSON.stringify(

@@ -440,36 +440,31 @@
     },
     {
       "id": "r2-mini",
-      "name": "MINI",
-      "brand": "Driftae Collection",
-      "brandShort": "Driftae",
+      "name": "MITICA Mini 1:18 – Orange",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
       "year": "",
       "mileage": "",
       "price": 0,
       "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/0b51114ccc6e578b1cc3affd144cac.JPG",
       "images": [
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/0b51114ccc6e578b1cc3affd144cac.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/2x2usm2uesl_800x454.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/50b36eca3796fbaf5346851248d93a.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/679e64070001c65be4943c17352412.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/482082878_1020255546816803_5680031717541142406_n.jpg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/a78c63b8e40f97cdc774798ed27c7a.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/b1a8831910f7e48342888393c84d4d.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/cb6d242da888135fa7f7e35faf4cbf.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/ewckr4mx02k_800x460%20(1).jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/f4a3ec1edcf527c4abfae6a1d941fc.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/fd2b015c9571e2973fe21d231b503c.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/l43czqkefjt_800x429.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/mini-cooper-mk2-innocenti-1968-blue-ivory-mitica-mitica205005-d.jpg"
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/482082878_1020255546816803_5680031717541142406_n.jpg"
       ],
       "status": "instock",
-      "description": "MINI diecast model. Message us for details.",
-      "specs": {},
-      "marque": "MINI",
-      "vehicleModel": "",
+      "description": "1:18 scale Mini in orange by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Orange"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
       "tags": [
         "marque:MINI",
-        "mini"
+        "mini",
+        "marque:Mini"
       ]
     },
     {
@@ -501,37 +496,6 @@
       "tags": [
         "marque:Volkswagen",
         "volkswagen"
-      ]
-    },
-    {
-      "id": "r2-norev-1-18-ford-escort-cosworth-1992-",
-      "name": "NOREV Ford Escort RS Cosworth 1992",
-      "brand": "NOREV",
-      "brandShort": "NOREV",
-      "year": "1992",
-      "mileage": "",
-      "price": 0,
-      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
-      "images": [
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01IqlIwP1pvKaixQw7l_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01kITYc11pvKahrjj46_!!198605422%202.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01kITYc11pvKahrjj46_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01Mt1rHV1pvKaileb3c_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01pgNqfJ1pvKadX13Gx_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01SqTHy41pvKaj774an_!!198605422.jpeg",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01YmNlp91pvKaicNqEx_!!198605422.jpeg"
-      ],
-      "status": "instock",
-      "description": "1:18 scale Ford Escort RS Cosworth (1992) by NOREV.",
-      "specs": {
-        "Model": "Escort Cosworth"
-      },
-      "marque": "Ford",
-      "vehicleModel": "Escort Cosworth",
-      "tags": [
-        "marque:Ford",
-        "ford"
       ]
     },
     {
@@ -570,11 +534,15 @@
       "year": "1992",
       "mileage": "",
       "price": 0,
-      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9311.JPG",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
       "images": [
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9311.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9312.JPG",
-        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9315.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01ejYuGW1pvKai691Yx_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01IqlIwP1pvKaixQw7l_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01pgNqfJ1pvKadX13Gx_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01YmNlp91pvKaicNqEx_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01Mt1rHV1pvKaileb3c_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01SqTHy41pvKaj774an_!!198605422.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%201-18%20%E7%A6%8F%E7%89%B9%20Ford%20Escort%20Cosworth%201992%20%E5%90%88%E9%87%91%E4%BB%BF%E7%9C%9F%E6%B1%BD%E8%BD%A6%E6%A8%A1%E5%9E%8B/O1CN01kITYc11pvKahrjj46_!!198605422%202.jpeg",
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9316.JPG",
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9317.JPG",
         "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/NOREV%20Ford%20Escort%20Cosworth%201992-RMB327/IMG_9318.JPG"
@@ -2045,6 +2013,95 @@
       "tags": [
         "marque:Volkswagen",
         "volkswagen"
+      ]
+    },
+    {
+      "id": "mitica-mini-red",
+      "name": "MITICA Mini 1:18 – Red",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in red by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Red"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/50b36eca3796fbaf5346851248d93a.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/50b36eca3796fbaf5346851248d93a.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/2x2usm2uesl_800x454.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/ewckr4mx02k_800x460%20(1).jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/l43czqkefjt_800x429.jpeg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
+      ]
+    },
+    {
+      "id": "mitica-mini-green",
+      "name": "MITICA Mini 1:18 – Green",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in green by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Green"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/f4a3ec1edcf527c4abfae6a1d941fc.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/f4a3ec1edcf527c4abfae6a1d941fc.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/a78c63b8e40f97cdc774798ed27c7a.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/679e64070001c65be4943c17352412.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/b1a8831910f7e48342888393c84d4d.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/cb6d242da888135fa7f7e35faf4cbf.JPG"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
+      ]
+    },
+    {
+      "id": "mitica-mini-blue",
+      "name": "MITICA Mini 1:18 – Blue",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in blue by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Blue"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/fd2b015c9571e2973fe21d231b503c.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/fd2b015c9571e2973fe21d231b503c.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/mini-cooper-mk2-innocenti-1968-blue-ivory-mitica-mitica205005-d.jpg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
       ]
     }
   ]

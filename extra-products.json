@@ -1005,6 +1005,95 @@
         "marque:Volkswagen",
         "volkswagen"
       ]
+    },
+    {
+      "id": "mitica-mini-red",
+      "name": "MITICA Mini 1:18 – Red",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in red by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Red"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/50b36eca3796fbaf5346851248d93a.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/50b36eca3796fbaf5346851248d93a.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/2x2usm2uesl_800x454.jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/ewckr4mx02k_800x460%20(1).jpeg",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/l43czqkefjt_800x429.jpeg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
+      ]
+    },
+    {
+      "id": "mitica-mini-green",
+      "name": "MITICA Mini 1:18 – Green",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in green by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Green"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/f4a3ec1edcf527c4abfae6a1d941fc.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/f4a3ec1edcf527c4abfae6a1d941fc.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/a78c63b8e40f97cdc774798ed27c7a.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/679e64070001c65be4943c17352412.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/b1a8831910f7e48342888393c84d4d.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/cb6d242da888135fa7f7e35faf4cbf.JPG"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
+      ]
+    },
+    {
+      "id": "mitica-mini-blue",
+      "name": "MITICA Mini 1:18 – Blue",
+      "brand": "MITICA",
+      "brandShort": "MITICA",
+      "year": "",
+      "description": "1:18 scale Mini in blue by MITICA. Brand new in the maker's box.",
+      "specs": {
+        "Model": "Mini",
+        "Brand": "MITICA",
+        "Scale": "1:18",
+        "Colour": "Blue"
+      },
+      "marque": "Mini",
+      "vehicleModel": "Mini",
+      "image": "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/fd2b015c9571e2973fe21d231b503c.JPG",
+      "images": [
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/fd2b015c9571e2973fe21d231b503c.JPG",
+        "https://pub-7deca3383c7c456a973f05394a5584be.r2.dev/MINI/mini-cooper-mk2-innocenti-1968-blue-ivory-mitica-mitica205005-d.jpg"
+      ],
+      "mileage": "",
+      "price": 0,
+      "status": "instock",
+      "tags": [
+        "marque:Mini",
+        "mini"
+      ]
     }
   ]
 }

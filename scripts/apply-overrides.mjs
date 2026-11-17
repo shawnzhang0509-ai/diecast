@@ -7,7 +7,7 @@ import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const catalogPath = join(root, 'public', 'products.json');
 const catalog = JSON.parse(readFileSync(catalogPath, 'utf8'));
-const { _comment, _renames = {}, ...overrides } = JSON.parse(readFileSync(join(root, 'product-overrides.json'), 'utf8'));
+const { _comment, _renames = {}, _drop = [], ...overrides } = JSON.parse(readFileSync(join(root, 'product-overrides.json'), 'utf8'));
 
 let changed = 0;
 catalog.products = catalog.products.map((p0) => {
@@ -23,6 +23,9 @@ catalog.products = catalog.products.map((p0) => {
     tags: [...new Set([...(p.tags ?? []), ...(tags ?? []), ...(o.marque ? [`marque:${o.marque}`] : [])])],
   };
 });
+
+// _drop: products taken off the site, e.g. a duplicate folder of a car we already show (owner 2026-11-17).
+catalog.products = catalog.products.filter((p) => !_drop.includes(p.id));
 
 // Products without an R2 folder (extra-products.json) replace any earlier copy of themselves.
 const extra = JSON.parse(readFileSync(join(root, 'extra-products.json'), 'utf8')).products ?? [];
