@@ -29,5 +29,13 @@ const extra = JSON.parse(readFileSync(join(root, 'extra-products.json'), 'utf8')
 const extraIds = new Set(extra.map((p) => p.id));
 catalog.products = [...catalog.products.filter((p) => !extraIds.has(p.id)), ...extra];
 
+// Photos never shown to customers: Chinese text, another car (owner 2026-11-17). See no-photo.json.
+const noPhoto = JSON.parse(readFileSync(join(root, 'no-photo.json'), 'utf8')).photos.map((x) => x.url_has).filter(Boolean);
+const shown = (u) => !noPhoto.some((x) => decodeURIComponent(u).includes(x));
+catalog.products = catalog.products.map((p) => {
+  const images = (p.images ?? [p.image]).filter((u) => u && shown(u));
+  return { ...p, images, image: shown(p.image ?? '') && p.image ? p.image : images[0] };
+});
+
 writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n');
 console.log(`applied overrides to ${changed} products, ${extra.length} extra products`);

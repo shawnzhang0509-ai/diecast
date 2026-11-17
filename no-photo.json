@@ -1,0 +1,71 @@
+{
+ "_comment": "Photos never shown to customers (owner 2026-11-17: 「别搞中文图片」, 网站上也不要有): Chinese text, another car. A photo is dropped when its R2 path contains url_has. Used by sync:r2 and apply:overrides; driftae-ops trademe/no-photo.json keeps the same list for Trade Me and Google.",
+ "photos": [
+  {
+   "url_has": "MINI/LF123-187654_204050_jpg.jpeg",
+   "why": "different car (Porsche Taycan)",
+   "product": "r2-mini",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Alpine A110 R Turini 2025-RMB 297/IMG_9388.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-alpine-a110-r-turini-2025",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Ford Escort Cosworth 1992-RMB327/IMG_9314.JPG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-ford-escort-cosworth-1992",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Ford Fiesta XR2 1981-RMB 336/IMG_9426.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-ford-fiesta-xr2-1981",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Lancia Fulvia 1971-RMB 518/IMG_9334.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-lancia-fulvia-1971",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Peugeot 306 S16 1997-RMB 374/IMG_9415.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-peugeot-306-s16-1997",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV Porsche 911 Turbo 3.3 1980 圣诞树-RMB 518/IMG_9406.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-porsche-911-turbo-3-3-1980",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV VW Golf MK1 GTI 1976-RMB 431/IMG_9352.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-vw-golf-mk1-gti-1976",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV VW Golf MK2 GTI 1989-RMB 451/IMG_9339.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-vw-golf-mk2-gti-1989",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "NOREV VW Scirocco GTX 16V 1988 - RMB 383/IMG_9330.PNG",
+   "why": "Chinese spec card",
+   "product": "r2-norev-vw-scirocco-gtx-16v-1988",
+   "added": "2026-11-17"
+  },
+  {
+   "url_has": "太阳星 斯巴鲁 翼豹 麦克雷 94新西兰 555 WRC拉力赛汽车模型/夜战版/wmremove-transformed (2).jpeg",
+   "why": "box of a different car",
+   "product": "r2--94-555-wrc-",
+   "added": "2026-11-17"
+  }
+ ]
+}
