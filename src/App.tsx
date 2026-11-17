@@ -9,6 +9,7 @@ import ProductDetail from './pages/ProductDetail';
 import AboutPage from './pages/AboutPage';
 import CollectionPage from './pages/CollectionPage';
 import ReturnsPage from './pages/ReturnsPage';
+import PrivacyPage from './pages/PrivacyPage';
 import NotFound from './pages/NotFound';
 import { ProductsProvider } from './context/ProductsContext';
 
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/returns" element={<ReturnsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ProductsProvider>
