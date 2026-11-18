@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto px-5 pb-24 pt-32 sm:px-10" style={{ maxWidth: 900 }}>
       <h1 className="font-display text-[36px] font-light text-driftae-white">Privacy Policy</h1>
-      <p className="mt-2 font-body text-[13px] text-driftae-muted">Last updated 17 November 2026</p>
+      <p className="mt-2 font-body text-[13px] text-driftae-muted">Last updated 18 November 2026</p>
       <div className="mt-8 space-y-8 font-body text-[15px] leading-relaxed text-driftae-muted">
         <p>
           Driftae sells 1:18 diecast model cars in New Zealand. This page explains what we collect, why, and what you
