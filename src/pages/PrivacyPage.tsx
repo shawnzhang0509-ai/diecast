@@ -22,6 +22,7 @@ export default function PrivacyPage() {
             <li>Messages you send us on Messenger, Instagram or email, so we can answer you.</li>
             <li>Your email address if you ask to hear about new models. You can unsubscribe from any email.</li>
             <li>Anonymous visit statistics for this website (pages viewed, no personal profile), to see what people look at.</li>
+            <li>The Pinterest tag on this website tells Pinterest which pages were visited, so our products can show on Pinterest and we can see what people came for. See the{' '}<a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer" className={link}>Pinterest Privacy Policy</a>.</li>
           </ul>
         </section>
         <section>
