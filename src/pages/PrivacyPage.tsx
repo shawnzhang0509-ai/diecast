@@ -1,7 +1,7 @@
 import { usePageTitle } from '../hooks/use-page-title';
 import { CONTACT_EMAIL } from '@/config/site-links';
 
-// Privacy policy (owner 2026-11-17): needed for the YouTube API audit and Google Merchant Center.
+// Privacy policy (owner 2026-11-17): needed for the YouTube and TikTok API reviews and Google Merchant Center.
 export default function PrivacyPage() {
   usePageTitle('Privacy Policy');
   const link = 'text-driftae-gold hover:underline';
@@ -42,6 +42,21 @@ export default function PrivacyPage() {
             any time in{' '}
             <a href="https://security.google.com/settings/security/permissions" target="_blank" rel="noopener noreferrer" className={link}>Google security settings</a>;
             once revoked we delete the stored token within 7 days.
+          </p>
+        </section>
+        <section>
+          <h2 className={h2}>TikTok</h2>
+          <p>
+            We use TikTok's Login Kit and Content Posting API only to post our own product videos to our own TikTok
+            account. We don't read, collect or store any data about TikTok users. See the{' '}
+            <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en" target="_blank" rel="noopener noreferrer" className={link}>TikTok Terms of Service</a>{' '}
+            and the{' '}
+            <a href="https://www.tiktok.com/legal/page/row/privacy-policy/en" target="_blank" rel="noopener noreferrer" className={link}>TikTok Privacy Policy</a>.
+          </p>
+          <p className="mt-2">
+            The only TikTok data we keep is our own account's sign-in token, stored on our server. Access can be removed at
+            any time in the TikTok app (Settings and privacy → Security → Manage app permissions); once removed we delete the
+            stored token within 7 days.
           </p>
         </section>
         <section>
