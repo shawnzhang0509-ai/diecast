@@ -12,6 +12,7 @@ import ReturnsPage from './pages/ReturnsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TikTokCallbackPage from './pages/TikTokCallbackPage';
 import TermsPage from './pages/TermsPage';
+import GiveawayPage from './pages/GiveawayPage';
 import NotFound from './pages/NotFound';
 import { ProductsProvider } from './context/ProductsContext';
 
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/tiktok-callback" element={<TikTokCallbackPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/giveaway" element={<GiveawayPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ProductsProvider>
