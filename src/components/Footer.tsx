@@ -4,6 +4,7 @@ import { Facebook, Instagram, MessageCircle, Youtube } from 'lucide-react';
 import Logo from './Logo';
 import NewsletterSignup from './NewsletterSignup';
 import TikTokIcon from './TikTokIcon';
+import GivingLine from './GivingLine';
 import {
   shopLinks,
   companyLinks,
@@ -141,6 +142,8 @@ export default function Footer() {
             Same model and colour, in stock at a NZ retailer, their advertised price. Ask us before you buy.
           </p>
         </div>
+
+        <GivingLine />
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-driftae-gold/20 pt-8 sm:flex-row">
           <p className="text-[12px] text-driftae-muted">© 2026 DRIFTAE. All rights reserved.</p>
