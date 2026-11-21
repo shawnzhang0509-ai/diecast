@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { usePageTitle } from '../hooks/use-page-title';
-import { CONTACT_EMAIL, FACEBOOK_URL, INSTAGRAM_URL } from '@/config/site-links';
+import { CONTACT_EMAIL } from '@/config/site-links';
 
 // The monthly draw (owner 2026-11-19). Everything comes from the ledger's /api/giveaway: prize, end time, masked
 // entries and, once drawn, the winner's position. The winner is drawn there (once, at random); this page only replays it.
+// Entering = name + email + one consent box (owner 2026-11-21: the draw is how we grow the email list).
 const feedUrl =
   import.meta.env.VITE_GIVEAWAY_URL?.trim() || 'https://ledger-nu-ruddy.vercel.app/api/giveaway';
 
@@ -66,13 +67,38 @@ export default function GiveawayPage() {
   const entries = feed?.entries ?? [];
   const winner = feed?.winner ?? null;
   const clock = useCountdown(draw?.ends_at);
+  const [form, setForm] = useState({ name: '', email: '', consent: false, website: '' });
+  const [sending, setSending] = useState(false);
+  const [entered, setEntered] = useState(false);
+  const [error, setError] = useState('');
 
-  useEffect(() => {
+  const load = () =>
     fetch(feedUrl, { cache: 'no-cache' })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((f: Feed) => { setFeed(f); setReel((f.entries ?? []).slice(0, 6)); })
       .catch(() => setFailed(true));
-  }, []);
+  useEffect(() => { load(); }, []);
+
+  const enter = async (ev: FormEvent) => {
+    ev.preventDefault();
+    setError('');
+    if (!form.consent) return setError('Tick the box to enter.');
+    setSending(true);
+    try {
+      const r = await fetch(feedUrl, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'join', ...form }),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'Please try again in a minute.');
+      setEntered(true);
+      load();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Please try again in a minute.');
+    } finally {
+      setSending(false);
+    }
+  };
 
   const replay = () => {
     if (!winner || spinning || !entries.length) return;
@@ -174,31 +200,55 @@ export default function GiveawayPage() {
               <p className="font-display text-[11px] tracking-[0.4em] text-driftae-gold">WINNER</p>
               <p className="my-2 font-serif text-[40px] text-driftae-white">{winner.display}</p>
               <p className="font-body text-[12px] leading-relaxed text-driftae-muted">
-                entered via {winner.via} · 1 of {entries.length} entries<br />We'll message the winner to send their model.
+                entered via {winner.via} · 1 of {entries.length} entries<br />We'll email the winner to send their model.
               </p>
             </div>
           )}
         </>
       )}
 
-      <section className="mt-10 border-t border-driftae-border pt-6 font-body text-[14px] leading-relaxed text-driftae-muted">
-        <h2 className="mb-2 font-display text-[16px] font-semibold text-driftae-white">How to enter (free)</h2>
-        <ul className="list-disc space-y-1 pl-5">
-          <li>Comment on this month's giveaway post on our <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className={link}>Facebook</a> or <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className={link}>Instagram</a>.</li>
-          <li>Bought a model from us on Trade Me this month? You're entered automatically.</li>
-        </ul>
-      </section>
+      {draw && !winner && !clock.done && (
+        <section id="enter" className="mt-8 rounded-[18px] border border-driftae-gold/60 bg-driftae-surface px-4 py-5">
+          <h2 className="text-center font-display text-[18px] font-semibold text-driftae-white">Enter free</h2>
+          {entered ? (
+            <p className="mt-3 text-center font-body text-[14px] text-driftae-white">
+              You're in! Good luck. 🍀<br /><span className="text-driftae-muted text-[13px]">Watch this page when entries close.</span>
+            </p>
+          ) : (
+            <form onSubmit={enter} className="mt-4 space-y-3 font-body text-[14px]">
+              <input required maxLength={60} autoComplete="name" placeholder="Your name" value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full rounded-xl border border-driftae-border bg-black/40 px-4 py-3 text-driftae-white placeholder:text-driftae-muted focus:border-driftae-gold focus:outline-none" />
+              <input required type="email" maxLength={254} autoComplete="email" placeholder="Your email" value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full rounded-xl border border-driftae-border bg-black/40 px-4 py-3 text-driftae-white placeholder:text-driftae-muted focus:border-driftae-gold focus:outline-none" />
+              <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={form.website}
+                onChange={(e) => setForm({ ...form, website: e.target.value })} className="hidden" />
+              <label className="flex items-start gap-3 text-[13px] leading-snug text-driftae-muted">
+                <input type="checkbox" checked={form.consent} onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                  className="mt-0.5 h-5 w-5 shrink-0 accent-[#C7A96B]" />
+                <span>Enter me in the draw and email me new arrivals and deals from DRIFTAE. Unsubscribe anytime.</span>
+              </label>
+              {error && <p className="text-[13px] text-red-400">{error}</p>}
+              <button disabled={sending}
+                className="w-full rounded-[14px] bg-gradient-to-r from-driftae-gold via-[#E9D3A0] to-driftae-gold py-4 font-display text-[15px] font-bold tracking-[0.15em] text-black disabled:opacity-50">
+                {sending ? 'ENTERING…' : 'ENTER THE DRAW'}
+              </button>
+            </form>
+          )}
+        </section>
+      )}
 
       <section id="rules" className="mt-8 font-body text-[13px] leading-relaxed text-driftae-muted">
         <h2 className="mb-2 font-display text-[16px] font-semibold text-driftae-white">Rules</h2>
         <ol className="list-decimal space-y-1.5 pl-5">
           <li>The promoter is Driftae, a New Zealand diecast model shop. Open to New Zealand residents.</li>
-          <li>Entry is free. No purchase is needed: a comment on the month's giveaway post is a full entry, and buyers pay only the normal listed price.</li>
-          <li>One entry per person per way of entering each month (one comment, and one per Trade Me order). Entries close at the time shown above.</li>
+          <li>Entry is free and no purchase is needed. Enter with the form on this page: your name, your email and the box ticked.</li>
+          <li>One entry per person (one email address) each month. Entries close at the time shown above.</li>
           <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page.</li>
-          <li>We contact the winner through the channel they entered by (Messenger, Instagram or Trade Me) within 3 days. If there is no reply within 14 days, we draw again.</li>
+          <li>We email the winner within 3 days. If there is no reply within 14 days, we draw again.</li>
           <li>The prize is the model shown, delivered free within New Zealand. It can't be exchanged for cash. If that model is unavailable we send one of equal or higher value.</li>
-          <li>Only a shortened name (like "J*** S.") is shown publicly. We use entry details only to run the draw and contact the winner. See our <a href="/privacy" className={link}>Privacy Policy</a>.</li>
+          <li>Only a shortened name (like "J*** S.") is shown publicly. Entering adds your email to our mailing list (new arrivals and deals); every email has an unsubscribe link. We never sell or share it. See our <a href="/privacy" className={link}>Privacy Policy</a>.</li>
           <li>These rules do not change once a month's draw has started.</li>
           <li>This promotion is not sponsored, endorsed or administered by, or associated with, Meta, Facebook, Instagram or Trade Me. Entrants release Meta from any liability for it.</li>
           <li>Questions: <a href={`mailto:${CONTACT_EMAIL}`} className={link}>{CONTACT_EMAIL}</a>.</li>
