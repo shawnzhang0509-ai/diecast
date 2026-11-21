@@ -125,7 +125,7 @@ export default function GiveawayPage() {
         The <em className="text-driftae-gold">Monthly</em> Draw
       </h1>
       <p className="mt-1 text-center font-body text-[13px] text-driftae-muted">
-        One 1:18 diecast model, free to one collector each month.
+        One diecast model, free to one collector each month.
       </p>
 
       {!draw && (
@@ -144,7 +144,7 @@ export default function GiveawayPage() {
             <div className="flex items-end justify-between gap-3 px-4 pb-4 pt-3">
               <div className="min-w-0">
                 <p className="font-display text-[16px] font-semibold text-driftae-white">{draw.prize}</p>
-                <p className="mt-1 font-body text-[12px] text-driftae-muted">1:18 diecast model, delivered free in NZ</p>
+                <p className="mt-1 font-body text-[12px] text-driftae-muted">Diecast model, delivered free in NZ</p>
               </div>
               {draw.prize_value && <p className="whitespace-nowrap font-display text-[18px] font-bold text-driftae-gold">NZ${draw.prize_value}</p>}
             </div>
