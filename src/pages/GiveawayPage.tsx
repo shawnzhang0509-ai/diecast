@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { usePageTitle } from '../hooks/use-page-title';
-import { CONTACT_EMAIL } from '@/config/site-links';
+import { CONTACT_EMAIL, INSTAGRAM_URL } from '@/config/site-links';
 
 // The monthly draw (owner 2026-11-19). Everything comes from the ledger's /api/giveaway: prize, end time, masked
 // entries and, once drawn, the winner's position. The winner is drawn there (once, at random); this page only replays it.
@@ -67,9 +67,12 @@ export default function GiveawayPage() {
   const entries = feed?.entries ?? [];
   const winner = feed?.winner ?? null;
   const clock = useCountdown(draw?.ends_at);
-  const [form, setForm] = useState({ name: '', email: '', consent: false, website: '' });
+  const [form, setForm] = useState({ name: '', email: '', instagram: '', consent: false, website: '' });
   const [sending, setSending] = useState(false);
-  const [entered, setEntered] = useState(false);
+  const [entered, setEntered] = useState<{ code: string | null; invited: number; chances: number } | null>(null);
+  const [copied, setCopied] = useState(false);
+  const ref = new URLSearchParams(window.location.search).get('r');
+  const invite = entered?.code ? `${window.location.origin}/giveaway?r=${entered.code}` : '';
   const [error, setError] = useState('');
 
   const load = () =>
@@ -87,11 +90,11 @@ export default function GiveawayPage() {
     try {
       const r = await fetch(feedUrl, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'join', ...form }),
+        body: JSON.stringify({ action: 'join', ref, ...form }),
       });
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.error || 'Please try again in a minute.');
-      setEntered(true);
+      setEntered({ code: j.code ?? null, invited: j.invited ?? 0, chances: j.chances ?? 1 });
       load();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Please try again in a minute.');
@@ -116,7 +119,17 @@ export default function GiveawayPage() {
     }, 6100);
   };
 
+  const share = async () => {
+    if (!invite) return;
+    const text = `I just entered a free diecast model draw. Enter here (free): ${invite}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Driftae Monthly Draw', text, url: invite }); return; } catch { /* closed: fall back to copy */ }
+    }
+    try { await navigator.clipboard.writeText(invite); setCopied(true); setTimeout(() => setCopied(false), 2000); } catch { /* shown in the box */ }
+  };
+
   const link = 'text-driftae-gold hover:underline';
+  const field = 'w-full rounded-xl border border-driftae-border bg-black/40 px-4 py-3 text-driftae-white placeholder:text-driftae-muted focus:border-driftae-gold focus:outline-none';
   return (
     <div className="relative mx-auto px-4 pb-24 pt-28 sm:px-6" style={{ maxWidth: 560 }}>
       <canvas ref={fx} className="pointer-events-none fixed inset-0 z-50" aria-hidden="true" />
@@ -211,17 +224,40 @@ export default function GiveawayPage() {
         <section id="enter" className="mt-8 rounded-[18px] border border-driftae-gold/60 bg-driftae-surface px-4 py-5">
           <h2 className="text-center font-display text-[18px] font-semibold text-driftae-white">Enter free</h2>
           {entered ? (
-            <p className="mt-3 text-center font-body text-[14px] text-driftae-white">
-              You're in! Good luck. 🍀<br /><span className="text-driftae-muted text-[13px]">Watch this page when entries close.</span>
-            </p>
+            <div className="mt-3 text-center font-body">
+              <p className="text-[16px] text-driftae-white">You're in! Good luck. 🍀</p>
+              {invite && (
+                <>
+                  <p className="mt-4 text-[13px] text-driftae-muted">Your invite link: +1 chance for every friend who enters with it (up to 5).</p>
+                  <p className="mt-2 break-all rounded-xl border border-driftae-gold/60 bg-black/40 px-3 py-3 text-[14px] text-driftae-white select-all">{invite}</p>
+                  <button onClick={share}
+                    className="mt-3 w-full rounded-[14px] bg-gradient-to-r from-driftae-gold via-[#E9D3A0] to-driftae-gold py-3.5 font-display text-[14px] font-bold tracking-[0.15em] text-black">
+                    {copied ? 'COPIED ✓' : 'SHARE MY LINK'}
+                  </button>
+                  <div className="mt-4 grid grid-cols-2 gap-2">
+                    {[[String(entered?.invited ?? 0), 'FRIENDS JOINED'], [String(entered?.chances ?? 1), 'YOUR CHANCES']].map(([v, k]) => (
+                      <div key={k} className="rounded-xl border border-driftae-border py-2.5">
+                        <b className="block font-display text-[22px] font-semibold text-driftae-white">{v}</b>
+                        <span className="font-display text-[10px] tracking-widest text-driftae-muted">{k}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[12px] text-driftae-muted">Enter again with the same email any time to see your count.</p>
+                </>
+              )}
+            </div>
           ) : (
             <form onSubmit={enter} className="mt-4 space-y-3 font-body text-[14px]">
+              {ref && <p className="text-center text-[13px] text-driftae-gold">A friend invited you 🎁</p>}
               <input required maxLength={60} autoComplete="name" placeholder="Your name" value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full rounded-xl border border-driftae-border bg-black/40 px-4 py-3 text-driftae-white placeholder:text-driftae-muted focus:border-driftae-gold focus:outline-none" />
+                onChange={(e) => setForm({ ...form, name: e.target.value })} className={field} />
               <input required type="email" maxLength={254} autoComplete="email" placeholder="Your email" value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full rounded-xl border border-driftae-border bg-black/40 px-4 py-3 text-driftae-white placeholder:text-driftae-muted focus:border-driftae-gold focus:outline-none" />
+                onChange={(e) => setForm({ ...form, email: e.target.value })} className={field} />
+              <input required maxLength={31} autoCapitalize="none" placeholder="Your Instagram @" value={form.instagram}
+                onChange={(e) => setForm({ ...form, instagram: e.target.value })} className={field} />
+              <p className="text-[12px] leading-snug text-driftae-muted">
+                On Instagram: follow <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className={link}>@driftaenz</a> and tag a mate under our giveaway post. We check the winner did both.
+              </p>
               <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={form.website}
                 onChange={(e) => setForm({ ...form, website: e.target.value })} className="hidden" />
               <label className="flex items-start gap-3 text-[13px] leading-snug text-driftae-muted">
@@ -243,14 +279,14 @@ export default function GiveawayPage() {
         <h2 className="mb-2 font-display text-[16px] font-semibold text-driftae-white">Rules</h2>
         <ol className="list-decimal space-y-1.5 pl-5">
           <li>The promoter is Driftae, a New Zealand diecast model shop. Open to New Zealand residents.</li>
-          <li>Entry is free and no purchase is needed. Enter with the form on this page: your name, your email and the box ticked.</li>
-          <li>One entry per person (one email address) each month. Entries close at the time shown above.</li>
-          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page.</li>
+          <li>Entry is free and no purchase is needed. To enter: (1) follow @driftaenz on Instagram, (2) tag a friend in a comment on this month's giveaway post on Instagram, and (3) fill in the form on this page (name, email, Instagram handle, box ticked).</li>
+          <li>One entry per person (one email address) each month, plus one extra entry for each friend who enters through your invite link for the first time (up to 5). Entries close at the time shown above.</li>
+          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page. If the winner did not do steps (1) and (2), or entered with fake details, we draw again.</li>
           <li>We email the winner within 3 days. If there is no reply within 14 days, we draw again.</li>
           <li>The prize is the model shown, delivered free within New Zealand. It can't be exchanged for cash. If that model is unavailable we send one of equal or higher value.</li>
           <li>Only a shortened name (like "J*** S.") is shown publicly. Entering adds your email to our mailing list (new arrivals and deals); every email has an unsubscribe link. We never sell or share it. See our <a href="/privacy" className={link}>Privacy Policy</a>.</li>
           <li>These rules do not change once a month's draw has started.</li>
-          <li>This promotion is not sponsored, endorsed or administered by, or associated with, Meta, Facebook, Instagram or Trade Me. Entrants release Meta from any liability for it.</li>
+          <li>This promotion is not sponsored, endorsed or administered by, or associated with, Meta, Facebook, Instagram or Trade Me. Entrants release Meta and Instagram from any liability for it.</li>
           <li>Questions: <a href={`mailto:${CONTACT_EMAIL}`} className={link}>{CONTACT_EMAIL}</a>.</li>
         </ol>
       </section>
