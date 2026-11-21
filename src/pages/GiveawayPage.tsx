@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { usePageTitle } from '../hooks/use-page-title';
-import { CONTACT_EMAIL, INSTAGRAM_URL } from '@/config/site-links';
+import { CONTACT_EMAIL } from '@/config/site-links';
 
 // The monthly draw (owner 2026-11-19). Everything comes from the ledger's /api/giveaway: prize, end time, masked
 // entries and, once drawn, the winner's position. The winner is drawn there (once, at random); this page only replays it.
@@ -67,7 +67,7 @@ export default function GiveawayPage() {
   const entries = feed?.entries ?? [];
   const winner = feed?.winner ?? null;
   const clock = useCountdown(draw?.ends_at);
-  const [form, setForm] = useState({ name: '', email: '', instagram: '', consent: false, website: '' });
+  const [form, setForm] = useState({ name: '', email: '', consent: false, website: '' });
   const [sending, setSending] = useState(false);
   const [entered, setEntered] = useState<{ code: string | null; invited: number; chances: number } | null>(null);
   const [copied, setCopied] = useState(false);
@@ -253,11 +253,6 @@ export default function GiveawayPage() {
                 onChange={(e) => setForm({ ...form, name: e.target.value })} className={field} />
               <input required type="email" maxLength={254} autoComplete="email" placeholder="Your email" value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })} className={field} />
-              <input required maxLength={31} autoCapitalize="none" placeholder="Your Instagram @" value={form.instagram}
-                onChange={(e) => setForm({ ...form, instagram: e.target.value })} className={field} />
-              <p className="text-[12px] leading-snug text-driftae-muted">
-                On Instagram: follow <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className={link}>@driftaenz</a> and tag a mate under our giveaway post. We check the winner did both.
-              </p>
               <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={form.website}
                 onChange={(e) => setForm({ ...form, website: e.target.value })} className="hidden" />
               <label className="flex items-start gap-3 text-[13px] leading-snug text-driftae-muted">
@@ -279,9 +274,9 @@ export default function GiveawayPage() {
         <h2 className="mb-2 font-display text-[16px] font-semibold text-driftae-white">Rules</h2>
         <ol className="list-decimal space-y-1.5 pl-5">
           <li>The promoter is Driftae, a New Zealand diecast model shop. Open to New Zealand residents.</li>
-          <li>Entry is free and no purchase is needed. To enter: (1) follow @driftaenz on Instagram, (2) tag a friend in a comment on this month's giveaway post on Instagram, and (3) fill in the form on this page (name, email, Instagram handle, box ticked).</li>
+          <li>Entry is free and no purchase is needed. Enter with the form on this page: your name, your email and the box ticked.</li>
           <li>One entry per person (one email address) each month, plus one extra entry for each friend who enters through your invite link for the first time (up to 5). Entries close at the time shown above.</li>
-          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page. If the winner did not do steps (1) and (2), or entered with fake details, we draw again.</li>
+          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page. If the winner entered with fake details, we draw again.</li>
           <li>We email the winner within 3 days. If there is no reply within 14 days, we draw again.</li>
           <li>The prize is the model shown, delivered free within New Zealand. It can't be exchanged for cash. If that model is unavailable we send one of equal or higher value.</li>
           <li>Only a shortened name (like "J*** S.") is shown publicly. Entering adds your email to our mailing list (new arrivals and deals); every email has an unsubscribe link. We never sell or share it. See our <a href="/privacy" className={link}>Privacy Policy</a>.</li>
