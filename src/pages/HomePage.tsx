@@ -4,6 +4,7 @@ import InStockNow from '../sections/InStockNow';
 import Brands from '../sections/Brands';
 import NewArrivals from '../sections/NewArrivals';
 import Craftsmanship from '../sections/Craftsmanship';
+import Giving from '../sections/Giving';
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <FeaturedModel />
       <InStockNow />
+      <Giving />
       <Brands />
       <NewArrivals />
       <Craftsmanship />

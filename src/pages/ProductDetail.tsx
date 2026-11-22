@@ -7,6 +7,7 @@ import type { Product } from '../data/products';
 import { useProducts } from '../context/ProductsContext';
 import ProductImage from '../components/ProductImage';
 import ShippingEstimate from '../components/ShippingEstimate';
+import { GIVE_PHOTO, GIVE_SITE } from '../components/GivingLine';
 import { productMetaLine, extractMarque } from '../data/products';
 import { mailtoFor, messengerUrlFor } from '@/config/site-links';
 import { usePageTitle } from '../hooks/use-page-title';
@@ -157,6 +158,14 @@ export default function ProductDetail() {
             </div>
 
             <ShippingEstimate price={product.price} />
+
+            <a href={GIVE_SITE} target="_blank" rel="noopener noreferrer"
+              className="mt-4 flex items-center gap-3 border border-driftae-border p-3 hover:border-driftae-gold">
+              <img src={GIVE_PHOTO} alt="" loading="lazy" className="h-14 w-14 shrink-0 rounded object-cover" />
+              <span className="font-body text-[13px] leading-snug text-driftae-muted">
+                <b className="text-driftae-white">$1 from this model</b> goes to the Westpac Rescue Helicopter.
+              </span>
+            </a>
 
             {specEntries.length > 0 && (
               <div className="mt-8 border-t border-driftae-border">

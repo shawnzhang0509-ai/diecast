@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react';
 const giveUrl = import.meta.env.VITE_GIVE_URL?.trim() || 'https://ledger-nu-ruddy.vercel.app/api/give';
 
 type Give = { given: number; sold: number; url: string };
+export const GIVE_PHOTO = '/give/rescue-helicopter.jpg';
+export const GIVE_SITE = 'https://www.rescuehelicopter.org.nz';
 
-export default function GivingLine() {
+export function useGive() {
   const [give, setGive] = useState<Give | null>(null);
   useEffect(() => {
     fetch(giveUrl, { cache: 'no-cache' })
@@ -14,11 +16,16 @@ export default function GivingLine() {
       .then(setGive)
       .catch(() => setGive(null));
   }, []);
+  return give;
+}
+
+export default function GivingLine() {
+  const give = useGive();
   return (
     <div className="mt-8 text-center">
       <p className="text-[12px] leading-relaxed text-driftae-white sm:text-[14px]">
         $1 from every model we sell goes to the{' '}
-        <a href="https://www.rescuehelicopter.org.nz" target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
+        <a href={GIVE_SITE} target="_blank" rel="noopener noreferrer" className="text-driftae-gold hover:underline">
           Westpac Rescue Helicopter
         </a>
       </p>
