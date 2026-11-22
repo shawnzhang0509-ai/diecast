@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { usePageTitle } from '../hooks/use-page-title';
-import { CONTACT_EMAIL } from '@/config/site-links';
+import { CONTACT_EMAIL, INSTAGRAM_URL } from '@/config/site-links';
 
 // The monthly draw (owner 2026-11-19). Everything comes from the ledger's /api/giveaway: prize, end time, masked
 // entries and, once drawn, the winner's position. The winner is drawn there (once, at random); this page only replays it.
-// Entering = name + email + one consent box (owner 2026-11-21: the draw is how we grow the email list).
+// Entering = an Instagram post tagging us + name + email + its link + one consent box; it counts once the email is
+// confirmed (owner 2026-11-21/22: the draw grows the email list, and every entrant posts about us).
 const feedUrl =
   import.meta.env.VITE_GIVEAWAY_URL?.trim() || 'https://ledger-nu-ruddy.vercel.app/api/giveaway';
 
@@ -67,9 +68,11 @@ export default function GiveawayPage() {
   const entries = feed?.entries ?? [];
   const winner = feed?.winner ?? null;
   const clock = useCountdown(draw?.ends_at);
-  const [form, setForm] = useState({ name: '', email: '', consent: false, website: '' });
+  const [form, setForm] = useState({ name: '', email: '', post: '', consent: false, website: '' });
   const [sending, setSending] = useState(false);
   const [entered, setEntered] = useState<{ code: string | null; invited: number; chances: number } | null>(null);
+  const [pending, setPending] = useState(false);
+  const back = new URLSearchParams(window.location.search).get('entered');
   const [copied, setCopied] = useState(false);
   const ref = new URLSearchParams(window.location.search).get('r');
   const invite = entered?.code ? `${window.location.origin}/giveaway?r=${entered.code}` : '';
@@ -81,6 +84,13 @@ export default function GiveawayPage() {
       .then((f: Feed) => { setFeed(f); setReel((f.entries ?? []).slice(0, 6)); })
       .catch(() => setFailed(true));
   useEffect(() => { load(); }, []);
+  useEffect(() => {                       // back from the confirmation mail: ?entered=<invite code>
+    if (!back || !/^[A-Za-z0-9]{4,12}$/.test(back)) return;
+    fetch(`${feedUrl}?code=${back}`, { cache: 'no-cache' })
+      .then((r) => r.json())
+      .then((j) => j.code && setEntered({ code: j.code, invited: j.invited ?? 0, chances: j.chances ?? 1 }))
+      .catch(() => {});
+  }, [back]);
 
   const enter = async (ev: FormEvent) => {
     ev.preventDefault();
@@ -94,7 +104,8 @@ export default function GiveawayPage() {
       });
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(j.error || 'Please try again in a minute.');
-      setEntered({ code: j.code ?? null, invited: j.invited ?? 0, chances: j.chances ?? 1 });
+      if (j.confirmed) setEntered({ code: j.code ?? null, invited: j.invited ?? 0, chances: j.chances ?? 1 });
+      else setPending(true);
       load();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Please try again in a minute.');
@@ -223,9 +234,22 @@ export default function GiveawayPage() {
       {draw && !winner && !clock.done && (
         <section id="enter" className="mt-8 rounded-[18px] border border-driftae-gold/60 bg-driftae-surface px-4 py-5">
           <h2 className="text-center font-display text-[18px] font-semibold text-driftae-white">Enter free</h2>
-          {entered ? (
+          {back && ['bad', 'closed', 'error'].includes(back) && !entered && (
+            <p className="mt-3 text-center font-body text-[13px] text-red-400">
+              {back === 'closed' ? 'Entries for this draw are closed.' : back === 'bad' ? 'That confirmation link is not valid. Enter again below.' : 'Something went wrong. Please tap the link in your email again.'}
+            </p>
+          )}
+          {pending && !entered ? (
             <div className="mt-3 text-center font-body">
-              <p className="text-[16px] text-driftae-white">You're in! Good luck. 🍀</p>
+              <p className="text-[18px] text-driftae-white">📧 Check your email</p>
+              <p className="mt-2 text-[14px] leading-relaxed text-driftae-muted">
+                We sent a link to <b className="text-driftae-white">{form.email}</b>. Tap it to confirm your entry.<br />
+                It arrives within a few minutes. Not there? Check spam.
+              </p>
+            </div>
+          ) : entered ? (
+            <div className="mt-3 text-center font-body">
+              <p className="text-[16px] text-driftae-white">You're in! Email confirmed. Good luck. 🍀</p>
               {invite && (
                 <>
                   <p className="mt-4 text-[13px] text-driftae-muted">Your invite link: +1 chance for every friend who enters with it (up to 5).</p>
@@ -249,10 +273,17 @@ export default function GiveawayPage() {
           ) : (
             <form onSubmit={enter} className="mt-4 space-y-3 font-body text-[14px]">
               {ref && <p className="text-center text-[13px] text-driftae-gold">A friend invited you 🎁</p>}
+              <ol className="list-decimal space-y-1 rounded-xl bg-black/30 py-3 pl-8 pr-3 text-[13px] leading-snug text-driftae-muted">
+                <li>Post on Instagram (a photo of a car you love works) and tag <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className={link}>@driftaenz</a> with <b className="text-driftae-white">#driftaegiveaway</b>.</li>
+                <li>Copy the post's link (⋯ → Copy link) and paste it below.</li>
+                <li>Confirm your email with the link we send.</li>
+              </ol>
               <input required maxLength={60} autoComplete="name" placeholder="Your name" value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })} className={field} />
               <input required type="email" maxLength={254} autoComplete="email" placeholder="Your email" value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })} className={field} />
+              <input required type="url" inputMode="url" autoCapitalize="none" maxLength={300} placeholder="Your Instagram post link (instagram.com/p/…)"
+                value={form.post} onChange={(e) => setForm({ ...form, post: e.target.value })} className={field} />
               <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={form.website}
                 onChange={(e) => setForm({ ...form, website: e.target.value })} className="hidden" />
               <label className="flex items-start gap-3 text-[13px] leading-snug text-driftae-muted">
@@ -274,9 +305,9 @@ export default function GiveawayPage() {
         <h2 className="mb-2 font-display text-[16px] font-semibold text-driftae-white">Rules</h2>
         <ol className="list-decimal space-y-1.5 pl-5">
           <li>The promoter is Driftae, a New Zealand diecast model shop. Open to New Zealand residents.</li>
-          <li>Entry is free and no purchase is needed. Enter with the form on this page: your name, your email and the box ticked.</li>
+          <li>Entry is free and no purchase is needed. To enter: (1) publish a post on Instagram that tags @driftaenz and uses #driftaegiveaway, (2) fill in the form on this page with your name, your email and that post's link, box ticked, and (3) confirm your email with the link we send. An entry counts once the email is confirmed.</li>
           <li>One entry per person (one email address) each month, plus one extra entry for each friend who enters through your invite link for the first time (up to 5). Entries close at the time shown above.</li>
-          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page. If the winner entered with fake details, we draw again.</li>
+          <li>One winner each month, drawn at random from all valid entries after entries close. The draw is shown on this page. We check the winner's post: if it doesn't exist, doesn't tag us, or was deleted before the draw, or the details are fake, we draw again.</li>
           <li>We email the winner within 3 days. If there is no reply within 14 days, we draw again.</li>
           <li>The prize is the model shown, delivered free within New Zealand. It can't be exchanged for cash. If that model is unavailable we send one of equal or higher value.</li>
           <li>Only a shortened name (like "J*** S.") is shown publicly. Entering adds your email to our mailing list (new arrivals and deals); every email has an unsubscribe link. We never sell or share it. See our <a href="/privacy" className={link}>Privacy Policy</a>.</li>

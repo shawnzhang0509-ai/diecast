@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             <li>Your name, delivery address and order details when you buy from us (on Trade Me or directly), so we can send your model.</li>
             <li>Messages you send us on Messenger, Instagram or email, so we can answer you.</li>
             <li>Your email address if you ask to hear about new models. You can unsubscribe from any email.</li>
-            <li>If you enter our monthly giveaway, your name and email: a shortened name (like "J*** S.") is shown on the draw page, the email is used to contact the winner and, as the entry box says, to send you new arrivals and deals (unsubscribe anytime).</li>
+            <li>If you enter our monthly giveaway, your name, your email and the link to your Instagram entry post: a shortened name (like "J*** S.") is shown on the draw page, the email is used to contact the winner and, as the entry box says, to send you new arrivals and deals (unsubscribe anytime).</li>
             <li>Anonymous visit statistics for this website (pages viewed, no personal profile), to see what people look at.</li>
             <li>The Pinterest tag on this website tells Pinterest which pages were visited, so our products can show on Pinterest and we can see what people came for. See the{' '}<a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer" className={link}>Pinterest Privacy Policy</a>.</li>
           </ul>
