@@ -189,7 +189,7 @@ export default function ProductDetail() {
                   rel="noopener noreferrer"
                   className="btn-gold flex w-full items-center justify-center gap-2 py-4"
                 >
-                  Buy on Trade Me
+                  Buy now · our Trade Me store
                   <ExternalLink size={16} strokeWidth={1.5} />
                 </a>
               ) : (
@@ -225,7 +225,7 @@ export default function ProductDetail() {
               </div>
               <p className="mt-3 font-body text-[12px] leading-relaxed text-driftae-muted">
                 {product.trademeUrl
-                  ? `Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed: order today and it arrives by ${arrivesBy()}.`
+                  ? `Sold by DRIFTAE: checkout runs on our own Trade Me store (Trade Me seller fei13, with Trade Me buyer protection). Brand new in original packaging. Delivered NZ-wide, usually 2–3 weeks after your order is confirmed: order today and it arrives by ${arrivesBy()}.`
                   : 'Not listed on Trade Me right now — message us and we’ll confirm availability, price and delivery time.'}
               </p>
             </div>
