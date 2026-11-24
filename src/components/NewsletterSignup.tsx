@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 
-// Email list sign-up → ledger /api/subscribe. The tick box is the consent (NZ Unsolicited Electronic Messages Act);
+// Email list sign-up → ledger /api/subscribe, which mails a confirmation link (owner 2026-11-24); the link lands
+// on the home page with ?subscribed=… (SubscribedNotice). The tick box is the consent (NZ Unsolicited Electronic Messages Act);
 // its wording is stored with the address on the ledger side, so keep the two in step.
 const SUBSCRIBE_URL =
   import.meta.env.VITE_SUBSCRIBE_URL?.trim() || 'https://ledger-nu-ruddy.vercel.app/api/subscribe';
@@ -40,7 +41,7 @@ export default function NewsletterSignup() {
   if (state === 'done') {
     return (
       <p className="text-[13px] leading-relaxed text-driftae-muted">
-        You&apos;re on the list. We&apos;ll email you when new models land.
+        Almost there: check your inbox and tap the link we sent to confirm.
       </p>
     );
   }
